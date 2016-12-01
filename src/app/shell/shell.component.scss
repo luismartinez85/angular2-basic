@@ -18,7 +18,7 @@ app-shell {
   md-sidenav {
     width: 300px;
     >span {
-      background: url('https://www.smashingmagazine.com/wp-content/uploads/2015/07/Ultimate-Material-Lollipop-Collection1.png');
+      background: url('/assets/img/sidenav.png');
       width: 100%;
       height: 240px;
       background-size: cover;
@@ -68,7 +68,7 @@ app-shell {
     flex: 1 1 auto;
   }
   .shellBackground {
-    background: url('http://orig00.deviantart.net/d43e/f/2016/196/2/8/material_design_wallpaper_red_034_by_charlie_henson-daa22ts.png');
+    background: url('/assets/img/background.png');
     width: 100%;
     height: 320px;
     background-size: cover;

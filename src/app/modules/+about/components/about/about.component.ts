@@ -11,14 +11,11 @@ import { FsUsersService } from '../fs-users/fs-users.service';
 export class AboutComponent {
   private dataUsers;
 
-  constructor(private fsUsersService: FsUsersService){
-
-  }
+  constructor(private fsUsersService: FsUsersService){ }
 
   ngOnInit() {
     this.fsUsersService.search().subscribe(
       data => {
-        console.log('datos usuarios', data);
         this.dataUsers = data;
     });
   }
