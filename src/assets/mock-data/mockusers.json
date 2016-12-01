@@ -2,62 +2,62 @@
   "users" : [{
       "name": "David Chavarri",
       "job": "Front Architect",
-      "image": "https://twitter.com/dvdchavarri/profile_image?size=original",
+      "image": "/assets/img/team/david-min.jpg",
       "description": "React Ninja",
       "github": "https://github.com/DvdChavarri"
     },
     {
       "name": "Arturo Zarzalejo",
       "job": "Fantasy Architect",
-      "image": "https://avatars2.githubusercontent.com/u/6556976?v=3&s=460",
+      "image": "/assets/img/team/arturo-min.jpg",
       "description": "Sexy Fantasy Everywhere",
       "github": "https://github.com/Arturozh"
     },
     {
       "name": "Jose Bermudo",
       "job": "Front Architect",
-      "image": "https://twitter.com/josh2code/profile_image?size=original",
+      "image": "/assets/img/team/josh-min.jpg",
       "description": "Sorcerer code level 20",
       "github": "https://github.com/josemanuelbd"
     },
     {
       "name": "Jesus Cuesta",
       "job": "Product Owner",
-      "image": "http://jesuscuesta.net/wp-content/themes/travelify/images/photocontent/jesus-cuesta.jpg",
+      "image": "/assets/img/team/jesus-min.png",
       "description": "Dragon killer",
       "github": "https://github.com/jesuscuesta"
     },
     {
       "name": "Maximo Garcia",
       "job": "Front Architect",
-      "image": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAaZAAAAJDBlYjE0YjUwLTBlNTktNDBkZC05NzNlLWI5ZDhjYWRiYTBkYg.jpg",
+      "image": "/assets/img/team/max-min.jpg",
       "description": "Sexy Code Hunter",
       "github": "https://github.com/maxgarsaiz"
     },
     {
       "name": "Oscar Galea",
       "job": "Front Architect",
-      "image": "https://avatars3.githubusercontent.com/u/7000768?v=3&s=460",
+      "image": "/assets/img/team/oscar.png",
       "description": "Runner code",
       "github": "https://github.com/ogaleac"
     },
     {
       "name": "Juan Carlos Díez",
       "job": "Front Architect",
-      "image": "https://avatars1.githubusercontent.com/u/20802568?v=3&s=460",
+      "image": "/assets/img/team/jc-min.jpg",
       "description": "Pixel Hunter",
       "github": "https://github.com/jcdevelopmentspain"
     },
     {
       "name": "Luis Martinez",
       "job": "Front Architect",
-      "image": "http://www.teleadhesivo.com/es/img/asp056-jpg/folder/products-listado-merchanthover/pegatinas-coches-motos-caballo-de-soria.jpg",
+      "image": "/assets/img/team/luis-min.jpg",
       "description": "React Ninja"
     },
     {
       "name": "Francisco Quintero Japón",
       "job": "Front Architect",
-      "image": "http://www.infojobs.net/ficha.foto?quina=a6d148c1-3633-4893-8d18-40f654233635",
+      "image": "/assets/img/team/fran.png",
       "description": "Samurai"
     }
   ]
