@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './about.routes';
 
 import { MaterialModule } from '@angular/material';
+import { TranslateModule } from 'ng2-translate';
 import { AboutComponent } from './components/about/about.component';
 import { FsUsersComponent } from './components/fs-users/fs-users.component';
 import { FsDialogComponent } from '../../shared/components/fs-dialog';
@@ -29,6 +30,9 @@ import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
     JsonpModule,
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
+    TranslateModule.forRoot()
+    // BrowserModule,
+    // FormsModule
   ]
 })
 
