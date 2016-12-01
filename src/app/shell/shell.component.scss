@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @font-face {
   font-family: 'Sansation';
@@ -81,7 +81,13 @@ app-shell {
     display:block;
     background-position: top center;
     md-toolbar {
-      background: transparent; color: #FFF;
+      background: transparent; 
+      color: #FFF;
+      font-weight:600;
+      letter-spacing:1px;
+      word-spacing:0.2em;
+      font-family: 'Sansation';
+      text-transform: uppercase;
     }
   }
   main {
@@ -188,7 +194,8 @@ span.active {
 
 .text-headline {
   letter-spacing:1px;
-  font-family:'Open Sans';
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600;
 }
 
 .text-body {
