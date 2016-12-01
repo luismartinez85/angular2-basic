@@ -39,6 +39,7 @@ export class FsYoutubeAPIComponent{
       disableClose: false
     });
     console.log('argumentos', arguments);
+    console.log(this.dialogRef);
     this.dialogRef.obj = arguments[0];
     this.dialogRef.obj.id.videoId = this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+this.dialogRef.obj.id.videoId);
     setTimeout( ()=>

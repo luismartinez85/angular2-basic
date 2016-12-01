@@ -5,12 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class FsUsersService {
 
-  // URL TO WEB API
   private mockURL:string = 'assets/mock-data/mockusers.json';
 
-  constructor (private http: Http) {
-    console.log(http);
-  }
+  constructor (private http: Http) {}
 
   search (): Observable<Response> {
     // TODO: Add error handling
