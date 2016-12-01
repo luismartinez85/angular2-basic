@@ -14,8 +14,7 @@ import { FsYoutubeAPIService } from './fs-youtube-api.service';
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class FsYoutubeAPIComponent implements OnInit {
-  @Input() title: string;
+export class FsYoutubeAPIComponent{
   dataYoutube: Array<any>;
   searchString: string = '';
   dialogRef: MdDialogRef<FsYoutubeDialog>;
@@ -26,12 +25,9 @@ export class FsYoutubeAPIComponent implements OnInit {
   }
 
   ngOnInit () {
-    this.fsyoutubeapiservice
-    .search()
-    .subscribe(
+    this.fsyoutubeapiservice.search().subscribe(
       data => {
         this.dataYoutube = data.items;
-        console.log(data);
     });
   }
 

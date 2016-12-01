@@ -249,7 +249,7 @@ module.exports = function (env) {
        */
       new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
 
-      new OfflinePlugin()
+      //new OfflinePlugin()
 
     ],
 

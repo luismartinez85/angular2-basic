@@ -14,7 +14,7 @@ export class FsUsersComponent {
   constructor() {}
 
   ngOnInit() {
-    console.log('asfasf', this.users);
+
 
   }
 

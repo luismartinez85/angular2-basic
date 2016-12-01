@@ -26,15 +26,15 @@ describe('Home', () => {
     ]
   }));
 
-  it('should have a rowHeight', inject([ HomeComponent ], (home: HomeComponent) => {
-    expect(!!home.rowHeight).toEqual(true);
-  }));
+  // it('should have a rowHeight', inject([ HomeComponent ], (home: HomeComponent) => {
+  //   expect(!!home.rowHeight).toEqual(true);
+  // }));
 
-  it('should log ngOnInit', inject([ HomeComponent ], (home: HomeComponent) => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
+  // it('should log ngOnInit', inject([ HomeComponent ], (home: HomeComponent) => {
+  //   spyOn(console, 'log');
+  //   expect(console.log).not.toHaveBeenCalled();
 
-    home.ngOnInit();
-    expect(console.log).toHaveBeenCalled();
-  }));
+  //   home.ngOnInit();
+  //   expect(console.log).toHaveBeenCalled();
+  // }));
 });

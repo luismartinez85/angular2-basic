@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // import { BrowserModule } from '@angular/platform-browser';
 // import { FormsModule } from '@angular/forms';
+import { routes } from './about.routes';
 
 import { MaterialModule } from '@angular/material';
 import { AboutComponent } from './components/about/about.component';
 import { FsUsersComponent } from './components/fs-users/fs-users.component';
-import { routes } from './about.routes';
 import { FsDialogComponent } from '../../shared/components/fs-dialog';
 import { FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
-
+import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube-api';
 import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
 import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog } from '../../shared/components/fs-youtube-api'; // import our pipe here
 

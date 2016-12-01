@@ -1,6 +1,3 @@
-/*
- * Angular 2 decorators and services
- */
 import { Component, ViewEncapsulation } from '@angular/core';
 
 /*
@@ -15,13 +12,4 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 
 export class ShellComponent {
-  title: string;
-
-  constructor() {
-    this.title = 'Hello';
-  }
-
-  ngOnInit() {
-  }
-
 }
