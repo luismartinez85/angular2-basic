@@ -34,11 +34,11 @@ import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog } from '../../shared/comp
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
     TranslateModule.forRoot()
+    // FormsModule
+    // BrowserModule,
+  ],
   entryComponents : [
     FsYoutubeDialog
-    // FormsModule
-  ],
-    // BrowserModule,
   ]
 
 })
