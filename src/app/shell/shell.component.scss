@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/css/fonts/webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+}
 
 html, body{
   height: 100%;
@@ -75,7 +81,13 @@ app-shell {
     display:block;
     background-position: top center;
     md-toolbar {
-      background: transparent; color: #FFF;
+      background: transparent; 
+      color: #FFF;
+      font-weight:600;
+      letter-spacing:1px;
+      word-spacing:0.2em;
+      font-family: 'Sansation';
+      text-transform: uppercase;
     }
   }
   main {
@@ -141,7 +153,6 @@ span.active {
 
 .footer-container{
 	position:relative;
-	left:0px;
 	width:100%;
 	height:auto;
 	background:#263238;
@@ -154,7 +165,7 @@ span.active {
 	justify-content: space-around;
 	flex:0 0 auto;
 	box-sizing:border-box;
-	margin-top:100px;
+	margin-top:170px;
   padding: 10px;
 
 }
@@ -166,7 +177,7 @@ span.active {
       box-sizing: border-box;
 }
 
-.link_extern { 
+.link_extern, p { 
 	color:white;
 	text-decoration:none;
 	font-family:'Roboto';
@@ -176,7 +187,6 @@ span.active {
 .social_logos {
 	display:flex;
 	flex-direction:row;
-	flex-flow:row wrap;
 	justify-content: space-around;
   padding-left:0px;
   padding-right:0px;
@@ -184,7 +194,8 @@ span.active {
 
 .text-headline {
   letter-spacing:1px;
-  font-family:'Open Sans';
+  font-family: 'Open Sans', sans-serif;
+  font-weight:600;
 }
 
 .text-body {
@@ -192,7 +203,7 @@ span.active {
   padding-right:0px;
 }
 
-li { list-style-type: none}
+li { list-style-type: none; font-size:0.9em}
 
 @media screen and (min-width: 480px) {
 
