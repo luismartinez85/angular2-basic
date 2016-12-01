@@ -37,7 +37,7 @@
     {
       "name": "Oscar Galea",
       "job": "Front Architect",
-      "image": "/assets/img/team/oscar.png",
+      "image": "/assets/img/team/oscar-min.png",
       "description": "Runner code",
       "github": "https://github.com/ogaleac"
     },
@@ -57,7 +57,7 @@
     {
       "name": "Francisco Quintero Japón",
       "job": "Front Architect",
-      "image": "/assets/img/team/fran.png",
+      "image": "/assets/img/team/fran-min.png",
       "description": "Samurai"
     }
   ]

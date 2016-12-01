@@ -6,7 +6,6 @@ describe('App', () => {
     browser.get('/#/');
   });
 
-
   it('should have a title', () => {
     let subject = browser.getTitle();
     let result  = 'Angular2 Basic';
@@ -19,8 +18,8 @@ describe('App', () => {
     expect(subject).toEqual(result);
   });
 
-  it('should have a component with classname grid-title', () => {
-    let subject = element(by.className('grid-title')).isPresent();
+  it('should have a component with classname fs-custom-grid-cards', () => {
+    let subject = element(by.css('fs-custom-grid-cards')).isPresent();
     let result  = true;
     expect(subject).toEqual(result);
   });
