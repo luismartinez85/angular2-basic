@@ -103,6 +103,10 @@ span.active {
   width: 400px;
 }
 
+.md-tab-body-wrapper {
+  overflow: visible!important;
+}
+
 .md-overlay-pane {
   .md-dialog-container {
     transition: all 0.4s ease;

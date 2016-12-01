@@ -13,7 +13,8 @@ import { FsDialogComponent } from '../../shared/components/fs-dialog';
 import { FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
 
 import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
-import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube-api'; // import our pipe here
+import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog } from '../../shared/components/fs-youtube-api'; // import our pipe here
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube
     FsYoutubeAPIComponent,
     FsTwitterAPIComponent,
     fsYoutubeApiPipeFilterSearch,
-    FsUsersComponent
+    FsUsersComponent,
+    FsYoutubeDialog
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,11 @@ import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube
     MaterialModule.forRoot(),
     // BrowserModule,
     // FormsModule
+  ],
+  entryComponents : [
+    FsYoutubeDialog
   ]
+
 })
 
 export class AboutModule {

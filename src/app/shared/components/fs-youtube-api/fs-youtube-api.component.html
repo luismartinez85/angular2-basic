@@ -1,8 +1,10 @@
-<h3>Our latest videos</h3>
-  <md-card>
-    <md-toolbar ><md-input [value]="searchString" (input)="searchString = $event.target.value" placeholder="Filter">
-</md-input></md-toolbar>
-  </md-card>
+<!--<h3>Our latest videos</h3>
+<md-card>
+  <md-toolbar >
+    <md-input [value]="searchString" (input)="searchString = $event.target.value" placeholder="Filter">
+  </md-input>
+  </md-toolbar>
+</md-card>
 <div class="flex-container">
 
   <div class="flex-element" *ngFor="let item of dataYoutube | fsYoutubeApiPipeFilterSearch:searchString; let i = index">
@@ -20,4 +22,30 @@
       </md-card>
     </a>
   </div>
-</div>
+</div>-->
+
+<!--<md-input [value]="searchString" (input)="searchString = $event.target.value" placeholder="Filter">
+</md-input>-->
+
+<md-card *ngFor="let item of dataYoutube | fsYoutubeApiPipeFilterSearch:searchString; let i = index">
+  <div *ngIf="item.id.videoId">
+    <span [style.background-image]="'url(' + item.snippet.thumbnails.high.url + ')'"></span>
+    <div>
+      <h3>
+        {{item.snippet.title}}
+      </h3>
+    </div>
+
+    <div class="border">
+      <button color="accent" md-button (click)="openDialog(item)">
+        <md-icon>movie</md-icon>
+        Watch
+      </button>
+    </div>
+  </div>
+
+</md-card>
+
+<button id="youtubeSearchFilter" color="secondary" md-fab>
+  <md-icon>search</md-icon>
+</button>
