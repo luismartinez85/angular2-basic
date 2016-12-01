@@ -3,7 +3,7 @@ import { Feature } from './feature';
 export let FEATURES: Feature[] = [
   { title: 'Mobile First',
     description: 'Designed for mobile phones first.',
-    code: 'div <span> width:50%;</span> {<span>@media screen and (min-width: 480px){<span>width: 100%;</span>}</span>}',
+    code: 'div  width:50%; { @media screen and (min-width: 480px){ width: 100%; } }',
     image: '',
     icon: 'phone_iphone'
   },

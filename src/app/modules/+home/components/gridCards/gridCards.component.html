@@ -1,9 +1,8 @@
-<md-list>
-  <md-list-item *ngFor="let element of elements">
-    <img md-list-avatar [src]="element.image" alt="...">
-    <h3 md-line> {{element.title}} </h3>
-    <p md-line>
-      <span> {{element.description}} </span>
-    </p>
-  </md-list-item>
-</md-list>
+<md-card *ngFor="let element of elements">
+  <h3>
+    <img [src]="element.image" [alt]="element.title">
+    {{element.title}}
+    <span>{{element.description}}</span>
+  </h3>
+
+</md-card>
