@@ -10,7 +10,6 @@ export class FsCustomGridCardsComponent {
 
   @Input() elements = [];
   @Input() title;
-  @Input() rowHeight;
 
   dialogRef: MdDialogRef<PizzaDialog>;
 
