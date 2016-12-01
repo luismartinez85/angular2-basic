@@ -10,7 +10,6 @@ export class FsCustomGridCardsComponent {
 
   @Input() elements = [];
   @Input() title;
-  @Input() rowHeight;
 
   dialogRef: MdDialogRef<PizzaDialog>;
 
@@ -24,10 +23,10 @@ export class FsCustomGridCardsComponent {
     this.dialogRef = this.dialog.open(PizzaDialog, {
       disableClose: false
     });
-    this.dialogRef.obj = arguments[0];
-    setTimeout( ()=>
-      this.dialogRef._overlayRef._pane.querySelector('.md-dialog-container').classList.add('openAnimated')
-    ,0);
+    // this.dialogRef.obj = arguments[0];
+    // setTimeout( ()=>
+    //   this.dialogRef._overlayRef._pane.querySelector('.md-dialog-container').classList.add('openAnimated')
+    // ,0);
     console.log('console', this);
     // console.log('JASF', this.dialogRef._overlayRef._pane);
     this.dialogRef.afterClosed().subscribe(result => {

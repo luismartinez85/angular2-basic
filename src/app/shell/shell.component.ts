@@ -17,14 +17,4 @@ import { TranslateService } from 'ng2-translate';
 })
 
 export class ShellComponent {
-  title: string;
-
-  constructor(translate: TranslateService) {
-
-    this.title = 'Hello';
-  }
-
-  ngOnInit() {
-  }
-
 }
