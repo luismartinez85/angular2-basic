@@ -11,7 +11,8 @@
     <h2>{{dialogData.obj.title}}</h2>
     <!--<img src="https://sharepointkunskap.files.wordpress.com/2013/06/mds_002.png" alt="">-->
     
-    <code [innerHTML]="dialogData.obj.code">
+    <code>
+        <pre [innerHTML]="dialogData.obj.code"></pre>
     </code>
 
     <p>{{dialogData.obj.description}}</p>

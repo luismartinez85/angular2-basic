@@ -37,6 +37,7 @@ export class FsTwitterAPIComponent implements OnInit {
           if (arguments[1] < 10)
             that.dataTwitter.push({avatar : img, tweet: text, date : date, author: tweetAuthor});
         });
+
     });
   }
 
