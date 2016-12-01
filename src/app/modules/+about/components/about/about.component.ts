@@ -16,8 +16,9 @@ export class AboutComponent {
   private dataUsers;
 
   constructor(private fsUsersService: FsUsersService, translate: MultiLanguageService){
-  }
     translate.initialize();
+  }
+    
   ngOnInit() {
     this.fsUsersService.search().subscribe(
       data => {
