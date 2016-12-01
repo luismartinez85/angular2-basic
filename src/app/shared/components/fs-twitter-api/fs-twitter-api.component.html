@@ -1,6 +1,6 @@
-<h3>Twitter API Example</h3>
+<!--<h3>Twitter API Example</h3>-->
 <!-- {{dataTwitter}} -->
-<div *ngIf="dataTwitter.length">
+<!--<div *ngIf="dataTwitter.length">
   <div *ngFor="let tw of dataTwitter">
     <md-card>
       <img src="{{tw.avatar}}" alt="" />
@@ -13,4 +13,28 @@
       <span>{{tw.date}}</span>
     </md-card>
   </div>
+</div>-->
+
+<div *ngIf="dataTwitter.length">
+
+  <div>
+    <h3>
+      Tweets
+    </h3>
+  </div>
+  <div *ngFor="let tw of dataTwitter">
+    <div>
+      <span [style.background-image]="'url(' + tw.avatar + ')'"></span>
+    </div>
+    <div>
+      <h3>
+        {{tw.author}} <span>- {{tw.date}}</span>
+      </h3>
+      <p>
+        {{tw.tweet}}
+      </p>
+    </div>
+
+  </div>
+
 </div>

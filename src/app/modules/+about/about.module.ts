@@ -14,6 +14,8 @@ import { FsDialogComponent } from '../../shared/components/fs-dialog';
 import { FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
 import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube-api';
 import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
+import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog } from '../../shared/components/fs-youtube-api'; // import our pipe here
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
     FsYoutubeAPIComponent,
     FsTwitterAPIComponent,
     fsYoutubeApiPipeFilterSearch,
-    FsUsersComponent
+    FsUsersComponent,
+    FsYoutubeDialog
   ],
   imports: [
     CommonModule,
@@ -31,9 +34,13 @@ import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
     TranslateModule.forRoot()
-    // BrowserModule,
     // FormsModule
+    // BrowserModule,
+  ],
+  entryComponents : [
+    FsYoutubeDialog
   ]
+
 })
 
 export class AboutModule {

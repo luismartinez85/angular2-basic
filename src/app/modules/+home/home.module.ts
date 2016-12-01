@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ExponentialStrengthPipe } from '../../shared/pipes'; // import our pipe here
+import { ExponentialStrengthPipe } from '../../shared/pipes';
 import { HomeComponent } from './components/home/home.component';
 import { GridCardsComponent } from './components/gridCards/gridCards.component';
 import { FsCustomGridCardsComponent, PizzaDialog } from './components/customGridCards/customGridCards.component';

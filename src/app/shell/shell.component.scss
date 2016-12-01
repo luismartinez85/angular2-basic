@@ -103,16 +103,21 @@ span.active {
   width: 400px;
 }
 
+.md-tab-body-wrapper, .md-tab-body {
+  overflow: visible!important;
+}
+
 .md-overlay-pane {
   .md-dialog-container {
     transition: all 0.4s ease;
-    height: 85vh;
-    width: 85vw;
+    height: 90vh;
+    width: 90vw;
     transform:scale(0.2);
     padding: 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background: #4DD0E1;
+    overflow: visible;
     &.openAnimated {
       transform: scale(1);
     }

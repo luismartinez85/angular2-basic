@@ -1,39 +1,97 @@
 fs-youtube-api {
-  md-input {
-    flex:1;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  * {
+    box-sizing: border-box;
   }
-  .flex-container {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    list-style: none;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-direction: row;
-  }
-
-  .flex-element {
-      flex: 0 0 100%;
+  md-card {
+    padding:0;
+    margin: 1em 0;
+    flex: 0 0 100%;
+    @media screen and (min-width: 480px) {
+      flex: 0 0 45%;
+      margin: 1em;
+    }
+    border-radius: 3px;
+    >div {
       display: flex;
-      min-width: 200px;
-      min-height: 150px;
       flex-direction: column;
-      box-sizing: border-box;
-      margin-bottom: 10px;
-      a {
-        text-decoration: none;
-      }
-      md-card-header {
-        padding-bottom: 1em;
-      }
+      justify-content: space-between;
       @media screen and (min-width: 480px) {
-        flex: 1 0 33%!important;
-        min-width: 200px;
-        min-height: 150px;
-        box-sizing: border-box;
-        margin-bottom: 5px;
+        min-height: 451px;
       }
+      >span {
+        display: block;
+        width: 100%;
+        flex: 0 0 230px;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #5c5c5c;
+      margin: 0px;
+      flex:1;
+    }
+    > div > div {
+      display: flex;
+      flex-direction: row;
+      padding: 32px 40px;
+      >div {
+        flex: 0 0 20%;
+      }
+      &.border {
+        border-top: 1px solid #eee;
+      }
+    }
   }
+  #youtubeSearchFilter {
+    top: -33px;
+    right: 0;
+    position: absolute;
+    color: #FFF;
+  }
+  // md-input {
+  //   flex:1;
+  // }
+  // .flex-container {
+  //   padding: 10px;
+  //   margin-top: 10px;
+  //   margin-bottom: 10px;
+  //   list-style: none;
+
+  //   display: flex;
+  //   flex-flow: row wrap;
+  //   justify-content: space-around;
+  //   flex-direction: row;
+  // }
+
+  // .flex-element {
+  //     flex: 0 0 100%;
+  //     display: flex;
+  //     min-width: 200px;
+  //     min-height: 150px;
+  //     flex-direction: column;
+  //     box-sizing: border-box;
+  //     margin-bottom: 10px;
+  //     a {
+  //       text-decoration: none;
+  //     }
+  //     md-card-header {
+  //       padding-bottom: 1em;
+  //     }
+  //     @media screen and (min-width: 480px) {
+  //       flex: 1 0 33%!important;
+  //       min-width: 200px;
+  //       min-height: 150px;
+  //       box-sizing: border-box;
+  //       margin-bottom: 5px;
+  //     }
+  // }
 }
