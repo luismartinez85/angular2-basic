@@ -1,3 +1,4 @@
+'use strict';
 
 const fs = require('fs');
 const helpers = require('./helpers');
@@ -40,7 +41,17 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
 /**
  * Extend Webpack Constants with Angular environment config
  */
-enviromentVars = helpers.extendAppConfig(enviromentVars,environment_config);
+let enviromentVars = {
+  'ENV': JSON.stringify(METADATA.ENV),
+  'HMR': METADATA.HMR,
+  'process.env': {
+    'ENV': JSON.stringify(METADATA.ENV),
+    'NODE_ENV': JSON.stringify(METADATA.ENV),
+    'HMR': METADATA.HMR
+  }
+};
+
+helpers.extendAppConfig(enviromentVars,environment_config);
 
 /**
  * Webpack configuration
@@ -133,15 +144,7 @@ module.exports = function (env) {
        * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
-      new DefinePlugin({
-        'ENV': JSON.stringify(METADATA.ENV),
-        'HMR': METADATA.HMR,
-        'process.env': {
-          'ENV': JSON.stringify(METADATA.ENV),
-          'NODE_ENV': JSON.stringify(METADATA.ENV),
-          'HMR': METADATA.HMR,
-        }
-      }),
+      new DefinePlugin(enviromentVars),
 
       /**
        * Plugin: UglifyJsPlugin

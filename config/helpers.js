@@ -22,7 +22,6 @@ function root(args) {
 function extendAppConfig(enviromentVars,environment_config){
   enviromentVars['ENVIRONMENT_CONFIG'] = {}; 
   for(var newVar  in environment_config){
-    console.log(newVar);  
     if(!enviromentVars.hasOwnProperty(newVar)){
       enviromentVars.ENVIRONMENT_CONFIG[newVar] = JSON.stringify(environment_config[newVar]);
     }
