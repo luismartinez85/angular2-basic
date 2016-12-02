@@ -1,12 +1,15 @@
-/**
- * @author: @AngularClass
- */
 
+const fs = require('fs');
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
+/**
+ * Application Configuration DEV Environment
+ */
+let appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
+let environment_config = appconfig.environment_constants['dev']['EnvironmentConfig'];
 /**
  * Webpack Plugins
  */
@@ -27,6 +30,20 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   ENV: ENV,
   HMR: HMR
 });
+
+/**
+ * Environment Variables
+ */
+let enviromentVars = {
+  'ENV': JSON.stringify(METADATA.ENV),
+  'HMR': METADATA.HMR,
+  'process.env': {
+    'ENV': JSON.stringify(METADATA.ENV),
+    'NODE_ENV': JSON.stringify(METADATA.ENV),
+    'HMR': METADATA.HMR
+  }
+};
+enviromentVars = helpers.extendAppConfig(enviromentVars,environment_config);
 
 /**
  * Webpack configuration
@@ -87,6 +104,8 @@ module.exports = function (options) {
 
     plugins: [
 
+
+
       /**
        * Plugin: DefinePlugin
        * Description: Define free variables.
@@ -97,15 +116,17 @@ module.exports = function (options) {
        * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
        */
       // NOTE: when adding more properties, make sure you include them in custom-typings.d.ts
-      new DefinePlugin({
-        'ENV': JSON.stringify(METADATA.ENV),
-        'HMR': METADATA.HMR,
-        'process.env': {
-          'ENV': JSON.stringify(METADATA.ENV),
-          'NODE_ENV': JSON.stringify(METADATA.ENV),
-          'HMR': METADATA.HMR,
-        }
-      }),
+      new DefinePlugin( enviromentVars ),
+      // {
+      //   'ENV': JSON.stringify(METADATA.ENV),
+      //   'HMR': METADATA.HMR,
+      //   'process.env': {
+      //     'ENV': JSON.stringify(METADATA.ENV),
+      //     'NODE_ENV': JSON.stringify(METADATA.ENV),
+      //     'HMR': METADATA.HMR
+      //   },
+      //   'myurl':'http://myurl.com'
+      // }),
 
       /**
        * Plugin: NamedModulesPlugin (experimental)

@@ -1,15 +1,27 @@
-.no-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 
-  color: white;
+no-content {
+  position:relative;
+  left:0px;
+
+  .no-content__message {
+    color: white;
+    font-size: 6em;
+    margin-top: 0px;
+    margin-bottom: 300px;
+  }
+
+  p {
+    color: black;
+    font-size:3em;
+    margin-bottom: 250px;
+  }
+
 }
 
-.no-content__message {
-  color: white;
-}
+
+
+
+
+
 
 
