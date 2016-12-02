@@ -11,11 +11,4 @@ export class FsUsersComponent {
   @Input() title;
   @Input() rowHeight;
 
-  constructor() {}
-
-  ngOnInit() {
-    console.log('asfasf', this.users);
-
-  }
-
 }

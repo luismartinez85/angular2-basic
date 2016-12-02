@@ -6,21 +6,20 @@ describe('App', () => {
     browser.get('/#/');
   });
 
-
   it('should have a title', () => {
     let subject = browser.getTitle();
     let result  = 'Angular2 Basic';
     expect(subject).toEqual(result);
   });
 
-  it('should have header', () => {
-    let subject = element(by.css('h1')).isPresent();
+  it('should have Toolbar', () => {
+    let subject = element(by.css('md-toolbar')).isPresent();
     let result  = true;
     expect(subject).toEqual(result);
   });
 
-  it('should have <home>', () => {
-    let subject = element(by.css('core home')).isPresent();
+  it('should have a component with classname fs-custom-grid-cards', () => {
+    let subject = element(by.css('fs-custom-grid-cards')).isPresent();
     let result  = true;
     expect(subject).toEqual(result);
   });
