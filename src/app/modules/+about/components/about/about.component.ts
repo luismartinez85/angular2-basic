@@ -15,11 +15,15 @@ import { MultiLanguageService } from '../../../../shared/services/multiLanguage.
 export class AboutComponent {
   private dataUsers;
 
-  constructor(private fsUsersService: FsUsersService, translate: MultiLanguageService){
-    translate.initialize();
+  constructor(
+    private fsUsersService: FsUsersService,
+    private translate: MultiLanguageService){
+
   }
-    
+
   ngOnInit() {
+    this.translate.initialize();
+
     this.fsUsersService.search().subscribe(
       data => {
         this.dataUsers = data;
