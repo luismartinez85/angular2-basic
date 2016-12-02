@@ -8,8 +8,8 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 /**
  * Application Configuration DEV Environment
  */
-let appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
-let environment_config = appconfig.environment_constants['dev']['EnvironmentConfig'];
+const appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
+const environment_config = appconfig.environment_constants['dev']['EnvironmentConfig'];
 /**
  * Webpack Plugins
  */
@@ -34,7 +34,7 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
 /**
  * Environment Variables
  */
-let enviromentVars = {
+const enviromentVars = {
   'ENV': JSON.stringify(METADATA.ENV),
   'HMR': METADATA.HMR,
   'process.env': {
