@@ -11,19 +11,14 @@ import { FsTwitterAPIService } from './fs-twitter-api.service';
   encapsulation: ViewEncapsulation.None,
 })
 
-export class FsTwitterAPIComponent implements OnInit {
-  @Input() title: string;
+export class FsTwitterAPIComponent {
   dataTwitter: Array<any> = [];
   searchString: string = '';
 
-  constructor(private fstwitterapiservice: FsTwitterAPIService, private _ngZone: NgZone, private lc: ApplicationRef) {
-    // this.name = 'hola';
-  }
+  constructor(private fstwitterapiservice: FsTwitterAPIService) {}
 
   ngOnInit () {
-    this.fstwitterapiservice
-    .search()
-    .subscribe(
+    this.fstwitterapiservice.search().subscribe(
       data => {
         let div = document.createElement('div');
         div.innerHTML = data.body;
@@ -37,20 +32,6 @@ export class FsTwitterAPIComponent implements OnInit {
           if (arguments[1] < 10)
             that.dataTwitter.push({avatar : img, tweet: text, date : date, author: tweetAuthor});
         });
-    });
-  }
-
-  ngOnChanges () {
-  }
-
-  openContent () {
-    console.log('click sexy!');
-  }
-
-  urlify(text) {
-    let urlRegex = /(https?:\/\/[^\s]+)/g;
-    return text.replace(urlRegex, function(url) {
-        return '<a href="' + url + '">' + url + '</a>';
     });
   }
 }

@@ -1,20 +1,42 @@
-// import {
-//   inject,
-//   TestBed
-// } from '@angular/core/testing';
-//
+// import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+// import { By }              from '@angular/platform-browser';
+// import { DebugElement }    from '@angular/core';
+// import { MaterialModule } from '@angular/material';
+
 // // Load the implementations that should be tested
-// import { CoreComponent } from './core.component';
-//
-// describe('App', () => {
+// import { FsYoutubeAPIComponent } from './fs-youtube-api.component';
+
+// let component:  FsYoutubeAPIComponent;
+// let fixture:    ComponentFixture<FsYoutubeAPIComponent>;
+// let debug:      DebugElement;
+// let element:    HTMLElement;
+
+// describe('Youtube API component', () => {
 //   // provide our implementations or mocks to the dependency injector
-//   beforeEach(() => TestBed.configureTestingModule({
-//     providers: [
-//       CoreComponent
-//     ]}));
-//
-//   it('should have a url', inject([ CoreComponent ], (app: CoreComponent) => {
-//     expect(app.url).toEqual('https://twitter.com/AngularClass');
-//   }));
-//
+//   beforeEach(() => {
+//      TestBed.configureTestingModule({
+//       imports: [
+//         MaterialModule.forRoot()
+//       ],
+//       declarations: [ 
+//         FsYoutubeAPIComponent 
+//       ]
+//     })
+//     .compileComponents(); // compile template and css
+
+//     fixture = TestBed.createComponent(FsYoutubeAPIComponent);
+
+//     component = fixture.componentInstance; // ShellComponent test instance
+
+//     // query for the first <a> by CSS element selector
+//     debug = fixture.debugElement.query(By.css('a'));
+
+//     element = debug.nativeElement;
+//   });
+
+//   it('should have first route called Home',() => {
+//     fixture.detectChanges();
+//     expect(element.textContent).toContain('Home');
+//   });
+
 // });

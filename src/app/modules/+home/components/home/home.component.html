@@ -1,4 +1,4 @@
-<h3>Home</h3>
+<h3>{{'HOME.TITLE' | translate }}</h3>
 
 <md-tab-group>
   <md-tab>
@@ -6,13 +6,13 @@
       <span class="text">Features</span>
       <span class="icon"><md-icon>fingerprint</md-icon></span>
     </template>
-    <fs-custom-grid-cards [elements]="features" [rowHeight]="rowHeight"></fs-custom-grid-cards>
+    <fs-custom-grid-cards [elements]="features"></fs-custom-grid-cards>
   </md-tab>
   <md-tab>
     <template md-tab-label>
       <span class="text">Technologies</span>
       <span class="icon"><md-icon>code</md-icon></span>
     </template>
-    <fs-grid-cards [elements]="techs" [rowHeight]="rowHeight"></fs-grid-cards>
+    <fs-grid-cards [elements]="techs"></fs-grid-cards>
   </md-tab>
 </md-tab-group>

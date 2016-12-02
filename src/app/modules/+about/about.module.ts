@@ -2,18 +2,17 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-// import { BrowserModule } from '@angular/platform-browser';
-// import { FormsModule } from '@angular/forms';
+import { routes } from './about.routes';
 
 import { MaterialModule } from '@angular/material';
+import { TranslateModule } from 'ng2-translate';
 import { AboutComponent } from './components/about/about.component';
 import { FsUsersComponent } from './components/fs-users/fs-users.component';
-import { routes } from './about.routes';
 import { FsDialogComponent } from '../../shared/components/fs-dialog';
 import { FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
-
 import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
-import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube-api'; // import our pipe here
+import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog } from '../../shared/components/fs-youtube-api'; // import our pipe here
+
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube
     FsYoutubeAPIComponent,
     FsTwitterAPIComponent,
     fsYoutubeApiPipeFilterSearch,
-    FsUsersComponent
+    FsUsersComponent,
+    FsYoutubeDialog
   ],
   imports: [
     CommonModule,
@@ -30,9 +30,12 @@ import { fsYoutubeApiPipeFilterSearch } from '../../shared/components/fs-youtube
     JsonpModule,
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
-    // BrowserModule,
-    // FormsModule
+    TranslateModule.forRoot()
+  ],
+  entryComponents : [
+    FsYoutubeDialog
   ]
+
 })
 
 export class AboutModule {

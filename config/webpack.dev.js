@@ -186,8 +186,7 @@ module.exports = function (options) {
         aggregateTimeout: 300,
         poll: 1000,
         ignored: /node_modules/
-      },
-      outputPath: helpers.root('dist')
+      }
     },
 
     /*
