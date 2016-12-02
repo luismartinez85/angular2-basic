@@ -26,19 +26,21 @@ export class HomeComponent {
   constructor(
     private featuresService: FeaturesService, 
     private techsService: TechsService, 
-    translate: MultiLanguageService,
-    environmentConfig: EnvironmentConfigService) {
-    // initialize translate service
-    translate.initialize();
-    /* if you want change language, you need to call method of translateService 
-      example: translate.setLanguage('es');
-    */
+    private translate: MultiLanguageService,
+    private environmentConfig: EnvironmentConfigService) {
+
     console.log(environmentConfig.api);
    }
 
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
     this.techs = this.techsService.getTechs();
-  }
+    // initialize translate service
+    this.translate.initialize();
+    /* if you want change language, you need to call method of translateService 
+      example: 
+      this.translate.setLanguage('es');
+    */
+    }
 
 }
