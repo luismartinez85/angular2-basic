@@ -50,7 +50,7 @@ declare module '*';
 declare var ENV: string;
 declare var HMR: boolean;
 declare var System: SystemJS;
-declare var ENVVIRONMENT_CONFIG: any;
+declare var ENVIRONMENT_CONFIG: any;
 
 interface SystemJS {
   import: (path?: string) => Promise<any>;
@@ -61,7 +61,7 @@ interface GlobalEnvironment {
   HMR: boolean;
   SystemJS: SystemJS;
   System: SystemJS;
-  ENVVIRONMENT_CONFIG: any;
+  ENVIRONMENT_CONFIG: any;
 }
 
 interface Es6PromiseLoader {
