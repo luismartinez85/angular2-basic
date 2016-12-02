@@ -19,6 +19,18 @@ function root(args) {
   return path.join.apply(path, [ROOT].concat(args));
 }
 
+function extendAppConfig(enviromentVars,environment_config){
+  enviromentVars['ENVVIRONMENT_CONFIG'] = {}; 
+  for(var newVar  in environment_config){
+    console.log(newVar);  
+    if(!enviromentVars.hasOwnProperty(newVar)){
+      enviromentVars.ENVVIRONMENT_CONFIG[newVar] = JSON.stringify(environment_config[newVar]);
+    }
+  }
+  return enviromentVars;
+}
+
 exports.hasProcessFlag = hasProcessFlag;
 exports.isWebpackDevServer = isWebpackDevServer;
 exports.root = root;
+exports.extendAppConfig = extendAppConfig;

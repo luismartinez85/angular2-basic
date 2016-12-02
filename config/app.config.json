@@ -2,12 +2,14 @@
   "environment_constants": {
     "dev": {
       "EnvironmentConfig": {
-        "api": "http://localhost/"
+        "api": "http://localhost/",
+        "api1": "http://localhost/"
       }
     },
     "pro": {
       "EnvironmentConfig": {
-        "api": "https://api.production.com/"
+        "api": "https://api.production.com/",
+        "api1": "http://localhost/"
       }
     }
   },

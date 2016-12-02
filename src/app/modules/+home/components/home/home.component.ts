@@ -26,7 +26,7 @@ export class HomeComponent {
   rowHeight: string = '200px';
 
   constructor(private featuresService: FeaturesService, private techsService: TechsService) {
-    console.log('out home');
+    console.log('out home' + ENVVIRONMENT_CONFIG.api );
    }
 
   ngOnInit() {
