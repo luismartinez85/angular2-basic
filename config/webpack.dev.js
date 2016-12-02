@@ -1,3 +1,4 @@
+'use strict';
 
 const fs = require('fs');
 const helpers = require('./helpers');
@@ -34,7 +35,7 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
 /**
  * Environment Variables
  */
-const enviromentVars = {
+let enviromentVars = {
   'ENV': JSON.stringify(METADATA.ENV),
   'HMR': METADATA.HMR,
   'process.env': {
@@ -43,7 +44,8 @@ const enviromentVars = {
     'HMR': METADATA.HMR
   }
 };
-enviromentVars = helpers.extendAppConfig(enviromentVars,environment_config);
+
+helpers.extendAppConfig(enviromentVars,environment_config);
 
 /**
  * Webpack configuration
