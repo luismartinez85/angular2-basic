@@ -6,16 +6,15 @@
         <span>{{element.description}}</span>-->
         <button style="right: 15px; position: absolute;" md-icon-button (click)="dialogRef.close()"><md-icon>close</md-icon></button>
 </md-toolbar>
-<div style="padding:1em;">
+<div style="padding:1em;" *ngIf="dialogData">
 
-    <h2>{{dialogData.obj.title}}</h2>
-    <!--<img src="https://sharepointkunskap.files.wordpress.com/2013/06/mds_002.png" alt="">-->
+    <h2>{{dialogData.title}}</h2>
     
     <code>
-        <pre [innerHTML]="dialogData.obj.code"></pre>
+        <pre [innerHTML]="dialogData.code"></pre>
     </code>
 
-    <p>{{dialogData.obj.description}}</p>
+    <p>{{dialogData.description}}</p>
 
 </div>
 <!--<button type="button" (click)="dialogRef.close('yes')">Yes</button>

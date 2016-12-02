@@ -9,9 +9,8 @@ import { TranslateModule } from 'ng2-translate';
 import { AboutComponent } from './components/about/about.component';
 import { FsUsersComponent } from './components/fs-users/fs-users.component';
 import { FsDialogComponent } from '../../shared/components/fs-dialog';
-import { FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
 import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
-import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog } from '../../shared/components/fs-youtube-api'; // import our pipe here
+import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
 
 
 @NgModule({

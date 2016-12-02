@@ -4,7 +4,8 @@ import { RouterModule } from '@angular/router';
 import { ExponentialStrengthPipe } from '../../shared/pipes';
 import { HomeComponent } from './components/home/home.component';
 import { GridCardsComponent } from './components/gridCards/gridCards.component';
-import { FsCustomGridCardsComponent, PizzaDialog } from './components/customGridCards/customGridCards.component';
+import { FsCustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
+import { PizzaDialog } from './components/customGridCards/customGridCardsDialog.component';
 
 import { routes } from './home.routes';
 import  { ShellModule } from '../../shell';
