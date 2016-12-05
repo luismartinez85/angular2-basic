@@ -23,16 +23,16 @@ What you need to run this app:
 > If you have `nvm` installed, which is highly recommended (`brew install nvm`) you can do a `nvm install --lts && nvm use` in `$` to run with the latest Node LTS. You can also have this `zsh` done for you [automatically](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file) 
 
 Once you have those, you should install these globals with `yarn install --global`:
-* `webpack` (`yarn install --global webpack`)
-* `webpack-dev-server` (`yarn install --global webpack-dev-server`)
-* `karma` (`yarn install --global karma-cli`)
-* `protractor` (`yarn install --global protractor`)
-* `typescript` (`yarn install --global typescript`)
+* `webpack` (`yarn add global webpack`)
+* `webpack-dev-server` (`yarn global add webpack-dev-server`)
+* `karma` (`yarn add --global karma-cli`)
+* `protractor` (`yarn add global protractor`)
+* `typescript` (`yarn add global typescript`)
 
 ## Installing
 * `fork` this repo
 * `clone` your fork
-* `yarn install webpack-dev-server rimraf webpack -g` to install required global dependencies
+* `yarn global add webpack-dev-server rimraf webpack ` to install required global dependencies
 * `yarn install` to install all dependencies or `yarn`
 * `yarn run serve` to start the dev server in another tab
 
