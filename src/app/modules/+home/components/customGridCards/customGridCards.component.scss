@@ -1,11 +1,14 @@
 fs-custom-grid-cards {
-  padding: 1em;
+  padding: 0em;
   display: block;
+  
   md-card {
     padding:0;
     margin: 1em;
     border-radius: 3px;
-    padding:32px;
+    padding:20px;
+    margin-left:0;
+    width:96%!important;
 
     .feature_title {
       color:black;
@@ -20,16 +23,17 @@ fs-custom-grid-cards {
     .feature_description {
       color:#333;
       font-family:'Roboto';
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ddd;
       font-size:1.1em;
       padding-bottom: 32px;
       margin-bottom: 0px;
     }
 
     .more {
-      padding:5px;
+      padding: 0px;
       text-align: right;
-      height: 0px;
+      height: 10px;
+      padding-bottom: 5px;
     }
 
   }

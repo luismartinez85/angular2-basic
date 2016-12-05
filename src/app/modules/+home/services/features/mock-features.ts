@@ -38,7 +38,7 @@ export let FEATURES: Feature[] = [
     icon: 'grain'
   },
   { title: 'E2E',
-    description: 'Reprehenderit laboris nisi exercitation eu et eiusmod.',
+    description: 'A methodology used to test whether the flow of an application is performing as designed from start to finish.',
     code: '',
     image: '',
     icon: 'touch_app'
