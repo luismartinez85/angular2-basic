@@ -41,12 +41,15 @@ home {
     text-shadow: 2px 2px #000000
   }
 
-  md-tab-body-wrapper {
+  .md-tab-body-wrapper {
     margin-top:50px;
   }
+  
   .md-tab-header {
     border-bottom: 0px;
     color: #FFF;
+    margin-top:33px;
+    background:rgba(255, 255, 255, 0.1);
     .md-tab-label {
       opacity: 1;
       position: relative;
