@@ -10,6 +10,7 @@ home {
     width:146px;
     height:157px;
     margin-top: -80px;
+    margin-left: 150px;
   }
 
   .home_slogan {
@@ -20,7 +21,7 @@ home {
     letter-spacing: 1px;
     word-wrap: normal;
     word-spacing: .15em;
-    margin-left: 190px;
+    margin-left: 330px;
     margin-top: -46px;
     text-shadow: 2px 2px #000000
 
@@ -34,7 +35,7 @@ home {
     font-family: Sansation;
     line-height: 56px;
     margin-top: -140px;
-    margin-left: 190px;
+    margin-left: 330px;
     width: 575px;
     word-spacing: 0.3em;
     word-wrap: normal;
@@ -53,6 +54,8 @@ home {
     .md-tab-label {
       opacity: 1;
       position: relative;
+      font-size: 1.1em;
+    letter-spacing: 0.040em;
     }
     .text {
       padding-right: 10px;

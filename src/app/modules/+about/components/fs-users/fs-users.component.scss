@@ -30,7 +30,8 @@ fs-users {
       min-width: 200px;
       min-height: auto;
       box-sizing: border-box;
-      margin-bottom: 10px;
+      margin: 0;
+      margin-bottom: 0.5em;
       md-card-title-group {
         flex: 1;
       }
@@ -50,7 +51,8 @@ fs-users {
         min-width: 200px;
         min-height: auto;
         box-sizing: border-box;
-        margin-bottom: 5px;
+        margin: 0;
+        margin-bottom: 0.5em;
       }
   }
 }

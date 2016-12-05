@@ -15,9 +15,12 @@ about {
   .md-tab-header {
     border-bottom: 0px;
     color: #FFF;
+    background:rgba(255, 255, 255, 0.1);
     .md-tab-label {
       opacity: 1;
       position: relative;
+      font-size:1.1em;
+      letter-spacing: 0.03;
     }
     .text {
       padding-right: 10px;
