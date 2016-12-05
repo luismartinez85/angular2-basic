@@ -43,31 +43,48 @@
 // }
 
 fs-grid-cards {
-  padding: 1em;
-  display: block;
+    padding: 1em;
+    display: block;
+    margin-top: 50px;
+
+  .title_tech {
+    margin-top:.20px;
+    margin-left:20px;
+    width:600px;
+    color:black;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight:bold;
+    font-size: 1.5em;
+    word-spacing: 0.2em;
+
+  }
+
+  .description_tech {
+    display: block;
+    font-size: 1.1em;
+    line-height: 26px;
+    margin-left: 160px;
+    margin-top: -70px;
+  }
+
+  .logo_tech {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border:0px solid white;
+    margin-top:20px;
+  }
+
   md-card {
+    display: flex;
+    flex-wrap: wrap;
     padding:0;
-    margin: 1em;
+    padding-top:20px;
+    margin: 1.5em;
     border-radius: 3px;
-    > h3 {
-      font-size: 24px;
-      line-height: 36px;
-      font-weight: 400;
-      border-bottom: 1px solid #eee;
-      color: #5c5c5c;
-      padding:32px 40px;
-      margin-bottom: 0px;
-      span {
-        display: block;
-        font-size: 0.7em;
-        line-height: 26px;
-      }
-      img {
-        width: 36px;
-        margin-right: 5px;
-        margin-bottom: -6px;
-      }
-    }
+
     > div {
       padding:32px 40px;
     }

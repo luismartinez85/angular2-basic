@@ -5,13 +5,44 @@ home {
   flex-direction: column;
   padding: 1em;
   max-width: 1000px;
-  >h3 {
+
+  .logo_angular {
+    width:146px;
+    height:157px;
+    margin-top: -80px;
+  }
+
+  .home_slogan {
+
+    font-size: 1.80em;
+    color: white;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    word-wrap: normal;
+    word-spacing: .15em;
+    margin-left: 190px;
+    margin-top: -46px;
+    text-shadow: 2px 2px #000000
+
+  }
+
+  .home_title {
     color: #FFF;
-    letter-spacing: -0.04em;
-    font-size: 48px;
-    font-weight: 300;
-    line-height: 56px; 
-    margin: 0.52em 0;
+    text-transform: uppercase;
+    font-size: 3.35em;
+    font-weight: 600;
+    font-family: Sansation;
+    line-height: 56px;
+    margin-top: -140px;
+    margin-left: 190px;
+    width: 575px;
+    word-spacing: 0.3em;
+    word-wrap: normal;
+    text-shadow: 2px 2px #000000
+  }
+
+  md-tab-body-wrapper {
+    margin-top:50px;
   }
   .md-tab-header {
     border-bottom: 0px;

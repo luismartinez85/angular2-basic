@@ -1,16 +1,18 @@
-<h3>{{'HOME.TITLE' | translate }}</h3>
+<img class="logo_angular" src="./assets/img/angular-logo.png">
+<h3 class="home_title" >{{'HOME.TITLE' | translate }}</h3>
+<h4 class="home_slogan">{{'HOME.SLOGAN' | translate }}</h4>
 
 <md-tab-group>
   <md-tab>
     <template md-tab-label>
-      <span class="text">Features</span>
+      <span class="menu_option">Features</span>
       <span class="icon"><md-icon>fingerprint</md-icon></span>
     </template>
     <fs-custom-grid-cards [elements]="features"></fs-custom-grid-cards>
   </md-tab>
   <md-tab>
     <template md-tab-label>
-      <span class="text">Technologies</span>
+      <span class="menu_option">Technologies</span>
       <span class="icon"><md-icon>code</md-icon></span>
     </template>
     <fs-grid-cards [elements]="techs"></fs-grid-cards>
