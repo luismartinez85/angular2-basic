@@ -162,11 +162,25 @@ span.active {
 
 /********** FOOTER *********************************************************************/
 
+.core-layout__main {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: -175px; 
+}
+.core-layout__main:after {
+  content: "";
+  display: block;
+}
+.footer-container, .core-layout__main:after {
+  /* .push must be the same height as footer */
+	height: 195px; 
+}
+
+
 
 .footer-container{
-	position:sticky;
+	position:relative;
 	width:100%;
-	height:auto;
 	background:#263238;
 	font-family:"Roboto";
 	font-size:1em;
