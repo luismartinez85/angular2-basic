@@ -80,6 +80,7 @@ app-shell {
     background-size: cover;
     display:block;
     background-position: top center;
+
     md-toolbar {
       background: transparent; 
       color: #FFF;
@@ -90,6 +91,17 @@ app-shell {
       text-transform: uppercase;
     }
   }
+
+  .developed_frontstack {
+    position:absolute;
+    right:30px;
+    top:0px;
+    color:#ddd;
+    font-family:'Roboto';
+    text-transform: none;
+    font-size:0.7em;
+  }
+
   main {
     margin: -170px 0;
     flex-direction: row;
@@ -152,7 +164,7 @@ span.active {
 
 
 .footer-container{
-	position:relative;
+	position:sticky;
 	width:100%;
 	height:auto;
 	background:#263238;
