@@ -4,10 +4,9 @@
 @font-face {
   font-family: 'Sansation';
   src: url('./assets/fonts/Sansation_Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
-
 }
 
-html, body{
+html, body {
   height: 100%;
   font-family: 'Roboto', Helvetica, sans-serif;
   width: 100%;
@@ -170,16 +169,16 @@ span.active {
   /* equal to footer height */
 	margin-bottom: -175px; 
 }
+
 .core-layout__main:after {
   content: "";
   display: block;
 }
+
 .footer-container, .core-layout__main:after {
   /* .push must be the same height as footer */
 	height: 195px; 
 }
-
-
 
 .footer-container{
 	position:relative;
@@ -196,6 +195,7 @@ span.active {
 	box-sizing:border-box;
 	margin-top:170px;
   padding: 10px;
+  margin: 0px;
 
 }
 
@@ -244,6 +244,7 @@ span.active {
 
 .flex-column.five {
     flex: 0 0 18%;
+    color:#fff;
 
     @media screen and (min-width: 480px) {
       flex: 0 0 18%;
@@ -252,7 +253,7 @@ span.active {
 }
 
 .link_extern, .text-body p { 
-	color:white;
+	color:#fff;
 	text-decoration:none;
 	font-family:'Roboto';
   font-size:1em;
