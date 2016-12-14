@@ -15,7 +15,6 @@ about {
   .md-tab-header {
     border-bottom: 0px;
     color: #FFF;
-    background:rgba(255, 255, 255, 0.1);
     .md-tab-label {
       opacity: 1;
       position: relative;
@@ -40,7 +39,9 @@ about {
   }
 
   .md-tab-body-wrapper {
-    margin-top:80px;
     margin-bottom:80px;
+    md-tab-body.md-tab-body-active {
+      overflow: visible;
+    }
   }
 }

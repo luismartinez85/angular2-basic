@@ -23,7 +23,7 @@ app-shell {
   flex-direction: row;
   md-sidenav {
     width: 300px;
-    >span {
+    .sidenavHeader {
       background: url('/assets/img/sidenav.png');
       width: 100%;
       height: 240px;
@@ -57,7 +57,7 @@ app-shell {
         font-size: 5em!important;
       }
     }
-    >div {
+    .sidenavList {
       display: flex;
       flex-direction: column;
       a {
@@ -107,6 +107,9 @@ app-shell {
     flex-direction: row;
     display: flex;
     justify-content: center;
+    .md-tab-body-content {
+      transition: all 0 ease;
+    }
   }
 }
 span.app-action {
