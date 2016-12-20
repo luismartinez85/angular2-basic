@@ -1,8 +1,8 @@
 <md-card *ngFor="let element of elements">
   <h3 class="feature_title">
-    {{element.title}}
+    {{element.title}} | <span class="feature_description">{{element.description}}</span>
   </h3>
-  <p class="feature_description">{{element.description}}</p>
+  
   <div class="more">
     <button color="accent" md-button (click)="openDialog(element)">
       <md-icon>web_asset</md-icon>

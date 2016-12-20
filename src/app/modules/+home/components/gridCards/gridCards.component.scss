@@ -45,7 +45,7 @@
 fs-grid-cards {
     padding: 0;
     display: block;
-    margin-top: -50px;
+    margin-top: 0px;
 
   .title_tech {
     margin-top:.20px;
@@ -53,7 +53,7 @@ fs-grid-cards {
     width:600px;
     color:black;
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
     font-weight:bold;
     font-size: 1.5em;
@@ -63,10 +63,11 @@ fs-grid-cards {
 
   .description_tech {
     display: block;
-    font-size: 1.1em;
+    font-size: 1.5em;
     line-height: 26px;
     margin-left: 160px;
     margin-top: -70px;
+    font-weight:500;
   }
 
   .logo_tech {

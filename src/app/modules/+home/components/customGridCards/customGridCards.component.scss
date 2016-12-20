@@ -13,27 +13,31 @@ fs-custom-grid-cards {
     .feature_title {
       color:black;
       text-transform: uppercase;
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Roboto', sans-serif;
       letter-spacing: 1px;
       font-weight:bold;
       font-size: 1.5em;
       word-spacing: 0.2em;
+
     }
 
     .feature_description {
-      color:#333;
+      color:#777;
       font-family:'Roboto';
-      border-bottom: 1px solid #ddd;
-      font-size:1.1em;
+      font-size:1em;
       padding-bottom: 32px;
       margin-bottom: 0px;
+      text-transform: lowercase;
+      font-weight:500!important;
+      letter-spacing:0px;
     }
 
     .more {
       padding: 0px;
-      text-align: right;
+      text-align: left;
       height: 10px;
-      padding-bottom: 5px;
+      padding-bottom: 7px;
+      border-top: 1px solid #ddd;
     }
 
   }
