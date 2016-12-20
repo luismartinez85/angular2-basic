@@ -2,8 +2,8 @@ import { Feature } from './feature';
 
 export let FEATURES: Feature[] = [
   { title: 'Mobile First',
-    description: 'Designed for mobile phones first.',
-    code: 'div  width:50%; { @media screen and (min-width: 480px){ width: 100%; } }',
+    description: 'Designed for mobile phones first. By starting mobile first with your responsive website you are able to make the tough decisions about the content. Mobile first often lends itself to a linear layout model, although this is a general truth and not necessarily a rule',
+    code: '',
     image: '',
     icon: 'phone_iphone'
   },

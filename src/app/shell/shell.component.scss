@@ -86,8 +86,7 @@ app-shell {
       font-weight:600;
       letter-spacing:1px;
       word-spacing:0.2em;
-      font-family: 'Sansation';
-      text-transform: uppercase;
+      font-family: 'Roboto';
     }
   }
 
@@ -142,7 +141,7 @@ span.active {
     padding: 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: #4DD0E1;
+    background: #ffffff;
     overflow: visible;
     &.openAnimated {
       transform: scale(1);
@@ -150,7 +149,7 @@ span.active {
     md-toolbar {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      background: #26C6DA;
+      background: #999;
     }
     code {
       span {

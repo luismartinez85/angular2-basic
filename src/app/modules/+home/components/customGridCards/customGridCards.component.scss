@@ -1,6 +1,7 @@
 fs-custom-grid-cards {
   padding: 0em;
   display: block;
+  margin-bottom:150px;
   
   md-card {
     padding:0;
@@ -24,7 +25,7 @@ fs-custom-grid-cards {
     .feature_description {
       color:#777;
       font-family:'Roboto';
-      font-size:1em;
+      font-size:0.9em;
       padding-bottom: 32px;
       margin-bottom: 0px;
       text-transform: lowercase;
