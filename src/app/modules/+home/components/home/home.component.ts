@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+//service is a alias of /src/app/shared/services
+import { MultiLanguageService } from 'services/multiLanguage.service';
+import { EnvironmentConfigService } from 'services/environmentConfig.service.ts';
+
 import { Feature } from '../../services/features/feature';
 import { FeaturesService } from '../../services/features/features.service';
 import { Tech } from '../../services/techs/tech';
 import { TechsService } from '../../services/techs/techs.service';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage.service';
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig.service';
+
 
 @Component({
 
@@ -25,7 +28,7 @@ export class HomeComponent {
 
   constructor(
     private featuresService: FeaturesService, 
-    private techsService: TechsService, 
+    private techsService: TechsService,
     private translate: MultiLanguageService,
     private environmentConfig: EnvironmentConfigService) {
 
