@@ -16,16 +16,24 @@ import { TechsService } from '../../services/techs/techs.service';
 import { HomeComponent } from './home.component';
 
 describe('Home', () => {
+  let component;
   // provide our implementations or mocks to the dependency injector
-  beforeEach(() => TestBed.configureTestingModule({
-    providers: [
-      BaseRequestOptions,
-      HomeComponent,
-      FeaturesService,
-      TechsService
-    ]
-  }));
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        BaseRequestOptions,
+        HomeComponent,
+        FeaturesService,
+        TechsService
+      ]
+    });
+    const fixture = TestBed.createComponent(HomeComponent);
+    component = fixture.componentInstance;
+  });
 
+  /* it('should have a defined component', () => {
+        expect(component).toBeDefined();
+    });*/
   // it('should have a rowHeight', inject([ HomeComponent ], (home: HomeComponent) => {
   //   expect(!!home.rowHeight).toEqual(true);
   // }));

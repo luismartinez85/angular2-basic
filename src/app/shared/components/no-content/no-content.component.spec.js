@@ -18,4 +18,8 @@ describe('no-content Component', () => {
     // get test component from the fixture
     comp = fixture.componentInstance;
   });
+  
+  it('should have a defined component', () => {
+    expect(component).toBeDefined();
+  });
 })
