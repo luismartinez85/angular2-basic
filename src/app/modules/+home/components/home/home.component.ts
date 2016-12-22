@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-//service is a alias of /src/app/shared/services
-import { MultiLanguageService } from 'services/multiLanguage.service';
-import { EnvironmentConfigService } from 'services/environmentConfig.service.ts';
+
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage.service'; 
+import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig.service'; 
 
 import { Feature } from '../../services/features/feature';
 import { FeaturesService } from '../../services/features/features.service';

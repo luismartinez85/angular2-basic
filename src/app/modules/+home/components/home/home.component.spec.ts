@@ -11,6 +11,7 @@ import {
 import { MockBackend } from '@angular/http/testing';
 import { FeaturesService } from '../../services/features/features.service';
 import { TechsService } from '../../services/techs/techs.service';
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage.service'; 
 
 // Load the implementations that should be tested
 import { HomeComponent } from './home.component';
@@ -24,16 +25,17 @@ describe('Home', () => {
         BaseRequestOptions,
         HomeComponent,
         FeaturesService,
-        TechsService
+        TechsService,
+        MultiLanguageService
       ]
     });
     const fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
   });
-
-  /* it('should have a defined component', () => {
-        expect(component).toBeDefined();
-    });*/
+/*
+  it('should have a defined component', () => {
+    expect(component).toBeDefined();
+  });*/
   // it('should have a rowHeight', inject([ HomeComponent ], (home: HomeComponent) => {
   //   expect(!!home.rowHeight).toEqual(true);
   // }));
