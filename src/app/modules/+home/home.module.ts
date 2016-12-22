@@ -33,8 +33,4 @@ import { TranslateModule } from 'ng2-translate';
   ]
 })
 
-export class HomeModule {
-
-  static routes = routes;
-
-}
+export class HomeModule { }
