@@ -1,11 +1,12 @@
-/*import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NoContentComponent } from './no-content.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoContentComponent } from './NoContent.component';
 
-let fixture:    ComponentFixture<NoContentComponent>;
+
 let component:  NoContentComponent;
+let fixture:    ComponentFixture<NoContentComponent>;
 
-describe('no-content Component', () => {
-   beforeEach(done => {
+describe('noContent Component', () => {
+   beforeEach(() => {
     // refine the test module by declaring the test component
     TestBed.configureTestingModule({
       declarations: [ NoContentComponent ],
@@ -19,6 +20,7 @@ describe('no-content Component', () => {
   });
 
   it('should have a defined component', () => {
-    expect(component).toBeDefined();
+     expect(component).toBeDefined();
   });
-})*/
+})
+
