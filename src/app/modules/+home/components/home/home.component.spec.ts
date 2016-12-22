@@ -43,15 +43,16 @@ describe('Home', () => {
   it('should have a defined component', () => {
     expect(component).toBeDefined();
   });
-  // it('should have a rowHeight', inject([ HomeComponent ], (home: HomeComponent) => {
-  //   expect(!!home.rowHeight).toEqual(true);
-  // }));
 
-  // it('should log ngOnInit', inject([ HomeComponent ], (home: HomeComponent) => {
-  //   spyOn(console, 'log');
-  //   expect(console.log).not.toHaveBeenCalled();
+  it('should have a rowHeight', () => {
+    expect(!!component.rowHeight).toEqual(true);
+  });
 
-  //   home.ngOnInit();
-  //   expect(console.log).toHaveBeenCalled();
-  // }));
+  it('should log ngOnInit', () => {
+    spyOn(console, 'log');
+    expect(console.log).not.toHaveBeenCalled();
+
+    component.ngOnInit();
+    expect(console.log).toHaveBeenCalled();
+  });
 });

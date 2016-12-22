@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NoContentComponent } from './NoContent.component';
 
 
@@ -23,5 +22,5 @@ describe('noContent Component', () => {
   it('should have a defined component', () => {
      expect(component).toBeDefined();
   });
-
 })
+
