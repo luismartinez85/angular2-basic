@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NoContentComponent } from './NoContent.component';
+import { NoContentComponent } from './noContent.component';
 
 
 let component:  NoContentComponent;

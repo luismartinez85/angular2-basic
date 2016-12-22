@@ -21,7 +21,7 @@ import { TranslateModule } from 'ng2-translate';
 // Load the implementations that should be tested
 import { HomeComponent } from './home.component';
 
-describe('Home -> Home', () => {
+describe('Module Home -> Component Home', () => {
   let component: HomeComponent;
   // provide our implementations or mocks to the dependency injector
   beforeEach(() => {

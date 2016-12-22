@@ -10,7 +10,7 @@ import { MaterialModule } from '@angular/material';
 // Load the implementations that should be tested
 import { GridCardsComponent } from './gridCards.component';
 
-describe('Home -> GridCards', () => {
+describe('Module Home -> Component GridCards', () => {
   let component: GridCardsComponent;
   let fixture;
 
