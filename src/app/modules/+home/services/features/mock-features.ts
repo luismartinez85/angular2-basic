@@ -2,14 +2,14 @@ import { Feature } from './feature';
 
 export let FEATURES: Feature[] = [
   { title: 'Mobile First',
-    description: 'Designed for mobile phones first.',
-    code: 'div  width:50%; { @media screen and (min-width: 480px){ width: 100%; } }',
+    description: 'Designed for mobile phones first.  ',
+    code: 'By starting mobile first with your responsive website you are able to make the tough decisions about the content.',
     image: '',
     icon: 'phone_iphone'
   },
   { title: 'Unit testing',
     description: 'Tools stack to unit test your code.',
-    code: '',
+    code: 'The primary goal of unit testing is to take the smallest piece of testable software in the application, isolate it from the remainder of the code, and determine whether it behaves exactly as you expect. Each unit is tested separately before integrating them into modules to test the interfaces between modules. Unit testing has proven its value in that a large percentage of defects are identified during its use',
     image: '',
     icon: 'check_box'
   },

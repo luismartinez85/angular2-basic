@@ -1,7 +1,7 @@
 /*styles for home content only*/
 home {
   display: flex;
-  flex: 1;
+  flex: 0 0 50%;
   flex-direction: column;
   padding: 1em;
   max-width: 1000px;
@@ -54,6 +54,7 @@ home {
       position: relative;
       font-size: 1.1em;
       letter-spacing: 0.040em;
+      text-align:left;
     }
     .text {
       padding-right: 10px;

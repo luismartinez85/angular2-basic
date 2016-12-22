@@ -8,14 +8,15 @@
 </md-toolbar>
 <div style="padding:1em;" *ngIf="dialogData">
 
-    <h2>{{dialogData.title}}</h2>
-    
-    <code>
-        <pre [innerHTML]="dialogData.code"></pre>
-    </code>
-    <h1>hola</h1>
+    <h1>{{dialogData.title}}</h1>
     <p>{{dialogData.description}}</p>
-
+    <h3>Description</h3>
+    <!--
+    <code>
+        <pre [innerHTML]=""></pre>
+    </code>
+    -->
+    <p>{{dialogData.code}}</p>
 </div>
 <!--<button type="button" (click)="dialogRef.close('yes')">Yes</button>
 <button type="button" (click)="dialogRef.close('no')">No</button>-->

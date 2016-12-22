@@ -86,8 +86,7 @@ app-shell {
       font-weight:600;
       letter-spacing:1px;
       word-spacing:0.2em;
-      font-family: 'Sansation';
-      text-transform: uppercase;
+      font-family: 'Roboto';
     }
   }
 
@@ -142,7 +141,7 @@ span.active {
     padding: 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: #4DD0E1;
+    background: #ffffff;
     overflow: visible;
     &.openAnimated {
       transform: scale(1);
@@ -150,7 +149,7 @@ span.active {
     md-toolbar {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      background: #26C6DA;
+      background: #999;
     }
     code {
       span {
@@ -177,7 +176,8 @@ span.active {
 
 .footer-container, .core-layout__main:after {
   /* .push must be the same height as footer */
-	height: 195px; 
+	min-height: 195px; 
+  height:auto;
 }
 
 .footer-container{
@@ -197,21 +197,12 @@ span.active {
   padding: 10px;
   margin: 0px;
 
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+    justify-content: flex-start;
+}
 }
 
-.flex-column{
-    flex: 0 0 12%;
-    min-width: 200px;
-    min-height: 150px;
-    box-sizing: border-box;
-
-  @media screen and (min-width: 480px) {
-    flex: 0 0 12%;
-    min-height: 120px;
-    box-sizing: border-box;
-    margin-bottom: 5px;
-  }
-}
 
 .flex-column.one {
     flex: 0 0 6%;
@@ -237,9 +228,6 @@ span.active {
     @media screen and (min-width: 480px) {
       flex: 0 0 22%;
     }
-
-
-
 }
 
 .flex-column.five {
@@ -262,15 +250,15 @@ span.active {
 .social_logos {
 	display:flex;
 	flex-direction:row;
-	justify-content: space-around;
   padding-left:0px;
   padding-right:0px;
 }
 
 .text-headline {
-  letter-spacing:1px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight:600;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .text-body {
