@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'no-content',
@@ -6,6 +6,4 @@ import { Component } from '@angular/core'
   styleUrls: ['noContent.component.scss']
 })
 
-export class NoContentComponent {
-
-}
+export class NoContentComponent { }
