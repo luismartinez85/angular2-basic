@@ -1,51 +1,39 @@
 import { ComponentFixture, TestBed, async, inject } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
-import { DebugElement }    from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA  }    from '@angular/core';
 
 // Load the implementations that should be tested
 import { FsUsersComponent } from '../fs-users/fs-users.component';
 import { FsUsersService } from '../fs-users/fs-users.service';
 
+import { MaterialModule } from '@angular/material';
+
 let component:    FsUsersComponent;
 let fixture: ComponentFixture<FsUsersComponent>;
-let usersElement:      DebugElement;
 
-describe('FsUsersComponent', () => {
+describe('Module FsUsers -> Component FsUser', () => {
 
  beforeEach(() => {
-	  // declare the test component
     TestBed.configureTestingModule({
-      declarations: [ FsUsersComponent ]
-    }).compileComponents().then(() => {
-        fixture = TestBed.createComponent(FsUsersComponent);
-
-
-
-        fixture.detectChanges();
-    });
-
-
-    //component = fixture.componentInstance; // BannerComponent test instance
-
-		// Render
-//		fixture.detectChanges();
-
-		// query for the title <h1> by CSS element selector
-  //  usersElement = fixture.debugElement.query(By.css('fs-users'));
+      imports: [
+        MaterialModule.forRoot()
+      ],
+      declarations: [ FsUsersComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+    }).compileComponents();
+    fixture = TestBed.createComponent(FsUsersComponent);
+    component = fixture.componentInstance;
+    console.log(" FsUsers:: " + component);
+    // Render
+    fixture.detectChanges();
   });
 
-	afterEach(() => {
+  afterEach(() => {
     fixture.destroy();
   });
 
-	// it('should create component', inject([FsUsersService], (fsUsersService: FsUsersService) => {
-  //     // Perform test using fixture and service
-  // }));
-
-
-
-  // it('should load team members', () => {
-    
-  //  // expect(usersElement.context).toContain('Test Title');
+  // it('should have a defined component', () => {
+  //     expect(component).toBeDefined();
   // });
+
 });

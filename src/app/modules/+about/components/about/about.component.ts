@@ -18,7 +18,6 @@ export class AboutComponent {
   constructor(
     private fsUsersService: FsUsersService,
     private translate: MultiLanguageService){
-
   }
 
   ngOnInit() {
