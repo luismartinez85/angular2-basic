@@ -5,12 +5,17 @@ fs-custom-grid-cards {
   margin-top:50px;
   
   md-card {
-    padding:0;
-    margin: 1em;
     border-radius: 3px;
-    padding:20px;
+    margin: 1em;
     margin-left:0;
+    padding-left: 0px;
+    padding-top:40px;
     width:96%!important;
+
+    h3 {
+      margin-left:40px;
+      margin-bottom:50px;
+    }
 
     .feature_title {
       color:black;
@@ -24,7 +29,7 @@ fs-custom-grid-cards {
     }
 
     .feature_description {
-      color:#444;
+      color:#777;
       font-family:'Roboto';
       font-size:0.9em;
       padding-bottom: 32px;
@@ -35,11 +40,14 @@ fs-custom-grid-cards {
     }
 
     .more {
-      padding: 0px;
-      text-align: left;
-      height: 10px;
-      padding-bottom: 7px;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      width: 102.5%;
+
+      button {
+        margin-left:20px;
+      }
+
     }
 
   }
