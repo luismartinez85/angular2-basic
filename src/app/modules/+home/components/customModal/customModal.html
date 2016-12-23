@@ -6,17 +6,17 @@
         <span>{{element.description}}</span>-->
         <button style="right: 15px; position: absolute;" md-icon-button (click)="dialogRef.close()"><md-icon>close</md-icon></button>
 </md-toolbar>
-<div style="padding:1em;" *ngIf="dialogData">
+<div style="padding:1em;" *ngIf="modalData">
 
-    <h1>{{dialogData.title}}</h1>
-    <p>{{dialogData.description}}</p>
+    <h1>{{modalData.title}}</h1>
+    <p>{{modalData.description}}</p>
     <h3>Description</h3>
     <!--
     <code>
         <pre [innerHTML]=""></pre>
     </code>
     -->
-    <p>{{dialogData.code}}</p>
+    <p>{{modalData.code}}</p>
 </div>
 <!--<button type="button" (click)="dialogRef.close('yes')">Yes</button>
 <button type="button" (click)="dialogRef.close('no')">No</button>-->
