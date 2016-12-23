@@ -34,6 +34,17 @@ describe('Module About -> Component About', () => {
 
 		// Render
     fixture.detectChanges();
+
+    let mockData = {
+      'users' : [{
+          'name': 'David Chavarri',
+          'job': 'Front Architect',
+          'image': '/assets/img/team/david-min.jpg',
+          'description': 'React Ninja',
+          'github': 'https://github.com/DvdChavarri'
+    }]};
+
+    spyOn(FsUsersService.prototype, 'search').and.returnValue(mockData);
   });
 
   afterEach(() => {
@@ -43,6 +54,11 @@ describe('Module About -> Component About', () => {
   it('should have a defined component', () => {
       expect(component).toBeDefined();
   });
+
+ /* it('ngOnInit', () => {
+  expect(component).toB
+  });
+  */
 
   // it('should have DataUsers', inject([ AboutComponent ], (about: AboutComponent) => {
   //   expect(!!about.dataUsers).toEqual(true);

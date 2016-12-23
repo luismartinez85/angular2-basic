@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { MultiLanguageService } from './multiLanguage.service';
-import { TRANSLATE_PROVIDERS, TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate';
+import { TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate';
 
 describe('shared -> MultiLanguageService', () => {
 
@@ -13,12 +13,13 @@ describe('shared -> MultiLanguageService', () => {
         TranslateParser
       ]
     });
+
+     spyOn(TranslateService.prototype, 'use').and.returnValue(true);
   });
 
   it('Should be defined',
     inject([MultiLanguageService], (multiLanguageService) => {
       expect(multiLanguageService).toBeDefined();
-      // expect(multiLanguageService.toHtml('hi')).toContain('<p>hi</p>');
     })
   );
 
@@ -28,12 +29,17 @@ describe('shared -> MultiLanguageService', () => {
     })
   );
 
-  it('getLanguage should return undefined',
+  it('setLanguage to "es" and getLanguage should return "es"',
     inject([MultiLanguageService], (multiLanguageService) => {
-
-      expect(multiLanguageService.getLanguage()).toBe('en');
+      multiLanguageService.setLanguage('es');
+      expect(multiLanguageService.langSelected).toBe('es');
     })
   );
 
-
+  it('setLanguage to "es" and getLanguage should return "es"',
+    inject([MultiLanguageService], (multiLanguageService) => {
+      multiLanguageService.setLanguage('es');
+      expect(multiLanguageService.langSelected).toBe('es');
+    })
+  );
 });

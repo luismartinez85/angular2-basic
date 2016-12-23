@@ -1,7 +1,8 @@
+/*
 import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { FsUsersService } from './fs-users.service';
 
-describe('FeaturesService', () => {
+describe('Modules -> About -> FsUsersService', () => {
   beforeEach(() => {
       TestBed.configureTestingModule({
         providers: [FsUsersService]
@@ -12,3 +13,4 @@ describe('FeaturesService', () => {
     expect(service.search()).toBe(9);
   }));
 });
+*/
