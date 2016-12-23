@@ -50,13 +50,19 @@ fs-users {
       }
 
       @media screen and (min-width: 480px) {
-        flex: 1 0 33%!important;
-        min-width: 200px;
+        flex: 0 0 33% !important;
+        max-width: 340px;
+        min-width: 114px;
+        min-height: auto;
+        margin: 1;
         min-height: auto;
         box-sizing: border-box;
-        margin: 0;
         margin-bottom: 0.5em;
       }
   }
 }
 
+/*@media screen and (min-width:480px)*/
+fs-users md-card {
+
+}
