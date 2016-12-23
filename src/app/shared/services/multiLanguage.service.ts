@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-
 import { TranslateService } from 'ng2-translate';
-
 
 @Injectable()
 export class MultiLanguageService {
-  langSelected : string;
-  langDefault : string = 'en';
+  langSelected: string;
+  langDefault: string = 'en';
   translateService: TranslateService;
 
   constructor(translateService: TranslateService) {

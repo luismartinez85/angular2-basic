@@ -14,9 +14,7 @@ export class FsTwitterAPIService {
   constructor (private jsonp: Jsonp, private http: Http) {}
 
   search () {
-    // TODO: Add error handling
-    return this.jsonp.get(this.twitterAPIURL, this.options)
-               .map(this.extractData);
+    return this.jsonp.get(this.twitterAPIURL, this.options).map(this.extractData);
   }
 
   private extractData(res: Response) {

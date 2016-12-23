@@ -14,6 +14,7 @@ export class fsYoutubeApiPipeFilterSearch implements PipeTransform {
     let array = arguments[0] || null;
     let valueString = arguments[1] || '';
     let returnArray = [];
+
     array && (function(){
         Array.prototype.forEach.call(array, function(){
         if (('snippet' in arguments[0]) && arguments[0].snippet.title) {

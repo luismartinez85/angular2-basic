@@ -8,7 +8,6 @@ import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';
 import { AboutComponent } from './components/about/about.component';
 import { FsUsersComponent } from './components/fs-users/fs-users.component';
-import { FsDialogComponent } from '../../shared/components/fs-dialog';
 import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
 import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
 
@@ -16,7 +15,6 @@ import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } 
 @NgModule({
   declarations: [
     AboutComponent,
-    FsDialogComponent,
     FsYoutubeAPIComponent,
     FsTwitterAPIComponent,
     fsYoutubeApiPipeFilterSearch,

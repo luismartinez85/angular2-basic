@@ -5,7 +5,7 @@ import { NoContentComponent } from './NoContent.component';
 let component:  NoContentComponent;
 let fixture:    ComponentFixture<NoContentComponent>;
 
-describe('noContent Component', () => {
+describe('shared -> noContentComponent', () => {
    beforeEach(() => {
     // refine the test module by declaring the test component
     TestBed.configureTestingModule({
