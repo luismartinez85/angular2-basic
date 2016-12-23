@@ -8,6 +8,7 @@ import { CustomModal } from '../customModal/customModal.component';
   templateUrl: './customGridCards.component.html',
   styleUrls: [ './customGridCards.component.scss' ]
 })
+
 export class FsCustomGridCardsComponent {
 
   @Input() elements = [];
@@ -19,24 +20,17 @@ export class FsCustomGridCardsComponent {
 
   }
 
-
-  openDialog() {
-    FsCustomGridCardsService.featuresData = arguments[0];
+  openDialog(element) {
+    FsCustomGridCardsService.featuresData = element;
 
     this.dialogRef = this.dialog.open(CustomModal, {
       disableClose: false
     });
-    setTimeout( ()=>
-      document.querySelector('.md-dialog-container').classList.add('openAnimated')
-    , 0);
+
     this.dialogRef.afterClosed().subscribe(result => {
       this.dialogRef = null;
+      FsCustomGridCardsService.featuresData = null;
     });
-  }
-
-  close() {
-    let args = arguments;
-    args[1].open = !args[1].open;
   }
 
 }

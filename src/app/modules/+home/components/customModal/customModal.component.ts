@@ -13,7 +13,4 @@ export class CustomModal {
   constructor(public dialogRef: MdDialogRef<CustomModal>) {
     this.modalData = FsCustomGridCardsService.featuresData;
   }
-
-  ngOnInit() {
-  }
-}
+};

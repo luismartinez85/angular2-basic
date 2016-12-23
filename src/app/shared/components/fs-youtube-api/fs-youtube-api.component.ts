@@ -37,7 +37,8 @@ export class FsYoutubeAPIComponent{
 
   openDialog() {
     FsYoutubeAPIService.actualYoutubeData = arguments[0];
-    FsYoutubeAPIService.actualYoutubeData.id.videoId = this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+FsYoutubeAPIService.actualYoutubeData.id.videoId);
+    FsYoutubeAPIService.actualYoutubeData.id.videoId = 
+      this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+FsYoutubeAPIService.actualYoutubeData.id.videoId);
     this.dialogRef = this.dialog.open(FsYoutubeDialog, {
       disableClose: false
     });
@@ -52,8 +53,4 @@ export class FsYoutubeAPIComponent{
     });
   }
 
-  close() {
-    var args = arguments;
-    args[1].open = !args[1].open;
-  }
 }

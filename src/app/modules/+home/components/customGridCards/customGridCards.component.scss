@@ -43,3 +43,26 @@ fs-custom-grid-cards {
 
   }
 }
+
+.md-overlay-pane {
+  .md-dialog-container {
+    height: 90vh;
+    width: 90vw;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #ffffff;
+    overflow: visible;
+
+    md-toolbar {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background: #999;
+    }
+    code {
+      span {
+        display: block;
+      }
+    }
+  }
+}
