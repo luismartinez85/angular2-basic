@@ -31,13 +31,13 @@ export class HomeComponent {
     private techsService: TechsService,
     private translate: MultiLanguageService,
     private environmentConfig: EnvironmentConfigService) {
-
-    console.log(environmentConfig.api);
    }
 
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
     this.techs = this.techsService.getTechs();
+    console.log(this.environmentConfig.api);
+
     // initialize translate service
     this.translate.initialize();
     /* if you want change language, you need to call method of translateService 

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
 import { FsCustomGridCardsService } from './customGridCards.service';
-import { PizzaDialog } from './customGridCardsDialog.component';
+import { CustomModal } from '../customModal/customModal.component';
 
 @Component({
   selector: 'fs-custom-grid-cards',
@@ -13,20 +13,17 @@ export class FsCustomGridCardsComponent {
   @Input() elements = [];
   @Input() title;
 
-  dialogRef: MdDialogRef<PizzaDialog>;
+  dialogRef: MdDialogRef<CustomModal>;
 
   constructor(public dialog: MdDialog) {
 
   }
 
-  ngOnInit() {
-
-  }
 
   openDialog() {
     FsCustomGridCardsService.featuresData = arguments[0];
 
-    this.dialogRef = this.dialog.open(PizzaDialog, {
+    this.dialogRef = this.dialog.open(CustomModal, {
       disableClose: false
     });
     setTimeout( ()=>

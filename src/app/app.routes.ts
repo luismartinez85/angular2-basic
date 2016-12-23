@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AuthenticateGuard } from './shared/services/auth.service';
-import { NoContentComponent } from './shared/components/no-content/no-content.component';
+import { NoContentComponent } from './shared/components/no-content/noContent.component';
 
 
 export const ROUTES: Routes = [

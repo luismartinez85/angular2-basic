@@ -25,7 +25,7 @@ import { ROUTES } from './app.routes';
 
 /** App is our top level component */
 import { ShellComponent, ShellModule } from './shell';
-import { NoContentComponent } from './shared/components/no-content/no-content.component';
+import { NoContentComponent } from './shared/components/no-content/noContent.component';
 
 
 /** `AppModule` is the main entry point into Angular2's bootstraping process */
