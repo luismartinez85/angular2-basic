@@ -21,18 +21,17 @@ import { TranslateModule } from 'ng2-translate';
 // Load the implementations that should be tested
 import { HomeComponent } from './home.component';
 
-describe('Home', () => {
+describe('Module Home -> Component Home', () => {
   let component: HomeComponent;
   // provide our implementations or mocks to the dependency injector
   beforeEach(() => {
     TestBed.configureTestingModule({
-  //  declarations:[FsCustomGridCardsComponent],
       imports: [
         TranslateModule.forRoot(),
         MaterialModule.forRoot()
       ],
-      providers: [EnvironmentConfigService],      
-      declarations:[HomeComponent],
+      providers: [ EnvironmentConfigService ],
+      declarations:[ HomeComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css

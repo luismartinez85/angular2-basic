@@ -5,7 +5,7 @@ import { ExponentialStrengthPipe } from '../../shared/pipes';
 import { HomeComponent } from './components/home/home.component';
 import { GridCardsComponent } from './components/gridCards/gridCards.component';
 import { FsCustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
-import { PizzaDialog } from './components/customGridCards/customGridCardsDialog.component';
+import { CustomModal } from './components/customModal/customModal.component';
 
 import { routes } from './home.routes';
 import  { ShellModule } from '../../shell';
@@ -19,7 +19,7 @@ import { TranslateModule } from 'ng2-translate';
     ExponentialStrengthPipe,
     GridCardsComponent,
     FsCustomGridCardsComponent,
-    PizzaDialog
+    CustomModal
   ],
   imports: [
     CommonModule,
@@ -29,7 +29,7 @@ import { TranslateModule } from 'ng2-translate';
 
   ],
   entryComponents : [
-    PizzaDialog
+    CustomModal
   ]
 })
 
