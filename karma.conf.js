@@ -59,7 +59,20 @@ module.exports = function(config) {
       cobertura: './test-reports/cobertura.xml'
     },
 
+    // Karma Default time redefinition
+    browserNoActivityTimeout : 100000, //default 10000
 
+    // File Paterns definitions
+    files: [ 
+      { pattern: './config/spec-bundle.js', watched: false },
+      { pattern: './src/assets/**/*.png', included: false, served: true},
+      { pattern: './i18n/**/*.json', included: false, served: true},
+      { pattern: './src/assets/**/*.json', included: false, served: true}
+    ],
+    proxies: {
+      '/assets/': '/base/src/assets/',
+      '/i18n/':'/base/i18n/'
+    },
 
     // Webpack please don't spam the console when running in karma!
     webpackMiddleware: { stats: 'errors-only'},
