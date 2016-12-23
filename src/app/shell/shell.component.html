@@ -12,14 +12,14 @@
     </span>
 
     <div class="sidenavList">
-        <a md-button md-ripple [routerLink]=" ['./home'] " (click)="sidenav.toggle()">Home</a>
+        <a md-button md-ripple [routerLink]=" ['./home'] " (click)="sidenav.toggle();">Home</a>
         <a md-button md-ripple [routerLink]=" ['./about'] " (click)="sidenav.toggle()">About Us</a>
         <a md-button md-ripple [routerLink]=" ['./nopagefound'] " (click)="sidenav.toggle()">No page found</a>
     </div>
   </md-sidenav>
   <span class="shellBackground">
       <md-toolbar>
-        <button md-button class="app-icon-button" (click)="sidenav.toggle()">
+        <button md-button class="app-icon-button" (click)="sidenav.toggle(); setFocusElement()">
           <i class="material-icons app-toolbar-menu">menu</i>
         </button>
         <span class="angular_basic_logo">Angular2 Basic</span>

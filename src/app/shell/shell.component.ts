@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { ShellUtilService } from './shell.service';
 
 import { TranslateService } from 'ng2-translate';
 
@@ -14,4 +15,12 @@ import { TranslateService } from 'ng2-translate';
 })
 
 export class ShellComponent {
+
+  /* Strategy for fix Material Design exec function toggle */
+  setFocusElement () {
+    console.log('asdgasdg', ShellUtilService.element);
+    setTimeout(() => {
+      ShellUtilService.element && ShellUtilService.element.focus();
+    }, 0);
+  }
 }
