@@ -11,6 +11,10 @@
     "strictNullChecks": false,
     "baseUrl": "./src",
     "paths": {
+      "shared/*": ["./app/shared/*"],
+      "components/*": ["./app/shared/components/*"],
+      "pipes/*": ["./app/shared/pipes/*"],
+      "services/*": ["./src/app/shared/services/*"]
     },
     "lib": [
       "dom",

@@ -1,6 +1,15 @@
 'use strict';
 const helpers = require('./helpers');
 const path = require('path');
+const fs = require('fs');
+const webpackMerge = require('webpack-merge'); // used to merge webpack configs
+const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+/**
+ * Application Configuration DEV Environment
+ */
+const appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
+const environment_config = appconfig.environment_constants['dev']['EnvironmentConfig'];
 
 /**
  * Webpack Plugins
@@ -14,6 +23,33 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
  * Webpack Constants
  */
 const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 3000;
+const HMR = helpers.hasProcessFlag('hot');
+const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
+  host: HOST,
+  port: PORT,
+  ENV: ENV,
+  HMR: HMR
+});
+
+
+/**
+ * Environment Variables
+ */
+let enviromentVars = {
+  'ENV': JSON.stringify(METADATA.ENV),
+  'HMR': METADATA.HMR,
+  'process.env': {
+    'ENV': JSON.stringify(METADATA.ENV),
+    'NODE_ENV': JSON.stringify(METADATA.ENV),
+    'HMR': METADATA.HMR
+  }
+};
+
+helpers.extendAppConfig(enviromentVars,environment_config);
+
+
 
 /**
  * Webpack configuration
@@ -177,7 +213,7 @@ module.exports = function (options) {
        * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
-      new DefinePlugin({
+     /* new DefinePlugin({
         'ENV': JSON.stringify(ENV),
         'HMR': false,
         'process.env': {
@@ -185,8 +221,8 @@ module.exports = function (options) {
           'NODE_ENV': JSON.stringify(ENV),
           'HMR': false,
         }
-      }),
-
+      }),*/
+      new DefinePlugin( enviromentVars ),
       /**
        * Plugin: ContextReplacementPlugin
        * Description: Provides context to Angular's use of System.import
