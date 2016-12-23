@@ -37,6 +37,4 @@ import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } 
 
 })
 
-export class AboutModule {
-  static routes = routes;
-}
+export class AboutModule { }

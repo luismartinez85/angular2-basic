@@ -1,25 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FsDialogComponent } from './fs-dialog.component';
+import { NoContentComponent } from './noContent.component';
 
 
-let component:  FsDialogComponent;
-let fixture:    ComponentFixture<FsDialogComponent>;
+let component:  NoContentComponent;
+let fixture:    ComponentFixture<NoContentComponent>;
 
-describe('FsDialog Component', () => {
+describe('noContent Component', () => {
    beforeEach(() => {
     // refine the test module by declaring the test component
     TestBed.configureTestingModule({
-      declarations: [ FsDialogComponent ],
-    }).compileComponents();
+      declarations: [ NoContentComponent ],
+    });
 
     // create component and test fixture
-    fixture = TestBed.createComponent(FsDialogComponent);
+    fixture = TestBed.createComponent(NoContentComponent);
 
     // get test component from the fixture
     component = fixture.componentInstance;
   });
 
-  it('should be defined', () => {
+  it('should have a defined component', () => {
      expect(component).toBeDefined();
   });
 })
+
