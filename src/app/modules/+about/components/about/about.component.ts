@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FsUsersService } from '../fs-users/fs-users.service';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage.service';
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
 
 @Component({
   selector: 'about',

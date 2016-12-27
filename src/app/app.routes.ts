@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AuthenticateGuard } from './shared/services/auth.service';
+import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.service';
 import { NoContentComponent } from './shared/components/no-content/noContent.component';
 
 

@@ -5,19 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class FsUsersService {
 
-  private mockURL:string = 'assets/mock-data/mockusers.json';
+  private mockURL: string = 'assets/mock-data/mockusers.json';
 
   constructor (private http: Http) {}
 
-  search (): Observable<Response> {
+  search (): Observable<Object> {
     // TODO: Add error handling
-    return this.http.get(this.mockURL)
-               .map(this.extractData);
+    return this.http.get(this.mockURL).map((res: Response) => res.json())
+               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
-
-  private extractData(res: Response) {
-    let body = res.json();
-    return body || { };
-  }
-
 }

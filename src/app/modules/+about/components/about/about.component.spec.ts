@@ -4,7 +4,7 @@ import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 
 // Load the implementations that should be tested
 import { AboutComponent } from './about.component';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage.service';
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
 import { FsUsersService } from '../fs-users/fs-users.service';
 import { TranslateModule } from 'ng2-translate';
 

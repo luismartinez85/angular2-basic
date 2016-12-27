@@ -31,6 +31,9 @@ describe('shared -> MultiLanguageService', () => {
 
   it('Initialize and return default language "en"',
     inject([MultiLanguageService], (multiLanguageService) => {
+      // clean localstorage
+      localStorage.removeItem('language');
+
       multiLanguageService.initialize();
       multiLanguageService.setLanguage('en');
       expect(multiLanguageService.langSelected).toBe('en');

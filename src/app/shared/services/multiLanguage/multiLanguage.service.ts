@@ -17,8 +17,8 @@ export class MultiLanguageService {
       return this.langSelected;
     }
 
-    if (localStorage) {
-      let lang = localStorage['language'] || this.langDefault;
+    if (localStorage && localStorage['language']) {
+      let lang = localStorage['language'];
       this.setLanguage(lang);
     }
     else {
@@ -38,5 +38,4 @@ export class MultiLanguageService {
     this.langSelected = language;
     this.translateService.use(this.langSelected);
   }
-
 }

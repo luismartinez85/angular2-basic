@@ -11,8 +11,8 @@ import {
 import { MockBackend } from '@angular/http/testing';
 import { FeaturesService } from '../../services/features/features.service';
 import { TechsService } from '../../services/techs/techs.service';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage.service'; 
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig.service'; 
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service'; 
+import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service'; 
 
 
 import { MaterialModule } from '@angular/material';
