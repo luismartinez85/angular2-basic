@@ -1,24 +1,4 @@
-
-
-describe('Modules -> About -> FsUsersService', () => {
-  beforeEachProviders(() => [
-    BaseRequestOptions,
-    MockBackend,
-    provide(Http, {
-      useFactory: (backend: MockBackend, defaultOptions: BaseRequestOptions) => {
-        return new Http(backend, defaultOptions);
-      },
-      deps: [MockBackend, BaseRequestOptions]
-    })
-  ]);
-
-  it('Should return 9 techs', inject([FsUsersService, AsyncTestCompleter], (service: FsUsersService, async: AsyncTestCompleter) => {
-    expect(service.search()).toBe(9);
-  }));
-});
-
-
-
+/*
 import {BaseRequestOptions, Http} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 
@@ -39,3 +19,4 @@ it('should get some data', inject([AsyncTestCompleter], (async) => {
   });
   connection.mockRespond(new Response('awesome'));
 }));
+*/
