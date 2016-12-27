@@ -29,9 +29,9 @@ describe('shared -> MultiLanguageService', () => {
     })
   );
 
-  it('setLanguage to "es" and getLanguage should return "es"',
+  it('Initialize and return default language "en"',
     inject([MultiLanguageService], (multiLanguageService) => {
-      multiLanguageService.setLanguage('es');
+      multiLanguageService.initialize();
       expect(multiLanguageService.langSelected).toBe('es');
     })
   );
