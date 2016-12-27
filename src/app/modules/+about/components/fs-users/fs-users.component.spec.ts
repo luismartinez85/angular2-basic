@@ -12,8 +12,25 @@ let component:    FsUsersComponent;
 let fixture: ComponentFixture<FsUsersComponent>;
 
 describe('Module FsUsers -> Component FsUser', () => {
+  const users = {
+    users:[
+      {
+        'name': 'David Chavarri',
+        'job': 'Front Architect',
+        'image': '/assets/img/team/david-min.jpg',
+        'description': 'React Ninja',
+        'github': 'https://github.com/DvdChavarri'
+      },
+      {
+        'name': 'Arturo Zarzalejo',
+        'job': 'Fantasy Architect',
+        'image': '/assets/img/team/arturo-min.jpg',
+        'description': 'Sexy Fantasy Everywhere',
+        'github': 'https://github.com/Arturozh'
+    }]
+  };
 
- beforeEach(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         MaterialModule.forRoot()
@@ -23,17 +40,25 @@ describe('Module FsUsers -> Component FsUser', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(FsUsersComponent);
     component = fixture.componentInstance;
-    console.log(" FsUsers:: " + component);
-    // Render
-    fixture.detectChanges();
+
   });
 
   afterEach(() => {
     fixture.destroy();
   });
 
-  // it('should have a defined component', () => {
-  //     expect(component).toBeDefined();
-  // });
+  it('should have a defined component', () => {
+    expect(component).toBeDefined();
+  });
 
+  it('should render users', () => {
+
+    component.users = users;
+    fixture.detectChanges();
+
+    let compiled = fixture.debugElement.nativeElement;
+
+    expect(compiled.querySelectorAll('.user-header').length).toEqual(users.users.length);
+
+  });
 });
