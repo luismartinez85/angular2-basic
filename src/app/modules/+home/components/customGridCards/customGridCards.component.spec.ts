@@ -59,7 +59,7 @@ describe('Module Home -> Component GridCards', () => {
       description:'description1'
     };
 
-    component.openDialog(element);
+   // component.openDialog(element);
   });
 
 
