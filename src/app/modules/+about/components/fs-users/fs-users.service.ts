@@ -9,9 +9,7 @@ export class FsUsersService {
 
   constructor (private http: Http) {}
 
-  search (): Observable<Object> {
-    // TODO: Add error handling
-    return this.http.get(this.mockURL).map((res: Response) => res.json())
-               .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  search (): Observable<Response> {
+    return this.http.get(this.mockURL).map((res: Response) => res.json());
   }
 }
