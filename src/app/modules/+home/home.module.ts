@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ExponentialStrengthPipe } from '../../shared/pipes';
 import { HomeComponent } from './components/home/home.component';
 import { GridCardsComponent } from './components/gridCards/gridCards.component';
-import { FsCustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
+import { CustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
 import { CustomModal } from './components/customModal/customModal.component';
 
 import { routes } from './home.routes';
@@ -18,7 +18,7 @@ import { TranslateModule } from 'ng2-translate';
     HomeComponent,
     ExponentialStrengthPipe,
     GridCardsComponent,
-    FsCustomGridCardsComponent,
+    CustomGridCardsComponent,
     CustomModal
   ],
   imports: [

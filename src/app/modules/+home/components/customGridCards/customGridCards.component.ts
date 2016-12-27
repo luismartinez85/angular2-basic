@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
-import { FsCustomGridCardsService } from './customGridCards.service';
+import { CustomGridCardsService } from './customGridCards.service';
 import { CustomModal } from '../customModal/customModal.component';
 
 @Component({
-  selector: 'fs-custom-grid-cards',
+  selector: 'custom-grid-cards',
   templateUrl: './customGridCards.component.html',
   styleUrls: [ './customGridCards.component.scss' ]
 })
 
-export class FsCustomGridCardsComponent {
+export class CustomGridCardsComponent {
 
   @Input() elements = [];
   @Input() title;
@@ -21,7 +21,7 @@ export class FsCustomGridCardsComponent {
   }
 
   openDialog(element) {
-    FsCustomGridCardsService.featuresData = element;
+    CustomGridCardsService.featuresData = element;
 
     this.dialogRef = this.dialog.open(CustomModal, {
       disableClose: false
@@ -29,7 +29,7 @@ export class FsCustomGridCardsComponent {
 
     this.dialogRef.afterClosed().subscribe(result => {
       this.dialogRef = null;
-      FsCustomGridCardsService.featuresData = null;
+      CustomGridCardsService.featuresData = null;
     });
   }
 
