@@ -1,4 +1,6 @@
 import { CommonModule } from '@angular/common';
+import 'hammerjs';
+
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ExponentialStrengthPipe } from '../../shared/pipes';
