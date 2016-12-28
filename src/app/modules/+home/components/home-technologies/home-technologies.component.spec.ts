@@ -8,10 +8,10 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MaterialModule } from '@angular/material';
 
 // Load the implementations that should be tested
-import { GridCardsComponent } from './gridCards.component';
+import { HomeTechnologiesComponent } from './home-technologies.component';
 
-describe('Module Home -> Component GridCards', () => {
-  let component: GridCardsComponent;
+describe('Module Home -> Component HomeTechnologies', () => {
+  let component: HomeTechnologiesComponent;
   let fixture;
 
   const elements = [
@@ -31,12 +31,12 @@ describe('Module Home -> Component GridCards', () => {
       imports: [
         MaterialModule.forRoot()
       ],
-      declarations:[ GridCardsComponent ],
+      declarations:[ HomeTechnologiesComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
 
-    fixture = TestBed.createComponent(GridCardsComponent);
+    fixture = TestBed.createComponent(HomeTechnologiesComponent);
     component = fixture.componentInstance;
   });
 

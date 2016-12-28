@@ -5,9 +5,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ExponentialStrengthPipe } from '../../shared/pipes';
 import { HomeMainComponent } from './components/home-main/home-main.component';
-import { GridCardsComponent } from './components/gridCards/gridCards.component';
-import { CustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
-import { CustomModal } from './components/customModal/customModal.component';
+import { HomeTechnologiesComponent } from './components/home-technologies/home-technologies.component';
+import { HomeFeaturesComponent } from './components/home-features/home-features.component';
+import { HomeFeatureModal } from './components/home-feature-modal/home-feature-modal.component';
 
 import { routes } from './home.routes';
 import  { ShellModule } from '../../shell';
@@ -19,9 +19,9 @@ import { TranslateModule } from 'ng2-translate';
   declarations: [
     HomeMainComponent,
     ExponentialStrengthPipe,
-    GridCardsComponent,
-    CustomGridCardsComponent,
-    CustomModal
+    HomeTechnologiesComponent,
+    HomeFeaturesComponent,
+    HomeFeatureModal
   ],
   imports: [
     CommonModule,
@@ -31,7 +31,7 @@ import { TranslateModule } from 'ng2-translate';
 
   ],
   entryComponents : [
-    CustomModal
+    HomeFeatureModal
   ]
 })
 
