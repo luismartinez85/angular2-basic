@@ -11,17 +11,17 @@ import { TechsService } from '../../services/techs/techs.service';
 
 @Component({
 
-  selector: 'home', 
+  selector: 'home-main', 
   providers: [
     FeaturesService,
     TechsService,
     MultiLanguageService,
     EnvironmentConfigService
   ],
-  styleUrls: [ './home.component.scss' ],
-  templateUrl: './home.component.html'
+  styleUrls: [ './home-main.component.scss' ],
+  templateUrl: './home-main.component.html'
 })
-export class HomeComponent {
+export class HomeMainComponent {
   features: Feature[];
   techs: Tech[];
   rowHeight: string = '200px';

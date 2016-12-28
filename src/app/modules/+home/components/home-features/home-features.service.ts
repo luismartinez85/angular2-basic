@@ -1,4 +1,4 @@
-export class CustomGridCardsService {
+export class HomeFeaturesService {
 
   public static featuresData: Object = {};
 

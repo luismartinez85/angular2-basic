@@ -8,12 +8,12 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MaterialModule, MdDialog, MdDialogRef } from '@angular/material';
 
 // Load the implementations that should be tested
-import { CustomGridCardsComponent } from './customGridCards.component';
+import { HomeFeaturesComponent } from './home-features.component';
 
-import { CustomModal } from '../customModal/customModal.component';
+import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.component';
 
-describe('Module Home -> Component GridCards', () => {
-  let component: CustomGridCardsComponent;
+describe('Module Home -> Component HomeFeatureModal', () => {
+  let component: HomeFeaturesComponent;
   let fixture;
 
   const elements = [
@@ -33,12 +33,12 @@ describe('Module Home -> Component GridCards', () => {
       imports: [
         MaterialModule.forRoot()
       ],
-      declarations:[ CustomGridCardsComponent ],
+      declarations:[ HomeFeaturesComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
 
-    fixture = TestBed.createComponent(CustomGridCardsComponent);
+    fixture = TestBed.createComponent(HomeFeaturesComponent);
     component = fixture.componentInstance;
 
    //let dialogRef = new MdDialogRef<CustomModal>();
