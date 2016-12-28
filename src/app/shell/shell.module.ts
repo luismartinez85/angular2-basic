@@ -10,11 +10,14 @@ import 'hammerjs';
 // Import material design module
 import { MaterialModule } from '@angular/material';
 import { ShellComponent } from './shell.component';
+
+import { FooterComponent } from '../shared/components/footer/footer.component';
 import { routes } from './shell.routes';
 
 @NgModule({
   declarations: [
-    ShellComponent
+    ShellComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
