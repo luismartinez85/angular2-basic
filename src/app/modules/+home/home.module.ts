@@ -4,7 +4,7 @@ import 'hammerjs';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ExponentialStrengthPipe } from '../../shared/pipes';
-import { HomeComponent } from './components/home/home.component';
+import { HomeMainComponent } from './components/home-main/home-main.component';
 import { GridCardsComponent } from './components/gridCards/gridCards.component';
 import { CustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
 import { CustomModal } from './components/customModal/customModal.component';
@@ -17,7 +17,7 @@ import { TranslateModule } from 'ng2-translate';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    HomeMainComponent,
     ExponentialStrengthPipe,
     GridCardsComponent,
     CustomGridCardsComponent,

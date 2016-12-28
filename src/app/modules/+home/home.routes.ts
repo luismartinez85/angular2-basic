@@ -1,5 +1,5 @@
-import { HomeComponent } from './components/home/home.component';
+import { HomeMainComponent } from './components/home-main/home-main.component';
 
 export const routes = [
-  { path: '', component: HomeComponent}
+  { path: '', component: HomeMainComponent}
 ];

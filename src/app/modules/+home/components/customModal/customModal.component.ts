@@ -4,8 +4,7 @@ import { CustomGridCardsService } from '../customGridCards/customGridCards.servi
 
 @Component({
   selector: 'custom-modal',
-  templateUrl: './customModal.html',
-  providers: [ MdDialogRef ]
+  templateUrl: './customModal.html'
 })
 export class CustomModal {
 
