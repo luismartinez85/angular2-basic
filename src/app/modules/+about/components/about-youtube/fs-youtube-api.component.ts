@@ -22,17 +22,18 @@ export class FsYoutubeAPIComponent{
     this.fsyoutubeapiservice.search().subscribe(
       data => {
         this.dataYoutube = data.items;
-    });
+      }
+    );
   }
 
-  openDialog() {
-    FsYoutubeAPIService.actualYoutubeData = arguments[0];
-    FsYoutubeAPIService.actualYoutubeData.id.videoId = 
-      this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+FsYoutubeAPIService.actualYoutubeData.id.videoId);
+  openDialog(item) {
+    FsYoutubeAPIService.actualYoutubeData = item;
+    FsYoutubeAPIService.actualYoutubeData.id.videoId =
+      this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + FsYoutubeAPIService.actualYoutubeData.id.videoId);
     this.dialogRef = this.dialog.open(FsYoutubeDialog, {
       disableClose: false
     });
-
+    /* TO CHECK IT */
     setTimeout( () =>
       document.querySelector('.md-dialog-container').classList.add('openAnimated')
     , 0);
@@ -42,3 +43,4 @@ export class FsYoutubeAPIComponent{
     });
   }
 }
+

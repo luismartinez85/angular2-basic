@@ -11,7 +11,7 @@ import { AboutMainComponent } from './components/about-main/about-main.component
 import { AboutTeamComponent } from './components/about-team/about-team.component';
 
 import { FsTwitterAPIComponent } from './components/about-twitter';
-import { fsYoutubeApiPipeFilterSearch, FsYoutubeAPIComponent } from './components/about-youtube';
+import { FsYoutubeApiPipeFilterSearch, FsYoutubeAPIComponent } from './components/about-youtube';
 import { FsYoutubeDialog } from './components/about-youtube-modal/fs-youtube-api-dialog.component';
 
 
@@ -19,7 +19,7 @@ import { FsYoutubeDialog } from './components/about-youtube-modal/fs-youtube-api
   declarations: [
     FsYoutubeAPIComponent,
     FsTwitterAPIComponent,
-    fsYoutubeApiPipeFilterSearch,
+    FsYoutubeApiPipeFilterSearch,
     AboutMainComponent,
     AboutTeamComponent,
     FsYoutubeDialog

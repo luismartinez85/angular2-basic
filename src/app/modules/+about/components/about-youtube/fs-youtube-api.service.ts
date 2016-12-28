@@ -5,8 +5,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class FsYoutubeAPIService {
 
-  public youtubeData;
   public static actualYoutubeData;
+  public youtubeData;
   private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
 
   constructor (private jsonp: Jsonp) {}

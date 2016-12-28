@@ -9,7 +9,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 */
 @Pipe({name: 'fsYoutubeApiPipeFilterSearch', pure: true})
 
-export class fsYoutubeApiPipeFilterSearch implements PipeTransform {
+export class FsYoutubeApiPipeFilterSearch implements PipeTransform {
   transform(value: string): Array<any> {
     let array = arguments[0] || null;
     let valueString = arguments[1] || '';

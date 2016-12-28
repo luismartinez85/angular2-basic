@@ -12,20 +12,22 @@ let component:    AboutTeamComponent;
 let fixture: ComponentFixture<AboutTeamComponent>;
 
 describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
-  const users = [{
-    'name': 'David Chavarri',
-    'job': 'Front Architect',
-    'image': '/assets/img/team/david-min.jpg',
-    'description': 'React Ninja',
-    'github': 'https://github.com/DvdChavarri'
-  },
-  {
-    'name': 'Arturo Zarzalejo',
-    'job': 'Fantasy Architect',
-    'image': '/assets/img/team/arturo-min.jpg',
-    'description': 'Sexy Fantasy Everywhere',
-    'github': 'https://github.com/Arturozh'
-  }];
+  const users = [
+    {
+      'name': 'David Chavarri',
+      'job': 'Front Architect',
+      'image': '/assets/img/team/david-min.jpg',
+      'description': 'React Ninja',
+      'github': 'https://github.com/DvdChavarri'
+    },
+    {
+      'name': 'Arturo Zarzalejo',
+      'job': 'Fantasy Architect',
+      'image': '/assets/img/team/arturo-min.jpg',
+      'description': 'Sexy Fantasy Everywhere',
+      'github': 'https://github.com/Arturozh'
+    }
+  ];
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -39,13 +41,16 @@ describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
     component = fixture.componentInstance;
 
     let mockData = {
-      'users' : [{
+      'users' : [
+        {
           'name': 'David Chavarri',
           'job': 'Front Architect',
           'image': '/assets/img/team/david-min.jpg',
           'description': 'React Ninja',
           'github': 'https://github.com/DvdChavarri'
-    }]};
+        }
+      ]
+    };
 
     spyOn(AboutTeamService.prototype, 'search').and.returnValue(mockData);
 
