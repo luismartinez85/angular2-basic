@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-
-@font-face {
-  font-family: 'Sansation';
-  src: url('./assets/fonts/Sansation_Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
-}
 
 html, body {
   height: 100%;
@@ -12,6 +6,7 @@ html, body {
   width: 100%;
   margin: 0;
 }
+
 body {
   display: flex;
 }
@@ -20,74 +15,12 @@ app-shell {
   flex: 1;
   display: flex;
   flex-direction: row;
-  md-sidenav {
-    width: 300px;
-    .sidenavHeader {
-      background: url('/assets/img/sidenav.png');
-      width: 100%;
-      height: 240px;
-      background-size: cover;
-      display:flex;
-      background-position: top center;
-      color: #FFF;
-      position: relative;
-      flex-direction: column;
-      figure {
-        margin: 0;
-        flex: 0 0 50%;
-        display: flex;
-        md-icon {
-          font-size: 5em!important;
-          height: 100%;
-          width: 100%;
-          text-align: center;
-          line-height: 120px!important;
-        }
-      }
-      figcaption {
-        text-align: center;
-        position: relative;
-      }
-      >md-icon {
-        width: 100%;
-        flex: 1;
-        text-align: center;
-        line-height: 100px!important;
-        font-size: 5em!important;
-      }
-    }
-    .sidenavList {
-      display: flex;
-      flex-direction: column;
-      a {
-        text-align: left!important;
-        color: #000!important;
-        padding: 0.2em 2em!important;
-      }
-    }
-  }
+  
   md-sidenav-layout {
     flex:1;
   }
   .app-toolbar-filler {
     flex: 1 1 auto;
-  }
-  .shellBackground {
-    background: url('/assets/img/background.png');
-    width: 100%;
-    height: 320px;
-    background-size: cover;
-    display:block;
-    background-position: top center;
-
-    md-toolbar {
-      background: transparent; 
-      color: #FFF;
-      font-weight:600;
-      letter-spacing:1px;
-      word-spacing:0.2em;
-      font-family: 'Roboto';
-    }
   }
 
   .developed_frontstack {
@@ -119,17 +52,6 @@ span.app-action {
 
 span.active {
   background-color: gray;
-}
-
-.webpack-starter md-card{
-  width: 300px;
-}
-.webpack-starter .wide-card{
-  width: 400px;
-}
-
-.md-tab-body-wrapper, .md-tab-body {
-  overflow: visible!important;
 }
 
 .md-overlay-pane {

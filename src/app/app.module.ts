@@ -14,6 +14,7 @@ import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.serv
 
 // Import material design module
 import { MaterialModule } from '@angular/material';
+import { LayoutModule } from 'ng2-flex-layout';
 
 //import ng2-translate module
 import { TranslateModule } from 'ng2-translate';
@@ -39,6 +40,7 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
     BrowserModule,
     HttpModule,
     MaterialModule.forRoot(),
+    LayoutModule,
     ShellModule,
     RouterModule.forRoot(ROUTES, {
       useHash: true

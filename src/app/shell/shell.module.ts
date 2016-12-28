@@ -10,13 +10,14 @@ import 'hammerjs';
 // Import material design module
 import { MaterialModule } from '@angular/material';
 import { ShellComponent } from './shell.component';
-
+import { ToolbarComponent } from '../shared/components/toolbar/toolbar.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
 import { routes } from './shell.routes';
 
 @NgModule({
   declarations: [
     ShellComponent,
+    ToolbarComponent,
     FooterComponent
   ],
   imports: [
@@ -31,10 +32,8 @@ export class ShellModule {
   private element;
   constructor (private route:Router) {
      route.events.subscribe((val) => {
-      console.log('sdfasdf', val);
       this.element = document.querySelector('.sidenavList > [href*="#'+ val.url+'"]');
       ShellUtilService.element = this.element;
-      console.log('this.element', this.element);
     })
   }
 }

@@ -3,16 +3,16 @@ import { By }              from '@angular/platform-browser';
 import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 
 // Load the implementations that should be tested
-import { AboutComponent } from './about.component';
+import { AboutMainComponent } from './about-main.component';
 import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
-import { FsUsersService } from '../fs-users/fs-users.service';
+
 import { TranslateModule } from 'ng2-translate';
 
-let component:    AboutComponent;
-let fixture: ComponentFixture<AboutComponent>;
+let component:  AboutMainComponent;
+let fixture: ComponentFixture<AboutMainComponent>;
 let usersElement:      DebugElement;
 
-describe('Module About -> Component About', () => {
+describe('Modules -> About -> Component About', () => {
 
  beforeEach(() => {
 	  // declare the test component
@@ -20,12 +20,12 @@ describe('Module About -> Component About', () => {
       imports: [
         TranslateModule.forRoot()
       ],
-      providers: [ FsUsersService, MultiLanguageService ],
-      declarations: [ AboutComponent ],
+      providers: [ MultiLanguageService ],
+      declarations: [ AboutMainComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
-    fixture = TestBed.createComponent(AboutComponent);
+    fixture = TestBed.createComponent(AboutMainComponent);
     // Render
     fixture.detectChanges();
 
