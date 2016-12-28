@@ -39,7 +39,6 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
     BrowserModule,
     HttpModule,
     MaterialModule.forRoot(),
-    LayoutModule,
     ShellModule,
     RouterModule.forRoot(ROUTES, {
       useHash: true
