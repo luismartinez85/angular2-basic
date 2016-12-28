@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service'; 
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service'; 
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
+import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
 
 import { Feature } from '../../services/features/feature';
 import { FeaturesService } from '../../services/features/features.service';
@@ -11,7 +11,7 @@ import { TechsService } from '../../services/techs/techs.service';
 
 @Component({
 
-  selector: 'home-main', 
+  selector: 'home-main',
   providers: [
     FeaturesService,
     TechsService,
@@ -27,11 +27,11 @@ export class HomeMainComponent {
   rowHeight: string = '200px';
 
   constructor(
-    private featuresService: FeaturesService, 
+    private featuresService: FeaturesService,
     private techsService: TechsService,
     private translate: MultiLanguageService,
     private environmentConfig: EnvironmentConfigService) {
-   }
+  }
 
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
@@ -44,6 +44,6 @@ export class HomeMainComponent {
       example: 
       this.translate.setLanguage('es');
     */
-    }
+  }
 
 }

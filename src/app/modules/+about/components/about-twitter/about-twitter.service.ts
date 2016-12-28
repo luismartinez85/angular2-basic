@@ -3,7 +3,7 @@ import { Http, Response, Jsonp, URLSearchParams, Headers, RequestOptions, Reques
 import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
-export class FsTwitterAPIService {
+export class AboutTwitterService {
 
   public youtubeData;
 

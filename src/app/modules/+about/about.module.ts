@@ -10,19 +10,19 @@ import { routes } from './about.routes';
 import { AboutMainComponent } from './components/about-main/about-main.component';
 import { AboutTeamComponent } from './components/about-team/about-team.component';
 
-import { FsTwitterAPIComponent } from './components/about-twitter';
-import { fsYoutubeApiPipeFilterSearch, FsYoutubeAPIComponent } from './components/about-youtube';
-import { FsYoutubeDialog } from './components/about-youtube-modal/fs-youtube-api-dialog.component';
+import { AboutTwitter } from './components/about-twitter';
+import { AboutYoutubeSearchPipe, AboutYoutubeComponent } from './components/about-youtube';
+import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
 
 
 @NgModule({
   declarations: [
-    FsYoutubeAPIComponent,
-    FsTwitterAPIComponent,
-    fsYoutubeApiPipeFilterSearch,
+    AboutYoutubeComponent,
+    AboutTwitter,
+    AboutYoutubeSearchPipe,
     AboutMainComponent,
     AboutTeamComponent,
-    FsYoutubeDialog
+    AboutYoutubeModal
   ],
   imports: [
     CommonModule,
@@ -33,7 +33,7 @@ import { FsYoutubeDialog } from './components/about-youtube-modal/fs-youtube-api
     TranslateModule.forRoot()
   ],
   entryComponents : [
-    FsYoutubeDialog
+    AboutYoutubeModal
   ]
 })
 

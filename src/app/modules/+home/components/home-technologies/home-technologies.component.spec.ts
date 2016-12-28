@@ -31,7 +31,7 @@ describe('Module Home -> Component HomeTechnologies', () => {
       imports: [
         MaterialModule.forRoot()
       ],
-      declarations:[ HomeTechnologiesComponent ],
+      declarations: [ HomeTechnologiesComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
@@ -54,7 +54,4 @@ describe('Module Home -> Component HomeTechnologies', () => {
     expect(compiled.querySelectorAll('.description_tech').length).toEqual(elements.length);
   });
 
-
-
-  
 });

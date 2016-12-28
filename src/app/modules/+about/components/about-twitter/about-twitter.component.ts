@@ -1,23 +1,23 @@
 import { Component, Input, ViewEncapsulation, ChangeDetectionStrategy, OnInit, NgZone, ApplicationRef } from '@angular/core';
 
-import { FsTwitterAPIService } from './fs-twitter-api.service';
+import { AboutTwitterService } from './about-twitter.service';
 
 @Component({
-  selector: 'fs-twitter-api',
-  providers: [ FsTwitterAPIService ],
-  styleUrls: [ 'fs-twitter-api.component.scss' ],
-  templateUrl: 'fs-twitter-api.component.html',
+  selector: 'about-twitter',
+  providers: [ AboutTwitterService ],
+  styleUrls: [ 'about-twitter.component.scss' ],
+  templateUrl: 'about-twitter.component.html',
   encapsulation: ViewEncapsulation.None,
 })
 
-export class FsTwitterAPIComponent {
+export class AboutTwitter {
   dataTwitter: Array<any> = [];
   searchString: string = '';
 
-  constructor(private fstwitterapiservice: FsTwitterAPIService) {}
+  constructor(private aboutTwitterService: AboutTwitterService) {}
 
   ngOnInit () {
-    this.fstwitterapiservice.search().subscribe(data => {
+    this.aboutTwitterService.search().subscribe(data => {
       let div = document.createElement('div');
       div.innerHTML = data.body;
       let that = this;

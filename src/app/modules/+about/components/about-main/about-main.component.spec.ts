@@ -8,13 +8,14 @@ import { MultiLanguageService } from '../../../../shared/services/multiLanguage/
 
 import { TranslateModule } from 'ng2-translate';
 
+
 let component:  AboutMainComponent;
 let fixture: ComponentFixture<AboutMainComponent>;
 let usersElement:      DebugElement;
 
 describe('Modules -> About -> Component About', () => {
 
- beforeEach(() => {
+  beforeEach(() => {
 	  // declare the test component
     TestBed.configureTestingModule({
       imports: [
@@ -41,6 +42,6 @@ describe('Modules -> About -> Component About', () => {
   });
 
   it('should have a defined component', () => {
-      expect(component).toBeDefined();
+    expect(component).toBeDefined();
   });
 });

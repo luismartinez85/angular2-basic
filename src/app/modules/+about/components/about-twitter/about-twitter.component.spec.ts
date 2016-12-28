@@ -59,4 +59,4 @@ describe('Twitter API component', () => {
   });
 
 });
-*/ 
+*/
