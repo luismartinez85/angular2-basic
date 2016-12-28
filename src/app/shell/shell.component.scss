@@ -132,6 +132,32 @@ span.active {
   overflow: visible!important;
 }
 
+.md-overlay-pane {
+  .md-dialog-container {
+    transition: all 0.4s ease;
+    height: 90vh;
+    width: 90vw;
+    transform:scale(0.2);
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #ffffff;
+    overflow: visible;
+    &.openAnimated {
+      transform: scale(1);
+    }
+    md-toolbar {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background: #ddd;
+    }
+    code {
+      span {
+        display: block;
+      }
+    }
+  }
+}
 
 
 
@@ -175,7 +201,8 @@ span.active {
   @media screen and (max-width: 1080px) {
     flex-direction: column;
     justify-content: flex-start;
-}
+  }
+
 }
 
 
