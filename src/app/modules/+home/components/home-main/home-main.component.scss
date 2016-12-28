@@ -1,38 +1,22 @@
-/*styles for home content only*/
 home-main {
-  display: flex;
-  flex: 0 0 70%;
-  flex-direction: column;
-  padding: 1em;
-  max-width: 1000px;
-
-  .logo_angular {
-    width:146px;
-    height:157px;
-    margin-top: -80px;
-    margin-left: 150px;
+  .home-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: -250px;
   }
 
-  .home_slogan {
-    color: white;
-    word-wrap: normal;
-    word-spacing: .15em;
-    margin-left: 330px;
-    margin-top: -46px;
+  .home-item {
+    flex: 0 0 1 auto auto;
+    padding: 15px;
+    max-width: 1000px;
+    width: 100%;
   }
 
-  .home_title {
-    color: #FFF;
-    font-size: 3.35em;
-    font-weight: 600;
-    line-height: 56px;
-    margin-top: -140px;
-    margin-left: 330px;
-    width: 575px;
-    word-spacing: 0.3em;
-    word-wrap: normal;
-  }
-
+/*
   .md-tab-body-wrapper {
     margin-bottom:80px;
   }
@@ -64,4 +48,5 @@ home-main {
       height: 4px;
     }
   }
+  */
 }
