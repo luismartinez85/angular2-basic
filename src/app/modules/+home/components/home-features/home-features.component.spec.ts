@@ -33,7 +33,7 @@ describe('Module Home -> Component HomeFeatureModal', () => {
       imports: [
         MaterialModule.forRoot()
       ],
-      declarations:[ HomeFeaturesComponent ],
+      declarations: [ HomeFeaturesComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
@@ -41,7 +41,7 @@ describe('Module Home -> Component HomeFeatureModal', () => {
     fixture = TestBed.createComponent(HomeFeaturesComponent);
     component = fixture.componentInstance;
 
-   //let dialogRef = new MdDialogRef<CustomModal>();
+   // let dialogRef = new MdDialogRef<CustomModal>();
 
     spyOn(MdDialog.prototype, 'open').and.returnValue(true);
     spyOn(MdDialogRef.prototype, 'afterClosed').and.returnValue(true);
@@ -55,14 +55,10 @@ describe('Module Home -> Component HomeFeatureModal', () => {
 
   it('should open dialog', () => {
     let element = {
-      title:'title1',
-      description:'description1'
+      title: 'title1',
+      description: 'description1'
     };
 
    // component.openDialog(element);
   });
-
-
-
-  
 });

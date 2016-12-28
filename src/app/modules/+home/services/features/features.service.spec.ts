@@ -3,8 +3,8 @@ import { FeaturesService } from './features.service';
 
 describe('Modules -> Home -> Services -> FeaturesService', () => {
   beforeEach(() => {
-      TestBed.configureTestingModule({
-        providers: [ FeaturesService ]
+    TestBed.configureTestingModule({
+      providers: [ FeaturesService ]
     });
   });
 

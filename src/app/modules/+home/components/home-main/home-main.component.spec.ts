@@ -11,8 +11,8 @@ import {
 import { MockBackend } from '@angular/http/testing';
 import { FeaturesService } from '../../services/features/features.service';
 import { TechsService } from '../../services/techs/techs.service';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service'; 
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service'; 
+import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
+import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
 
 
 import { MaterialModule } from '@angular/material';
@@ -31,7 +31,7 @@ describe('Module Home -> Component HomeMain', () => {
         MaterialModule.forRoot()
       ],
       providers: [ EnvironmentConfigService ],
-      declarations:[ HomeMainComponent ],
+      declarations: [ HomeMainComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css

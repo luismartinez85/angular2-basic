@@ -3,8 +3,8 @@ import { TechsService } from './techs.service';
 
 describe('Modules -> Home -> Services -> TechsService', () => {
   beforeEach(() => {
-      TestBed.configureTestingModule({
-        providers: [TechsService]
+    TestBed.configureTestingModule({
+      providers: [TechsService]
     });
   });
 
