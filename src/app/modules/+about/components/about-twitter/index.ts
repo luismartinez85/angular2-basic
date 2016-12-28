@@ -1,1 +1,1 @@
-export * from './fs-twitter-api.component';
+export * from './about-twitter.component';

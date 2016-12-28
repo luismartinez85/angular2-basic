@@ -3,11 +3,12 @@ import { Http, Response, Jsonp, URLSearchParams, Headers, RequestOptions, Reques
 import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
-export class FsTwitterAPIService {
+export class AboutTwitterService {
 
   public youtubeData;
 
-  private twitterAPIURL = 'https://syndication.twitter.com/timeline/profile?dnt=false&screen_name=serenityFront&suppress_response_codes=true&lang=en&callback=JSONP_CALLBACK';
+  private twitterAPIURL = 
+  'https://syndication.twitter.com/timeline/profile?dnt=false&screen_name=serenityFront&suppress_response_codes=true&lang=en&callback=JSONP_CALLBACK';
   private headers: Headers;
   private options: RequestOptions;
 

@@ -3,7 +3,7 @@ import { Http, Response, Jsonp, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class FsYoutubeAPIService {
+export class AboutYoutubeService {
 
   public static actualYoutubeData;
   public youtubeData;

@@ -3,13 +3,13 @@ import { Pipe, PipeTransform } from '@angular/core';
  * Raise the value exponentially
  * Takes an exponent argument that defaults to 1.
  * Usage:
- *   value | fsYoutubeApiPipeFilterSearch:string
+ *   value | AboutYoutubeSearchPipe:string
  * Example:
  *   {{ string |  string}}
 */
-@Pipe({name: 'fsYoutubeApiPipeFilterSearch', pure: true})
+@Pipe({name: 'aboutYoutubeSearchPipe', pure: true})
 
-export class FsYoutubeApiPipeFilterSearch implements PipeTransform {
+export class AboutYoutubeSearchPipe implements PipeTransform {
   transform(value: string): Array<any> {
     let array = arguments[0] || null;
     let valueString = arguments[1] || '';
