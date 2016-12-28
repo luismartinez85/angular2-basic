@@ -38,7 +38,7 @@ describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
       providers: [ AboutTeamService ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     }).compileComponents();
-    
+
     fixture = TestBed.createComponent(AboutTeamComponent);
     component = fixture.componentInstance;
 
