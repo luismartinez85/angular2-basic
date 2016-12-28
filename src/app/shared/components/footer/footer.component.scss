@@ -1,4 +1,4 @@
-.flex-container {
+.footer-container {
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
@@ -11,14 +11,14 @@
     color: white;
 }
 
-.flex-item {
+.footer-item {
     flex: 0.33;
     padding: 15px;
     min-width: 200px;
     text-align: center;
 }
 
-.social-flex-item {
+.social-footer-item {
     flex: 1;
     padding: 5px;
     text-align: center;
