@@ -1,3 +1,3 @@
 export * from './fs-youtube-api.component';
 export * from './fs-youtube-api.pipe';
-export * from '../fs-youtube-api-dialog/fs-youtube-api-dialog.component';
+export * from '../about-youtube-modal/fs-youtube-api-dialog.component';

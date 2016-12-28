@@ -1,6 +1,6 @@
 import { Component, Input, ViewEncapsulation, ChangeDetectionStrategy, OnInit, NgZone, ApplicationRef } from '@angular/core';
 import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
-import { FsYoutubeAPIService } from '../fs-youtube-api/fs-youtube-api.service';
+import { FsYoutubeAPIService } from '../about-youtube/fs-youtube-api.service';
 
 @Component({
   selector: 'youtube-dialog',

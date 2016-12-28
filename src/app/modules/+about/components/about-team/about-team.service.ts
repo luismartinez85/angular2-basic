@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class FsUsersService {
+export class AboutTeamService {
 
   private mockURL: string = 'assets/mock-data/mockusers.json';
 

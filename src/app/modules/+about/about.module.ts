@@ -2,23 +2,26 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { routes } from './about.routes';
-
 import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';
-import { AboutComponent } from './components/about/about.component';
-import { FsUsersComponent } from './components/fs-users/fs-users.component';
-import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
-import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
+
+import { routes } from './about.routes';
+
+import { AboutMainComponent } from './components/about-main/about-main.component';
+import { AboutTeamComponent } from './components/about-team/about-team.component';
+
+import { FsTwitterAPIComponent } from './components/about-twitter';
+import { fsYoutubeApiPipeFilterSearch, FsYoutubeAPIComponent } from './components/about-youtube';
+import { FsYoutubeDialog } from './components/about-youtube-modal/fs-youtube-api-dialog.component';
 
 
 @NgModule({
   declarations: [
-    AboutComponent,
     FsYoutubeAPIComponent,
     FsTwitterAPIComponent,
     fsYoutubeApiPipeFilterSearch,
-    FsUsersComponent,
+    AboutMainComponent,
+    AboutTeamComponent,
     FsYoutubeDialog
   ],
   imports: [
@@ -32,7 +35,6 @@ import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } 
   entryComponents : [
     FsYoutubeDialog
   ]
-
 })
 
 export class AboutModule { }
