@@ -1,18 +1,25 @@
-<h3>{{'ABOUT.TITLE' | translate}}</h3>
-
-<md-tab-group>
-  <md-tab>
-    <template md-tab-label>
-      <span class="text">Our Team</span>
-      <span class="icon"><md-icon>people</md-icon></span>
-    </template>
-    <about-team></about-team>
-  </md-tab>
-  <md-tab>
-    <template md-tab-label>
-      <span class="text">Youtube API</span>
-      <span class="icon"><md-icon>video_library</md-icon></span>
-    </template>
-    <about-youtube></about-youtube>
-  </md-tab>
-</md-tab-group>
+<div class="about-container">
+  <div class="about-item">
+    <span class="about-section-title">{{'ABOUT.TITLE' | translate}}</span>
+  </div>
+  <div class="about-item">
+    <div class="about-tab-content">
+      <md-tab-group>
+        <md-tab>
+          <template md-tab-label>
+            <span class="text">Our Team</span>
+            <span class="icon"><md-icon>people</md-icon></span>
+          </template>
+          <about-team></about-team>
+        </md-tab>
+        <md-tab>
+          <template md-tab-label>
+            <span class="text">Youtube API</span>
+            <span class="icon"><md-icon>video_library</md-icon></span>
+          </template>
+          <about-youtube></about-youtube>
+        </md-tab>
+      </md-tab-group>
+    </div>
+  </div>
+</div>
