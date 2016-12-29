@@ -12,7 +12,7 @@ export class HomeFeatureModal {
 
   public modalData;
 
-  constructor(public dialogRef: MdDialogRef<HomeFeatureModal>) {
+  constructor() {
     this.modalData = HomeFeaturesService.featuresData;
   }
 };

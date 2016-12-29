@@ -6,26 +6,24 @@ import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.compo
 @Component({
   selector: 'home-features',
   templateUrl: './home-features.component.html',
-  styleUrls: [ './home-features.component.scss' ]
+  styleUrls: [ './home-features.component.scss' ],
+  providers: [ HomeFeaturesService ]
 })
 
 export class HomeFeaturesComponent {
 
   @Input() elements = [];
-  dialogRef: MdDialogRef<HomeFeatureModal>;
 
-  constructor(public dialog: MdDialog) { }
+  constructor(
+    public dialog: MdDialog,
+    private homeFeatureService: HomeFeaturesService,
+  ) { }
 
   openDialog(element) {
-    HomeFeaturesService.featuresData = element;
+    this.homeFeatureService.selectData(element);
 
-    this.dialogRef = this.dialog.open(HomeFeatureModal, {
+    this.dialog.open(HomeFeatureModal, {
       disableClose: false
-    });
-
-    this.dialogRef.afterClosed().subscribe(result => {
-      this.dialogRef = null;
-      HomeFeaturesService.featuresData = null;
     });
   }
 
