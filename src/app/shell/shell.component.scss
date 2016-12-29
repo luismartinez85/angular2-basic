@@ -23,16 +23,6 @@ app-shell {
     flex: 1 1 auto;
   }
 
-  .developed_frontstack {
-    position:absolute;
-    right:30px;
-    top:0px;
-    color:#ddd;
-    font-family:'Roboto';
-    text-transform: none;
-    font-size:0.7em;
-  }
-
   main {
     margin: -170px 0;
     flex-direction: row;
@@ -52,33 +42,6 @@ span.app-action {
 
 span.active {
   background-color: gray;
-}
-
-.md-overlay-pane {
-  .md-dialog-container {
-    transition: all 0.4s ease;
-    height: 90vh;
-    width: 90vw;
-    transform:scale(0.2);
-    padding: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background: #ffffff;
-    overflow: visible;
-    &.openAnimated {
-      transform: scale(1);
-    }
-    md-toolbar {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      background: #ddd;
-    }
-    code {
-      span {
-        display: block;
-      }
-    }
-  }
 }
 
 

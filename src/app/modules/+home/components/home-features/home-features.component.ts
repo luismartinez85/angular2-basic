@@ -12,13 +12,9 @@ import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.compo
 export class HomeFeaturesComponent {
 
   @Input() elements = [];
-  @Input() title;
-
   dialogRef: MdDialogRef<HomeFeatureModal>;
 
-  constructor(public dialog: MdDialog) {
-
-  }
+  constructor(public dialog: MdDialog) { }
 
   openDialog(element) {
     HomeFeaturesService.featuresData = element;

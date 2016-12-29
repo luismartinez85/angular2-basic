@@ -1,14 +1,14 @@
 <md-toolbar>
   <span>Angular 2 Basic Features</span>
-  <button style="right: 15px; position: absolute;" md-icon-button (click)="dialogRef.close()">
+  <span class="fill-remaining-space"></span>
+  <button md-icon-button (click)="dialogRef.close()">
       <md-icon>close</md-icon>
   </button>
 </md-toolbar>
 
-<div style="padding:1em;" *ngIf="modalData">
-
-  <h1 class="title">{{modalData.title}}</h1>
-  <p class="description">{{modalData.description}}</p>
+<div *ngIf="modalData">
+  <h1>{{modalData.title}}</h1>
   <h3>Description</h3>
+  <p>{{modalData.description}}</p>
   <p>{{modalData.code}}</p>
 </div>

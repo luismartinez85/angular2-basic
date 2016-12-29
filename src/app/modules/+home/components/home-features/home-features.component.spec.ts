@@ -2,17 +2,13 @@ import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import 'hammerjs';
 
 import { By } from '@angular/platform-browser/src/dom/debug/by';
-
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { MaterialModule, MdDialog, MdDialogRef } from '@angular/material';
 
-// Load the implementations that should be tested
 import { HomeFeaturesComponent } from './home-features.component';
-
 import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.component';
 
-describe('Module Home -> Component HomeFeatureModal', () => {
+describe('Modules -> home -> HomeFeatureComponent', () => {
   let component: HomeFeaturesComponent;
   let fixture;
 
@@ -27,7 +23,6 @@ describe('Module Home -> Component HomeFeatureModal', () => {
     }
   ];
 
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -40,8 +35,6 @@ describe('Module Home -> Component HomeFeatureModal', () => {
 
     fixture = TestBed.createComponent(HomeFeaturesComponent);
     component = fixture.componentInstance;
-
-   // let dialogRef = new MdDialogRef<CustomModal>();
 
     spyOn(MdDialog.prototype, 'open').and.returnValue(true);
     spyOn(MdDialogRef.prototype, 'afterClosed').and.returnValue(true);
@@ -58,7 +51,5 @@ describe('Module Home -> Component HomeFeatureModal', () => {
       title: 'title1',
       description: 'description1'
     };
-
-   // component.openDialog(element);
   });
 });
