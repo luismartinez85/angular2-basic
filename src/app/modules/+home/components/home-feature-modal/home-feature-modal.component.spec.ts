@@ -5,37 +5,37 @@ import { By } from '@angular/platform-browser/src/dom/debug/by';
 
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { MaterialModule, MdDialogRef, MdDialog, MdDialogConfig  } from '@angular/material';
+import { MaterialModule, MdDialogRef, MdDialog, MdDialogConfig, OverlayRef  } from '@angular/material';
 
-import { CustomGridCardsService } from '../customGridCards/customGridCards.service'
+import { HomeFeaturesService } from '../home-features/home-features.service'
 
 // Load the implementations that should be tested
-import { CustomModal } from './customModal.component';
+import { HomeFeatureModal } from './home-feature-modal.component';
 
-describe('Module Home -> Component CustomModal', () => {
-  let component: CustomModal;
+describe('Module Home -> Component HomeFeatureModal', () => {
+  let component: HomeFeatureModal;
   let fixture;
 
   const element = {
     title: 'example1',
     description: 'description example1'
-	};
-
+  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         MaterialModule.forRoot(),
       ],
-      declarations:[ CustomModal ],
+      providers: [ MdDialogRef, OverlayRef],
+      declarations:[ HomeFeatureModal ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css	
 
-    fixture = TestBed.createComponent(CustomModal);
+    fixture = TestBed.createComponent(HomeFeatureModal);
     component = fixture.componentInstance;
 
-		spyOn(CustomGridCardsService.prototype, 'featuresData').and.returnValue(element);
+    spyOn(HomeFeaturesService.prototype, 'featuresData').and.returnValue(element);
 
   });
 
