@@ -2,22 +2,24 @@
   <div class="home-item">
     <home-logo></home-logo>
   </div>
+  <div class="home-item">
+    <div class="home-tab-content">
+      <md-tab-group>
+        <md-tab>
+          <template md-tab-label>
+            <span class="menu_option">Features</span>
+            <span class="icon"><md-icon>fingerprint</md-icon></span>
+          </template>
+          <home-features [elements]="features"></home-features>
+        </md-tab>
+        <md-tab>
+          <template md-tab-label>
+            <span class="menu_option">Technologies</span>
+            <span class="icon"><md-icon>code</md-icon></span>
+          </template>
+          <home-technologies [elements]="techs"></home-technologies>
+        </md-tab>
+      </md-tab-group>
+    </div>
+  </div>
 </div>
-<!--
-<md-tab-group>
-  <md-tab>
-    <template md-tab-label>
-      <span class="menu_option">Features</span>
-      <span class="icon"><md-icon>fingerprint</md-icon></span>
-    </template>
-    <home-features [elements]="features"></home-features>
-  </md-tab>
-  <md-tab>
-    <template md-tab-label>
-      <span class="menu_option">Technologies</span>
-      <span class="icon"><md-icon>code</md-icon></span>
-    </template>
-    <home-technologies [elements]="techs"></home-technologies>
-  </md-tab>
-</md-tab-group>
--->

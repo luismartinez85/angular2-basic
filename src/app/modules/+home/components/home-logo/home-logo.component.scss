@@ -1,5 +1,4 @@
 home-logo {
-    text-align: center;
 
     .logo-angular {
         display:block;
@@ -17,5 +16,10 @@ home-logo {
 
     .logo-slogan {
         color: white;
+    }
+
+    .logo-name {
+        position: relative;
+        top: 17px;
     }
 }

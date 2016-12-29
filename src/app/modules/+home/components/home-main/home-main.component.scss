@@ -16,37 +16,15 @@ home-main {
     width: 100%;
   }
 
-/*
-  .md-tab-body-wrapper {
-    margin-bottom:80px;
-  }
-  
-  .md-tab-header {
-    border-bottom: 0px;
-    color: #FFF;
-    margin-top:33px;
+  .home-tab-content {
+    margin-top: 53px;
+
     .md-tab-label {
-      opacity: 1;
-      position: relative;
-      font-size: 1.1em;
-      letter-spacing: 0.040em;
-      text-align:left;
-    }
-    .text {
-      padding-right: 10px;
-    }
-    .icon {
-      position: absolute;
-      top: 6px;
-      right: 10px;
-      display: none;
-      @media screen and (min-width: 480px) {
-        display: block;
+      color: white;
+      .icon {
+        top: 7px;
+        position: relative;
       }
     }
-    md-ink-bar {
-      height: 4px;
-    }
   }
-  */
 }
