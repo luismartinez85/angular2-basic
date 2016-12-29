@@ -10,9 +10,9 @@
         <md-icon>code</md-icon>
     </span>
     <div class="sidenavList">
-        <a md-button md-ripple [routerLink]=" ['./home'] " routerLinkActive="active" (click)="sidenav.toggle();">Home</a>
-        <a md-button md-ripple [routerLink]=" ['./about'] " routerLinkActive="active"(click)="sidenav.toggle()">About Us</a>
-        <a md-button md-ripple [routerLink]=" ['./nopagefound'] " routerLinkActive="active" (click)="sidenav.toggle()">No page found</a>
+        <a md-button md-ripple [routerLink]="ROUTES.HOME.path" routerLinkActive="active" (click)="sidenav.toggle();">Home </a>
+        <a md-button md-ripple [routerLink]="ROUTES.ABOUT_US.path" routerLinkActive="active"(click)="sidenav.toggle()">About Us</a>
+        <a md-button md-ripple [routerLink]="ROUTES.NO_CONTENT.path" routerLinkActive="active" (click)="sidenav.toggle()">No page found</a>
     </div>
 </md-sidenav>
 
