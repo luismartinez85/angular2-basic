@@ -1,25 +1,26 @@
 home-logo {
 
-    .logo-angular {
-        display:block;
-        margin:auto;
-        float:left;
-        width: 100px;
-        padding-right: 30px;
-    }
+  .logo-angular {
+    display: block;
+    margin: auto;
+    float: left;
+    width: 100px;
+    padding-right: 30px;
+  }
 
-    .logo-title {
-        color: #FFF;
-        font-size: 2.35em;
-        font-weight: 100;
-    }
+  .logo-name {
+    position: relative;
+    top: 17px;
+  }
 
-    .logo-slogan {
-        color: white;
-    }
+  .logo-title {
+    color: #FFF;
+    font-size: 2.35em;
+    font-weight: 100;
+  }
 
-    .logo-name {
-        position: relative;
-        top: 17px;
-    }
+  .logo-slogan {
+    color: white;
+  }
+
 }
