@@ -13,15 +13,11 @@ import { AboutYoutubeService } from './about-youtube.service';
 
 export class AboutYoutubeComponent{
   dataYoutube: Array<any>;
-  searchString: string = '';
-  dialogRef: MdDialogRef<AboutYoutubeModal>;
 
   constructor ( 
-    private aboutYoutubeService: AboutYoutubeService,  
-    private _ngZone: NgZone,  
-    private lc: ApplicationRef,  
-    public dialog: MdDialog) { } 
- 
+    private aboutYoutubeService: AboutYoutubeService,
+    public dialog: MdDialog) { }
+
   ngOnInit () { 
     this.aboutYoutubeService.search().subscribe( 
       data => { 
