@@ -1,9 +1,10 @@
 import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
-import { DebugElement }    from '@angular/core';
+import { DebugElement,Component, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { ToolbarComponent } from '../shared/components/toolbar/toolbar.component';
 
 // Load the implementations that should be tested
 import { ShellComponent } from './shell.component';
@@ -23,9 +24,11 @@ describe('App Shell', () => {
         MaterialModule.forRoot()
       ],
       declarations: [
-        ShellComponent
+        ShellComponent,
+        ToolbarComponent
       ], // declare the test component
-      providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
 

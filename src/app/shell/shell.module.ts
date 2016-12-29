@@ -25,7 +25,7 @@ import { routes } from './shell.routes';
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
   ],
-  providers: [TranslateService]
+  providers: [ TranslateService ]
 })
 
 export class ShellModule {
