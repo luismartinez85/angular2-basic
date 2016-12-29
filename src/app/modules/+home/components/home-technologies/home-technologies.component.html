@@ -1,9 +1,11 @@
 <md-card *ngFor="let element of elements">
-  <div class="tech-logo">
-    <img class="tech-logo" [src]="element.image" [alt]="element.title">
-  </div>
-  <div class="tech-text">
-    <h2>{{element.title}}</h2>
-    <span>{{element.description}}</span>
+  <div class="techs-container">
+    <div class="tech-item-image">
+      <img class="tech-logo" [src]="element.image" [alt]="element.title">
+    </div>
+    <div class="tech-item-text">
+      <h2>{{element.title}}</h2>
+      <span>{{element.description}}</span>
+    </div>
   </div>
 </md-card>
