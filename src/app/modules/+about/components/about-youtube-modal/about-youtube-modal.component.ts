@@ -11,7 +11,7 @@ export class AboutYoutubeModal {
 
   public dialogData;
 
-  constructor(public youtubeApiService: AboutYoutubeService) { 
+  constructor() { 
     this.dialogData = AboutYoutubeService.actualYoutubeData;
   }
 }
