@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.service';
 import { NoContentComponent } from './shared/components/no-content/noContent.component';
 
-import { ROUTES_CONSTANTS } from './shared/constants/routes/routes.constants';
+import { ROUTES_CONSTANTS } from './shared/constants/routes.constants';
 
 export const ROUTES: Routes = [
   {

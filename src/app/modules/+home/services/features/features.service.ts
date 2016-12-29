@@ -8,5 +8,5 @@ export class FeaturesService {
   getFeatures(): Feature[] {
     return FEATURES;
   }
-  
+
 }
