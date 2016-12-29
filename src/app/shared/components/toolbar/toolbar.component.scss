@@ -60,5 +60,11 @@
         color: #000!important;
         padding: 0.2em 2em!important;
       }
+      a.active .md-button-ripple{     
+        background-color: rgba(0, 0, 0, 0.1588);
+      }
+      a.md-button-focus{     
+        background-color: none!important;
+      }
     }
   }
