@@ -16,13 +16,13 @@ export class HomeFeaturesComponent {
 
   constructor(
     public dialog: MdDialog,
-    private homeFeatureService: HomeFeaturesService,
+    private homeFeatureService: HomeFeaturesService
   ) { }
 
   openDialog(element) {
     this.homeFeatureService.selectData(element);
 
-    this.dialog.open(HomeFeatureModal, {
+    return this.dialog.open(HomeFeatureModal, {
       disableClose: false
     });
   }

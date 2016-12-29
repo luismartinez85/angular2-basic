@@ -51,5 +51,7 @@ describe('Modules -> home -> HomeFeatureComponent', () => {
       title: 'title1',
       description: 'description1'
     };
+    let dialog = component.openDialog(element);
+    expect(dialog).toEqual(true);
   });
 });
