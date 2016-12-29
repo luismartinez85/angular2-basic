@@ -46,7 +46,7 @@ describe('Module Home -> Component HomeTechnologies', () => {
 
     let compiled = fixture.debugElement.nativeElement;
 
-    expect(compiled.querySelectorAll('.description_tech').length).toEqual(elements.length);
+    expect(compiled.querySelectorAll('.tech-item-text').length).toEqual(elements.length);
   });
 
 });
