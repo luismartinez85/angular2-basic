@@ -126,6 +126,7 @@
       "check-separator",
       "check-type"
     ],
-    "import-destructuring-spacing": true
+    "import-destructuring-spacing": true,
+    "cyclomatic-complexity": [true, 10]
   }
 }
