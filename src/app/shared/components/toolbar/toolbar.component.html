@@ -1,4 +1,5 @@
 <md-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
+    
     <span class="sidenavHeader">
         <figure>
             <md-icon>account_circle</md-icon>
@@ -9,9 +10,9 @@
         <md-icon>code</md-icon>
     </span>
     <div class="sidenavList">
-        <a md-button md-ripple [routerLink]=" ['./home'] " (click)="sidenav.toggle();">Home</a>
-        <a md-button md-ripple [routerLink]=" ['./about'] " (click)="sidenav.toggle()">About Us</a>
-        <a md-button md-ripple [routerLink]=" ['./nopagefound'] " (click)="sidenav.toggle()">No page found</a>
+        <a md-button md-ripple [routerLink]="ROUTES.HOME.path" routerLinkActive="active" (click)="sidenav.toggle();">Home </a>
+        <a md-button md-ripple [routerLink]="ROUTES.ABOUT_US.path" routerLinkActive="active"(click)="sidenav.toggle()">About Us</a>
+        <a md-button md-ripple [routerLink]="ROUTES.NO_CONTENT.path" routerLinkActive="active" (click)="sidenav.toggle()">No page found</a>
     </div>
 </md-sidenav>
 
