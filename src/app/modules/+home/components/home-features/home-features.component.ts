@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
+import { MdDialog } from '@angular/material';
 import { HomeFeaturesService } from './home-features.service';
 import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.component';
 

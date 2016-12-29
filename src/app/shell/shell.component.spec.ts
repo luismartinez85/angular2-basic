@@ -17,13 +17,13 @@ const routes = [{ path: '', component: ShellComponent}];
 describe('App Shell', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEach(() => {
-     TestBed.configureTestingModule({
+    TestBed.configureTestingModule({
       imports: [
         RouterModule.forRoot(routes),
         MaterialModule.forRoot()
       ],
-      declarations: [ 
-        ShellComponent 
+      declarations: [
+        ShellComponent
       ], // declare the test component
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     })
@@ -39,7 +39,7 @@ describe('App Shell', () => {
     element = debug.nativeElement;
   });
 
-  it('should have first route called Home',() => {
+  it('should have first route called Home', () => {
     fixture.detectChanges();
     expect(element.textContent).toContain('Home');
   });

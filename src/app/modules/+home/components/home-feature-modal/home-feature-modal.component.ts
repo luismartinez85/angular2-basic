@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
+import { Component } from '@angular/core';
 import { HomeFeaturesService } from '../home-features/home-features.service';
 
 @Component({

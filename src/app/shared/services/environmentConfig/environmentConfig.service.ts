@@ -11,7 +11,7 @@ export class EnvironmentConfigService {
     *  ENVIRONMENT_CONFIG.api is a value defined in /config/app.config.json
     *  ENVIRONMENT_CONFIG.api1 is a value defined in /config/app.config.json
     */
-    
+
     this.api = ENVIRONMENT_CONFIG.api;
     this.api1 = ENVIRONMENT_CONFIG.api1;
   }

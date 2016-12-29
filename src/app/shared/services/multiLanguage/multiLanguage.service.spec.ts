@@ -14,7 +14,7 @@ describe('shared -> MultiLanguageService', () => {
       ]
     });
 
-     spyOn(TranslateService.prototype, 'use').and.returnValue(true);
+    spyOn(TranslateService.prototype, 'use').and.returnValue(true);
   });
 
   it('Should be defined',

@@ -12,5 +12,4 @@ describe('Modules -> Home -> Services -> TechsService', () => {
   it('Should return 9 techs', inject([TechsService], (service: TechsService) => {
     expect(service.getTechs().length).toBe(9);
   }));
-  
 });

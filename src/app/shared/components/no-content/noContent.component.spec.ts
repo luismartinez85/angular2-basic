@@ -22,5 +22,5 @@ describe('shared -> noContentComponent', () => {
   it('should have a defined component', () => {
     expect(component).toBeDefined();
   });
-})
+});
 

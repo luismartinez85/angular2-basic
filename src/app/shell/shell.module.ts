@@ -28,12 +28,12 @@ import { routes } from './shell.routes';
   providers: [TranslateService]
 })
 
-export class ShellModule { 
+export class ShellModule {
   private element;
-  constructor (private route:Router) {
-     route.events.subscribe((val) => {
-      this.element = document.querySelector('.sidenavList > [href*="#'+ val.url+'"]');
+  constructor (private route: Router) {
+    route.events.subscribe((val) => {
+      this.element = document.querySelector('.sidenavList > [href*="#' + val.url + '"]');
       ShellUtilService.element = this.element;
-    })
+    });
   }
 }

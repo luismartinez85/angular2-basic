@@ -24,7 +24,7 @@ export const ROUTES: Routes = [
     loadChildren: './modules/+about/about.module#AboutModule'
   },
   {
-    path:ROUTES_CONSTANTS.NO_CONTENT.path,
+    path: ROUTES_CONSTANTS.NO_CONTENT.path,
     component: NoContentComponent
   }
 ];
