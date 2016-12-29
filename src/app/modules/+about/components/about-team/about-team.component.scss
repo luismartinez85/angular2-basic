@@ -1,63 +1,50 @@
 about-team {
-  .flex-container {
-    padding: 10px;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    list-style: none;
-
-    display: flex;
-
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-direction: row;
-  }
-
-  .user-header {
-    flex: 0 0 70%;
+  .team-container {
     display: flex;
     flex-direction: row;
-    >div {
-      display: flex;
-      flex-direction: column;
-      padding-left: 1em; 
-      line-height: 0.9em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    .team-item {
+      flex: 0 0 1 auto auto;
+      width: 30%;
+      padding: 6px;
+      @media screen and (max-width: 480px) {
+        flex: 1;
+        width: 100%;
+      }
+
+      .team-item-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        .team-item-image {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .team-item-text {
+          width: 100%;
+          margin-top: -12px;
+          margin-left: 10px;
+        }
+
+        .team-item-github {
+          width: 40px;
+        }
+      }
     }
   }
-
-  md-card {
-      flex: 0 0 100%;
-
-      min-width: 200px;
-      min-height: auto;
-      box-sizing: border-box;
-      margin: 0;
-      margin-bottom: 0.5em;
-      md-card-title-group {
-        flex: 1;
-      }
-      md-card-title {
-        font-weight:600;
-      }
-
-      md-card-content {
-        padding-top: 5px;
-      }
-
-      img{
-        display: block;
-        width: auto;
-        height: auto;
-      }
-
-      @media screen and (min-width: 480px) {
-        flex: 0 0 33% !important;
-        max-width: 340px;
-        min-width: 114px;
-        min-height: auto;
-        margin: 1;
-        min-height: auto;
-        box-sizing: border-box;
-        margin-bottom: 0.5em;
-      }
+  
+  .fill-remaining-space {
+    flex: 1 1 auto;
   }
 }

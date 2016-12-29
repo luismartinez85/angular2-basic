@@ -3,9 +3,7 @@ import { MultiLanguageService } from '../../../../shared/services/multiLanguage/
 
 @Component({
   selector: 'about-main',
-  providers: [
-    MultiLanguageService
-  ],
+  providers: [ MultiLanguageService ],
   templateUrl: './about-main.component.html',
   styleUrls: ['./about-main.component.scss'],
 })

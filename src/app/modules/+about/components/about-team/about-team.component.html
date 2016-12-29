@@ -1,22 +1,21 @@
-<div class="flex-container">
+<div class="team-container">
+  <div class="team-item" *ngFor="let user of dataUsers">
 
-  <md-card *ngFor="let user of dataUsers">
-    <md-card-header>
-        <div class="user-header">
-          <img md-card-avatar src="{{user.image}}">
-          <div>
-            <md-card-title>{{user.name}}</md-card-title>
-            <md-card-subtitle>{{user.job}}</md-card-subtitle>
+    <md-card>
+      <div class="team-item-container">
+          <div class="team-item-image">
+            <img md-card-avatar src="{{user.image}}">
           </div>
-        </div>
-        <span style="flex:1"></span>
-        <a href="{{user.github}}" md-icon-button color="primary">
-          <md-icon svgSrc="/assets/img/github.svg"></md-icon>
-        </a>
-    </md-card-header>
-    <md-card-content>
-        <p>{{user.description}}</p>
-    </md-card-content>
-  </md-card>
-  
+          <div class="team-item-text">
+            <h3>{{user.name}}</h3>
+            <span>{{user.description}}</span>
+          </div>
+          <span class="fill-remaining-space"></span>
+          <a target="_blank" href="{{user.github}}" md-icon-button color="primary">
+            <img class="team-item-github" src="assets/img/social_logos/logo_github_black.png">
+          </a>
+      </div>
+    </md-card>
+
+  </div>
 </div>
