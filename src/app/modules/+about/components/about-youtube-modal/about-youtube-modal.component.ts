@@ -11,7 +11,7 @@ export class AboutYoutubeModal {
 
   public dialogData;
 
-  constructor() { 
+  constructor() {
     this.dialogData = AboutYoutubeService.actualYoutubeData;
   }
 }

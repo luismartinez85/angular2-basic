@@ -14,23 +14,23 @@ import { AboutYoutubeService } from './about-youtube.service';
 export class AboutYoutubeComponent{
   dataYoutube: Array<any>;
 
-  constructor ( 
+  constructor (
     private aboutYoutubeService: AboutYoutubeService,
     public dialog: MdDialog) { }
 
-  ngOnInit () { 
-    this.aboutYoutubeService.search().subscribe( 
-      data => { 
-        this.dataYoutube = data.items; 
-      } 
-    ); 
-  } 
-  openVideo(item) { 
-    this.aboutYoutubeService.selectVideo(item); 
+  ngOnInit () {
+    this.aboutYoutubeService.search().subscribe(
+      data => {
+        this.dataYoutube = data.items;
+      }
+    );
+  }
+  openVideo(item) {
+    this.aboutYoutubeService.selectVideo(item);
 
-    this.dialog.open(AboutYoutubeModal, { 
-      disableClose: false 
-    }); 
+    this.dialog.open(AboutYoutubeModal, {
+      disableClose: false
+    });
   }
 }
 

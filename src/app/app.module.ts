@@ -15,7 +15,7 @@ import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.serv
 // Import material design module
 import { MaterialModule } from '@angular/material';
 
-//import ng2-translate module
+// import ng2-translate module
 import { TranslateModule } from 'ng2-translate';
 
 /** Platform and Environment providers/directives/pipes */

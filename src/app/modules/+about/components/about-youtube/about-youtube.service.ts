@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Jsonp, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser'; 
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Injectable()
 export class AboutYoutubeService {
@@ -10,10 +10,10 @@ export class AboutYoutubeService {
   public youtubeData;
   private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
 
-  constructor ( 
-    private jsonp: Jsonp, 
-    private sanitize: DomSanitizer 
-  ) {} 
+  constructor (
+    private jsonp: Jsonp,
+    private sanitize: DomSanitizer
+  ) {}
 
   search () {
     let params = new URLSearchParams();
@@ -22,13 +22,13 @@ export class AboutYoutubeService {
     return this.jsonp.get(this.youtubeAPIURL, { search: params }).map(this.extractData);
   }
 
-  selectVideo(item) { 
-    AboutYoutubeService.actualYoutubeData = item; 
-    AboutYoutubeService.actualYoutubeData.id.videoId = this.getVideoUrl(); 
-  } 
+  selectVideo(item) {
+    AboutYoutubeService.actualYoutubeData = item;
+    AboutYoutubeService.actualYoutubeData.id.videoId = this.getVideoUrl();
+  }
 
-  getVideoUrl (){ 
-    return this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + AboutYoutubeService.actualYoutubeData.id.videoId); 
+  getVideoUrl (){
+    return this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + AboutYoutubeService.actualYoutubeData.id.videoId);
   }
 
   private extractData(res: Response) {
