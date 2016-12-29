@@ -8,4 +8,5 @@ export class TechsService {
   getTechs(): Tech[] {
     return TECHS;
   }
+  
 }

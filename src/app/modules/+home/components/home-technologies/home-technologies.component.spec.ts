@@ -1,10 +1,6 @@
 import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
-
-
 import { By } from '@angular/platform-browser/src/dom/debug/by';
-
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { MaterialModule } from '@angular/material';
 
 // Load the implementations that should be tested
@@ -24,7 +20,6 @@ describe('Module Home -> Component HomeTechnologies', () => {
       description: 'description example2'
     }
   ];
-
 
   beforeEach(() => {
     TestBed.configureTestingModule({

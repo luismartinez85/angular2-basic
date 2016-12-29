@@ -1,4 +1,5 @@
 home-main {
+
   .home-container {
     display: flex;
     flex-direction: row;
@@ -9,6 +10,20 @@ home-main {
     margin-top: -250px;
   }
 
+  .home-tab-content {
+    margin-top: 53px;
+
+    .md-tab-label {
+      color: white;
+
+      .icon {
+        top: 7px;
+        position: relative;
+      }
+
+    }
+  }
+
   .home-item {
     flex: 0 0 1 auto auto;
     padding: 15px;
@@ -16,15 +31,4 @@ home-main {
     width: 100%;
   }
 
-  .home-tab-content {
-    margin-top: 53px;
-
-    .md-tab-label {
-      color: white;
-      .icon {
-        top: 7px;
-        position: relative;
-      }
-    }
-  }
 }

@@ -8,9 +8,7 @@ import { FeaturesService } from '../../services/features/features.service';
 import { Tech } from '../../services/techs/tech';
 import { TechsService } from '../../services/techs/techs.service';
 
-
 @Component({
-
   selector: 'home-main',
   providers: [
     FeaturesService,
@@ -21,6 +19,7 @@ import { TechsService } from '../../services/techs/techs.service';
   styleUrls: [ './home-main.component.scss' ],
   templateUrl: './home-main.component.html'
 })
+
 export class HomeMainComponent {
   features: Feature[];
   techs: Tech[];
