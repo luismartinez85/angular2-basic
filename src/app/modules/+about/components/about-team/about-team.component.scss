@@ -11,9 +11,12 @@ about-team {
       flex: 0 0 1 auto auto;
       width: 30%;
       padding: 6px;
+      min-width: 300px;
+
       @media screen and (max-width: 480px) {
         flex: 1;
         width: 100%;
+        min-width: 100%;
       }
 
       .team-item-container {
