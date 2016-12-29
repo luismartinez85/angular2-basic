@@ -16,31 +16,25 @@ export class AboutYoutubeComponent{
   searchString: string = '';
   dialogRef: MdDialogRef<AboutYoutubeModal>;
 
-  constructor(private fsyoutubeapiservice: AboutYoutubeService, private _ngZone: NgZone, private lc: ApplicationRef, public dialog: MdDialog, private sanitize: DomSanitizer) { }
+  constructor ( 
+    private aboutYoutubeService: AboutYoutubeService,  
+    private _ngZone: NgZone,  
+    private lc: ApplicationRef,  
+    public dialog: MdDialog) { } 
+ 
+  ngOnInit () { 
+    this.aboutYoutubeService.search().subscribe( 
+      data => { 
+        this.dataYoutube = data.items; 
+      } 
+    ); 
+  } 
+  openVideo(item) { 
+    this.aboutYoutubeService.selectVideo(item); 
 
-  ngOnInit () {
-    this.fsyoutubeapiservice.search().subscribe(
-      data => {
-        this.dataYoutube = data.items;
-      }
-    );
-  }
-
-  openDialog(item) {
-    AboutYoutubeService.actualYoutubeData = item;
-    AboutYoutubeService.actualYoutubeData.id.videoId =
-      this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + AboutYoutubeService.actualYoutubeData.id.videoId);
-    this.dialogRef = this.dialog.open(AboutYoutubeModal, {
-      disableClose: false
-    });
-    /* TO CHECK IT */
-    setTimeout( () =>
-      document.querySelector('.md-dialog-container').classList.add('openAnimated')
-    , 0);
-
-    this.dialogRef.afterClosed().subscribe(result => {
-      this.dialogRef = null;
-    });
+    this.dialog.open(AboutYoutubeModal, { 
+      disableClose: false 
+    }); 
   }
 }
 
