@@ -1,10 +1,11 @@
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import {  TestBed, inject } from '@angular/core/testing';
 import { TechsService } from './techs.service';
 
-describe('FeaturesService', () => {
+describe('Modules -> Home -> Services -> TechsService', () => {
+
   beforeEach(() => {
-      TestBed.configureTestingModule({
-        providers: [TechsService]
+    TestBed.configureTestingModule({
+      providers: [TechsService]
     });
   });
 

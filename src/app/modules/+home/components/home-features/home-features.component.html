@@ -1,0 +1,9 @@
+<md-card *ngFor="let element of elements">
+  <h2>{{element.title}}</h2>
+  <span class="feature-description">{{element.description}}</span>
+  <br>
+  <button color="accent" md-button (click)="openDialog(element)">
+    <md-icon>web_asset</md-icon>
+    See more
+  </button>
+</md-card>

@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
-import { AuthenticateGuard } from './shared/services/auth.service';
-import { NoContentComponent } from './shared/components/no-content/no-content.component';
+import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.service';
+import { NoContentComponent } from './shared/components/no-content/noContent.component';
 
+import { ROUTES_CONSTANTS } from './shared/constants/routes.constants';
 
 export const ROUTES: Routes = [
   {
@@ -11,19 +12,19 @@ export const ROUTES: Routes = [
     loadChildren: './modules/+home/home.module#HomeModule'
   },
   {
-    path: 'home',
+    path: ROUTES_CONSTANTS.HOME.path,
     canActivate: [AuthenticateGuard],
     canLoad: [AuthenticateGuard],
     loadChildren: './modules/+home/home.module#HomeModule'
   },
   {
-    path: 'about',
+    path: ROUTES_CONSTANTS.ABOUT_US.path,
     canActivate: [AuthenticateGuard],
     canLoad: [AuthenticateGuard],
     loadChildren: './modules/+about/about.module#AboutModule'
   },
   {
-    path: '**',
+    path: ROUTES_CONSTANTS.NO_CONTENT.path,
     component: NoContentComponent
   }
 ];

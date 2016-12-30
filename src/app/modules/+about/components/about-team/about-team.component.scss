@@ -1,0 +1,53 @@
+about-team {
+  .team-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    .team-item {
+      flex: 0 0 1 auto auto;
+      width: 30%;
+      padding: 6px;
+      min-width: 300px;
+
+      @media screen and (max-width: 480px) {
+        flex: 1;
+        width: 100%;
+        min-width: 100%;
+      }
+
+      .team-item-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        .team-item-image {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .team-item-text {
+          width: 100%;
+          margin-top: -12px;
+          margin-left: 10px;
+        }
+
+        .team-item-github {
+          width: 40px;
+        }
+      }
+    }
+  }
+  
+  .fill-remaining-space {
+    flex: 1 1 auto;
+  }
+}

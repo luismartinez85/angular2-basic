@@ -6,6 +6,7 @@ import { Feature } from './feature';
 export class FeaturesService {
 
   getFeatures(): Feature[] {
-      return FEATURES;
+    return FEATURES;
   }
+
 }

@@ -1,5 +1,5 @@
-import { AboutComponent } from './components/about/about.component';
+import { AboutMainComponent } from './components/about-main/about-main.component';
 
 export const routes = [
-  { path: '', component: AboutComponent}
+  { path: '', component: AboutMainComponent }
 ];

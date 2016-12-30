@@ -1,9 +1,10 @@
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
-import { DebugElement }    from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { ToolbarComponent } from '../shared/components/toolbar/toolbar.component';
 
 // Load the implementations that should be tested
 import { ShellComponent } from './shell.component';
@@ -17,15 +18,17 @@ const routes = [{ path: '', component: ShellComponent}];
 describe('App Shell', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEach(() => {
-     TestBed.configureTestingModule({
+    TestBed.configureTestingModule({
       imports: [
         RouterModule.forRoot(routes),
         MaterialModule.forRoot()
       ],
-      declarations: [ 
-        ShellComponent 
+      declarations: [
+        ShellComponent,
+        ToolbarComponent
       ], // declare the test component
-      providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
 
@@ -39,7 +42,7 @@ describe('App Shell', () => {
     element = debug.nativeElement;
   });
 
-  it('should have first route called Home',() => {
+  it('should have first route called Home', () => {
     fixture.detectChanges();
     expect(element.textContent).toContain('Home');
   });

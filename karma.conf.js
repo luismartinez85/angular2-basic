@@ -11,8 +11,6 @@ module.exports = function(config) {
   var configuration = {
 
     // base path that will be used to resolve all patterns (e.g. files, exclude)
-    basePath: '',
-
     /*
      * Frameworks to use
      *
@@ -28,8 +26,17 @@ module.exports = function(config) {
      *
      * we are building the test environment in ./spec-bundle.js
      */
-    files: [ { pattern: './config/spec-bundle.js', watched: false } ],
-
+    files: [ 
+      { pattern: './config/spec-bundle.js', watched: false },
+      { pattern: './src/assets/**/*.png', included: false, served: true},
+      { pattern: './src/assets/**/*.jpg', included: false, served: true},
+      { pattern: './i18n/**/*.json', included: false, served: true},
+      { pattern: './src/assets/**/*.json', included: false, served: true}
+    ],
+    proxies: {
+      '/assets/': '/base/src/assets/',
+      '/i18n/':'/base/i18n/'
+    },
     /*
      * preprocess matching files before serving them to the browser
      * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -54,12 +61,11 @@ module.exports = function(config) {
 
     remapCoverageReporter: {
       'text-summary': null,
+      'text':null,
       json: './test-reports/coverage.json',
       html: './test-reports/html',
       cobertura: './test-reports/cobertura.xml'
     },
-
-
 
     // Webpack please don't spam the console when running in karma!
     webpackMiddleware: { stats: 'errors-only'},
@@ -99,6 +105,8 @@ module.exports = function(config) {
         flags: ['--no-sandbox']
       }
     },
+
+    browserNoActivityTimeout: 1000000,
 
     /*
      * Continuous Integration mode
