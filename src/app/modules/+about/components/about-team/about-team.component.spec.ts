@@ -28,24 +28,20 @@ describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
     }
   ];
 
-  class mockTestService {
-    search() {
-      return Observable.of(users);
-    }
-  }
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         MaterialModule.forRoot()
       ],
-      providers: [ AboutTeamService, {provide: AboutTeamService, useClass: mockTestService} ],
       declarations: [ AboutTeamComponent ]
     })
     .compileComponents(); // compile template and css
 
     fixture = TestBed.createComponent(AboutTeamComponent);
     component = fixture.componentInstance;
+
+    spyOn(AboutTeamService.prototype, 'search').and.returnValue(Observable.of(users));
+
   });
 
   it('should have a defined component', () => {
@@ -53,7 +49,9 @@ describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
   });
 
   it('should render users', () => {
-    component.dataUsers = users;
+
+    component.ngOnInit();
+
     fixture.detectChanges();
 
     let compiled = fixture.debugElement.nativeElement;

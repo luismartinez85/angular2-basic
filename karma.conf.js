@@ -29,6 +29,7 @@ module.exports = function(config) {
     files: [ 
       { pattern: './config/spec-bundle.js', watched: false },
       { pattern: './src/assets/**/*.png', included: false, served: true},
+      { pattern: './src/assets/**/*.jpg', included: false, served: true},
       { pattern: './i18n/**/*.json', included: false, served: true},
       { pattern: './src/assets/**/*.json', included: false, served: true}
     ],
