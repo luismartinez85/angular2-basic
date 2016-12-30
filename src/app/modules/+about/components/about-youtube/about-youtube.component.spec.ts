@@ -15,7 +15,7 @@ let fixture:    ComponentFixture<AboutYoutubeComponent>;
 
 describe('Module -> about -> about-youtube -> AboutYoutubeComponent', () => {
    //  provide our implementations or mocks to the dependency injector
-  const videos = 
+  const videos =
     {
       'items': [
         {
