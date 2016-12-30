@@ -176,6 +176,7 @@ module.exports = function (env) {
           keep_fnames: true
         }, //prod
         compress: {
+          warnings: false,
           screw_ie8: true
         }, //prod
         comments: false //prod

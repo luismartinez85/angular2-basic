@@ -14,13 +14,4 @@ import { TranslateService } from 'ng2-translate';
   templateUrl: 'shell.component.html',
 })
 
-export class ShellComponent {
-
-  /* Strategy for fix Material Design exec function toggle */
-  setFocusElement () {
-    console.log('asdgasdg', ShellUtilService.element);
-    setTimeout(() => {
-      ShellUtilService.element && ShellUtilService.element.focus();
-    }, 0);
-  }
-}
+export class ShellComponent { }

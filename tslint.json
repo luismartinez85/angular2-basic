@@ -1,6 +1,7 @@
 {
   "rulesDirectory": [
-    "node_modules/codelyzer"
+    "node_modules/codelyzer",
+    "node_modules/tslint-eslint-rules/dist/rules"
   ],
   "rules": {
     "member-access": false,
@@ -57,7 +58,6 @@
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
-    "no-unreachable": true,
     "no-unused-expression": true,
     "no-unused-variable": false,
     "no-use-before-declare": true,
@@ -73,6 +73,7 @@
       true,
       "spaces"
     ],
+    "ter-indent": [true, 2],
     "max-line-length": [
       true,
       200

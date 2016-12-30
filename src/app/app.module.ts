@@ -5,7 +5,7 @@ import { RouterModule, PreloadAllModules, Router, NavigationEnd } from '@angular
 import { HttpModule } from '@angular/http';
 
 /** Angular Guard for module routes */
-import { AuthenticateGuard } from './shared/services/auth.service';
+import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.service';
 
 /** Angular Modules commented. Use in case you need it */
 
@@ -15,7 +15,7 @@ import { AuthenticateGuard } from './shared/services/auth.service';
 // Import material design module
 import { MaterialModule } from '@angular/material';
 
-//import ng2-translate module
+// import ng2-translate module
 import { TranslateModule } from 'ng2-translate';
 
 /** Platform and Environment providers/directives/pipes */

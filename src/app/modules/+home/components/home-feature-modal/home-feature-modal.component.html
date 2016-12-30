@@ -1,0 +1,14 @@
+<md-toolbar>
+  <span>Angular 2 Basic Features</span>
+  <span class="fill-remaining-space"></span>
+  <button md-icon-button md-dialog-close>
+      <md-icon>close</md-icon>
+  </button>
+</md-toolbar>
+
+<div *ngIf="modalData">
+  <h1>{{modalData.title}}</h1>
+  <h3>Description</h3>
+  <p>{{modalData.description}}</p>
+  <p>{{modalData.code}}</p>
+</div>

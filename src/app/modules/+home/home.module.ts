@@ -1,35 +1,38 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from 'ng2-translate';
 import { ExponentialStrengthPipe } from '../../shared/pipes';
-import { HomeComponent } from './components/home/home.component';
-import { GridCardsComponent } from './components/gridCards/gridCards.component';
-import { FsCustomGridCardsComponent } from './components/customGridCards/customGridCards.component';
-import { CustomModal } from './components/customModal/customModal.component';
+
+import { HomeMainComponent } from './components/home-main/home-main.component';
+import { HomeTechnologiesComponent } from './components/home-technologies/home-technologies.component';
+import { HomeFeaturesComponent } from './components/home-features/home-features.component';
+import { HomeFeatureModal } from './components/home-feature-modal/home-feature-modal.component';
+import { HomeLogoComponent } from './components/home-logo/home-logo.component';
 
 import { routes } from './home.routes';
-import  { ShellModule } from '../../shell';
-// Import material design module
+import { ShellModule } from '../../shell';
+
 import { MaterialModule } from '@angular/material';
-import { TranslateModule } from 'ng2-translate';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    HomeMainComponent,
     ExponentialStrengthPipe,
-    GridCardsComponent,
-    FsCustomGridCardsComponent,
-    CustomModal
+    HomeTechnologiesComponent,
+    HomeFeaturesComponent,
+    HomeFeatureModal,
+    HomeLogoComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
     TranslateModule.forRoot()
-
   ],
   entryComponents : [
-    CustomModal
+    HomeFeatureModal
   ]
 })
 

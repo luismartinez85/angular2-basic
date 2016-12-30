@@ -2,26 +2,22 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { routes } from './about.routes';
-
 import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';
-import { AboutComponent } from './components/about/about.component';
-import { FsUsersComponent } from './components/fs-users/fs-users.component';
-import { FsDialogComponent } from '../../shared/components/fs-dialog';
-import { FsTwitterAPIComponent } from '../../shared/components/fs-twitter-api';
-import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } from '../../shared/components/fs-youtube-api';
 
+import { routes } from './about.routes';
+
+import { AboutMainComponent } from './components/about-main/about-main.component';
+import { AboutTeamComponent } from './components/about-team/about-team.component';
+import { AboutYoutubeComponent } from './components/about-youtube/about-youtube.component';
+import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
 
 @NgModule({
   declarations: [
-    AboutComponent,
-    FsDialogComponent,
-    FsYoutubeAPIComponent,
-    FsTwitterAPIComponent,
-    fsYoutubeApiPipeFilterSearch,
-    FsUsersComponent,
-    FsYoutubeDialog
+    AboutYoutubeComponent,
+    AboutMainComponent,
+    AboutTeamComponent,
+    AboutYoutubeModal
   ],
   imports: [
     CommonModule,
@@ -32,9 +28,8 @@ import { fsYoutubeApiPipeFilterSearch, FsYoutubeDialog, FsYoutubeAPIComponent } 
     TranslateModule.forRoot()
   ],
   entryComponents : [
-    FsYoutubeDialog
+    AboutYoutubeModal
   ]
-
 })
 
 export class AboutModule { }

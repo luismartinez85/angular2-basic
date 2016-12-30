@@ -6,6 +6,6 @@ import { Tech } from './tech';
 export class TechsService {
 
   getTechs(): Tech[] {
-      return TECHS;
+    return TECHS;
   }
 }

@@ -4,5 +4,4 @@ export class Feature {
   code: string;
   image: string;
   icon: string;
-  
 }
