@@ -23,12 +23,12 @@ export class AboutYoutubeService {
   }
 
   selectVideo(item) {
+    item.id.videoId  = this.getVideoUrl(item);
     AboutYoutubeService.actualYoutubeData = item;
-    AboutYoutubeService.actualYoutubeData.id.videoId = this.getVideoUrl();
   }
 
-  getVideoUrl (){
-    return this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + AboutYoutubeService.actualYoutubeData.id.videoId);
+  getVideoUrl (item){
+    return this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + item.id.videoId);
   }
 
   private extractData(res: Response) {

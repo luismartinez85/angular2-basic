@@ -1,6 +1,5 @@
-import { Component, Input, ViewEncapsulation, ChangeDetectionStrategy, OnInit, NgZone, ApplicationRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
-import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.component';
 import { AboutYoutubeService } from './about-youtube.service';
 
@@ -28,7 +27,7 @@ export class AboutYoutubeComponent{
   openVideo(item) {
     this.aboutYoutubeService.selectVideo(item);
 
-    this.dialog.open(AboutYoutubeModal, {
+    return this.dialog.open(AboutYoutubeModal, {
       disableClose: false
     });
   }

@@ -37,7 +37,6 @@ describe('Modules -> home -> HomeFeatureComponent', () => {
     component = fixture.componentInstance;
 
     spyOn(MdDialog.prototype, 'open').and.returnValue(true);
-    spyOn(MdDialogRef.prototype, 'afterClosed').and.returnValue(true);
 
   });
 

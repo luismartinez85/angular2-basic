@@ -1,5 +1,5 @@
 <md-card *ngFor="let item of dataYoutube let i = index">
-  <div *ngIf="item.id.videoId">
+  <div *ngIf="item.id.videoId" class="video-item">
     <span [style.background-image]="'url(' + item.snippet.thumbnails.high.url + ')'"></span>
     <div>
       <h3>
