@@ -2,10 +2,10 @@ about-main {
 
   .about-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     align-content: flex-start;
     margin-top: -203px;
   }
