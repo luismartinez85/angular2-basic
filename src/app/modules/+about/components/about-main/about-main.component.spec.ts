@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed, async, inject } from '@angular/core/testing';
-import { By }              from '@angular/platform-browser';
-import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 
 // Load the implementations that should be tested
 import { AboutMainComponent } from './about-main.component';
@@ -11,7 +10,6 @@ import { TranslateModule } from 'ng2-translate';
 
 let component:  AboutMainComponent;
 let fixture: ComponentFixture<AboutMainComponent>;
-let usersElement:      DebugElement;
 
 describe('Modules -> About -> Component About', () => {
 

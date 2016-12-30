@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { TranslateService } from 'ng2-translate';
-import { Observable }     from 'rxjs/Observable';
 import { ShellUtilService } from './shell.service';
 import 'hammerjs';
 

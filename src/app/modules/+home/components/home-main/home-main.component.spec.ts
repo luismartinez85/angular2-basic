@@ -1,19 +1,7 @@
-import {
-  inject,
-  TestBed
-} from '@angular/core/testing';
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {
-  BaseRequestOptions,
-  ConnectionBackend,
-  Http
-} from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
-import { FeaturesService } from '../../services/features/features.service';
-import { TechsService } from '../../services/techs/techs.service';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
+import { TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
 
 import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';

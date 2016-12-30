@@ -35,7 +35,7 @@
     ],
 
     "ban": false,
-    "curly": false,
+    "curly": true,
     "forin": true,
     "label-position": true,
     "no-arg": true,
@@ -52,14 +52,14 @@
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
-    "no-empty": false,
+    "no-empty": true,
     "no-eval": true,
     "no-null-keyword": false,
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "no-unused-expression": true,
-    "no-unused-variable": false,
+    "no-unused-variable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "radix": true,
@@ -126,6 +126,14 @@
       "check-separator",
       "check-type"
     ],
-    "import-destructuring-spacing": true
+    "import-destructuring-spacing": true,
+    "cyclomatic-complexity": [true, 10],
+    "one-variable-per-declaration": true,
+    "no-inner-declarations": [
+      true,
+      "functions"
+    ],
+    "no-extra-boolean-cast": true,
+    "max-file-line-count": [true, 1000]
   }
 }

@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import {  TestBed, inject } from '@angular/core/testing';
 import { TechsService } from './techs.service';
 
 describe('Modules -> Home -> Services -> TechsService', () => {

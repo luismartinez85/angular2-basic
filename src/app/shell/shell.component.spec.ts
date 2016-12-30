@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
-import { DebugElement, Component, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';

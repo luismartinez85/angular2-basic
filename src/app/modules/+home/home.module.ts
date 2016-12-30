@@ -11,7 +11,6 @@ import { HomeFeatureModal } from './components/home-feature-modal/home-feature-m
 import { HomeLogoComponent } from './components/home-logo/home-logo.component';
 
 import { routes } from './home.routes';
-import { ShellModule } from '../../shell';
 
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
