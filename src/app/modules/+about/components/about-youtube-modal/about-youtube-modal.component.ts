@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
 import { AboutYoutubeService } from '../about-youtube/about-youtube.service';
 
 @Component({

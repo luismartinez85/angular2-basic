@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Jsonp, URLSearchParams } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { Response, Jsonp, URLSearchParams } from '@angular/http';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable()
 export class AboutYoutubeService {

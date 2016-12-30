@@ -1,27 +1,14 @@
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import 'hammerjs';
 
-import { By } from '@angular/platform-browser/src/dom/debug/by';
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MaterialModule, MdDialog, MdDialogRef } from '@angular/material';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MaterialModule, MdDialog } from '@angular/material';
 
 import { HomeFeaturesComponent } from './home-features.component';
-import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.component';
 
 describe('Modules -> home -> HomeFeatureComponent', () => {
   let component: HomeFeaturesComponent;
   let fixture;
-
-  const elements = [
-    {
-      title: 'example1',
-      description: 'description example1'
-    },
-    {
-      title: 'example2',
-      description: 'description example2'
-    }
-  ];
 
   beforeEach(() => {
     TestBed.configureTestingModule({

@@ -4,8 +4,6 @@ import { CanActivate, CanLoad } from '@angular/router';
 @Injectable()
 export class AuthenticateGuard implements CanActivate, CanLoad {
 
-  constructor() {}
-
   /**
    * Define route activation policy
    * @returns {Boolean}

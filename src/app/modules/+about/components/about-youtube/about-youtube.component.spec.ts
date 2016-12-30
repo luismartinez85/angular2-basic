@@ -1,11 +1,9 @@
 
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
-import { By }              from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutYoutubeService } from './about-youtube.service';
 import { Observable } from 'rxjs';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.component';
-import { MaterialModule, MdDialog, MdDialogRef } from '@angular/material';
+import { MaterialModule, MdDialog } from '@angular/material';
 
 // Load the implementations that should be tested
 import { AboutYoutubeComponent } from './about-youtube.component';
