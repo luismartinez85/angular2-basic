@@ -4,6 +4,7 @@
     "node_modules/tslint-eslint-rules/dist/rules"
   ],
   "rules": {
+    "no-constant-condition": true,
     "member-access": false,
     "member-ordering": [
       true,
@@ -34,7 +35,7 @@
       }
     ],
 
-    "ban": false,
+    "ban":  [true, ["alert"]],
     "curly": true,
     "forin": true,
     "label-position": true,
@@ -59,7 +60,6 @@
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "no-unused-expression": true,
-    "no-unused-variable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "radix": true,
