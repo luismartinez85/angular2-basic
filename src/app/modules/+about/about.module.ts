@@ -1,4 +1,4 @@
-import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -22,7 +22,6 @@ import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtub
   imports: [
     CommonModule,
     HttpModule,
-    JsonpModule,
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
     TranslateModule.forRoot()

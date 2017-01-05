@@ -26,16 +26,15 @@ export class HomeMainComponent {
   rowHeight: string = '200px';
 
   constructor(
+    private environmentConfig: EnvironmentConfigService,
     private featuresService: FeaturesService,
     private techsService: TechsService,
-    private translate: MultiLanguageService,
-    private environmentConfig: EnvironmentConfigService) {
-  }
+    private translate: MultiLanguageService)
+  { }
 
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
     this.techs = this.techsService.getTechs();
-    console.log(this.environmentConfig.api);
 
     // initialize translate service
     this.translate.initialize();

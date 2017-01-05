@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Response, Jsonp, URLSearchParams } from '@angular/http';
+import { Response, Http } from '@angular/http';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable()
@@ -10,15 +10,13 @@ export class AboutYoutubeService {
   private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
 
   constructor (
-    private jsonp: Jsonp,
+    private http: Http,
     private sanitize: DomSanitizer
   ) {}
 
   search () {
-    let params = new URLSearchParams();
-    params.set('callback', 'JSONP_CALLBACK');
     // TODO: Add error handling
-    return this.jsonp.get(this.youtubeAPIURL, { search: params }).map(this.extractData);
+    return this.http.get(this.youtubeAPIURL).map(this.extractData);
   }
 
   selectVideo(item) {

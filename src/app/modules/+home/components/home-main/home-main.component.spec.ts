@@ -35,11 +35,8 @@ describe('Module Home -> Component HomeMain', () => {
     expect(!!component.rowHeight).toEqual(true);
   });
 
-  it('should log ngOnInit', () => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
-
+  it('should ngOnInit called', () => {
     component.ngOnInit();
-    expect(console.log).toHaveBeenCalled();
+    expect(component.techs).toBeDefined();
   });
 });
