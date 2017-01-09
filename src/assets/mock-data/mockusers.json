@@ -52,7 +52,8 @@
     "name": "Luis Martínez",
     "job": "Front Architect",
     "image": "/assets/img/team/luis-min.jpg",
-    "description": "React Ninja"
+    "description": "React Ninja",
+    "github": "https://github.com/luismartinez85"
   },
   {
     "name": "Fran Quintero",

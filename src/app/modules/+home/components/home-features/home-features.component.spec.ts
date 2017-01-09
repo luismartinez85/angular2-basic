@@ -3,6 +3,7 @@ import 'hammerjs';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MaterialModule, MdDialog } from '@angular/material';
+import { SharedModule } from '../../../../shared/shared.module';
 
 import { HomeFeaturesComponent } from './home-features.component';
 
@@ -13,7 +14,8 @@ describe('Modules -> home -> HomeFeatureComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule.forRoot()
+        MaterialModule.forRoot(),
+        SharedModule
       ],
       declarations: [ HomeFeaturesComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

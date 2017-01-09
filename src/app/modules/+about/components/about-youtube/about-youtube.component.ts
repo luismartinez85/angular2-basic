@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 import { MdDialog } from '@angular/material';
 import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.component';
 import { AboutYoutubeService } from './about-youtube.service';
@@ -10,7 +11,8 @@ import { AboutYoutubeService } from './about-youtube.service';
   templateUrl: 'about-youtube.component.html'
 })
 
-export class AboutYoutubeComponent{
+export class AboutYoutubeComponent {
+
   dataYoutube: Array<any>;
 
   constructor (
@@ -18,6 +20,7 @@ export class AboutYoutubeComponent{
     public dialog: MdDialog) { }
 
   ngOnInit () {
+
     this.aboutYoutubeService.search().subscribe(
       data => {
         this.dataYoutube = data.items;
