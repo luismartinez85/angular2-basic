@@ -9,7 +9,10 @@ export let FEATURES: Feature[] = [
   },
   { title: 'Unit testing',
     description: 'Tools stack to unit test your code.',
-    code: 'The primary goal of unit testing is to take the smallest piece of testable software in the application, isolate it from the remainder of the code, and determine whether it behaves exactly as you expect. Each unit is tested separately before integrating them into modules to test the interfaces between modules. Unit testing has proven its value in that a large percentage of defects are identified during its use',
+    code: 'The primary goal of unit testing is to take the smallest piece of testable software in the application, \
+    isolate it from the remainder of the code, and determine whether it behaves exactly as you expect. \
+    Each unit is tested separately before integrating them into modules to test the interfaces between modules. \
+    Unit testing has proven its value in that a large percentage of defects are identified during its use',
     image: '',
     icon: 'check_box'
   },
