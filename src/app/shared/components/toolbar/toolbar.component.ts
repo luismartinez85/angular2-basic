@@ -11,10 +11,10 @@ import { ROUTES_CONSTANTS } from '../../constants/routes.constants';
 
 export class ToolbarComponent {
 
-  ROUTES: any;
+  routes: any;
 
   constructor(){
-    this.ROUTES = ROUTES_CONSTANTS;
+    this.routes = ROUTES_CONSTANTS;
   }
 
 }
