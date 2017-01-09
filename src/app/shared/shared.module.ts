@@ -6,7 +6,7 @@ import { SearchPipe } from './pipes';
   declarations: [
     SearchPipe
   ],
-  exports: [ 
+  exports: [
     SearchPipe
   ]
 })
