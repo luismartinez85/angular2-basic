@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { TECHS } from './mock-techs';
-import { Tech } from './tech';
+import { Tech } from './techs.interface';
 
 @Injectable()
 export class TechsService {
 
-  getTechs(): Tech[] {
+  getTechs(): Array<Tech> {
     return TECHS;
   }
 }

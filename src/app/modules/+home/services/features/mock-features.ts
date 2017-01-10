@@ -1,6 +1,6 @@
-import { Feature } from './feature';
+import { Feature } from './feature.interface';
 
-export let FEATURES: Feature[] = [
+export let FEATURES: Array<Feature> = [
   { title: 'Mobile First',
     description: 'Designed for mobile phones first.  ',
     code: 'By starting mobile first with your responsive website you are able to make the tough decisions about the content.',

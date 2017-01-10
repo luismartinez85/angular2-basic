@@ -1,4 +1,4 @@
-export class Tech {
+export interface Tech {
   title: string;
   description: string;
   image: string;
