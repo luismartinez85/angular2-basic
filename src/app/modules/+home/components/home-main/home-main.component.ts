@@ -21,20 +21,33 @@ import { TechsService } from '../../services/techs/techs.service';
 })
 
 export class HomeMainComponent {
+  /**
+   * This is a doc comment for "feature".
+   */
   features: Feature[];
+
+  /**
+   * This is a doc comment for "techs".
+   */
   techs: Tech[];
   rowHeight: string = '200px';
 
   constructor(
-    private environmentConfig: EnvironmentConfigService,
     private featuresService: FeaturesService,
     private techsService: TechsService,
-    private translate: MultiLanguageService)
-  { }
+    private translate: MultiLanguageService,
+    private environmentConfig: EnvironmentConfigService) {
+  }
 
+  /**
+   * Comment for method ngOnInit.
+   * @param target  Comment for parameter ´something´.
+   * @returns       Comment for return ´something´.
+   */
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
     this.techs = this.techsService.getTechs();
+    console.log(this.environmentConfig.api);
 
     // initialize translate service
     this.translate.initialize();
