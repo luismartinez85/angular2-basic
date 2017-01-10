@@ -22,12 +22,12 @@ export class HomeMainComponent {
   /**
    * This is a doc comment for "feature".
    */
-  features: Feature[];
+  features: Array<Feature> = [];
 
   /**
    * This is a doc comment for "techs".
    */
-  techs: Tech[];
+  techs: Array<Tech> = [];
   rowHeight: string = '200px';
 
   constructor(
