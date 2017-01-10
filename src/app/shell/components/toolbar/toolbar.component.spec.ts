@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ROUTES } from '../../../app.routes';
 
 import { ToolbarComponent } from './toolbar.component';
-import { NoContentComponent } from '../no-content/noContent.component';
+import { NoContentComponent } from '../../../shared/components/no-content/noContent.component';
 
 let component:  ToolbarComponent;
 let fixture:    ComponentFixture<ToolbarComponent>;
