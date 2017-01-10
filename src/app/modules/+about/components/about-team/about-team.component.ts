@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 import { AboutTeamService } from './about-team.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { AboutTeamService } from './about-team.service';
   providers: [ AboutTeamService ]
 })
 export class AboutTeamComponent {
+  @ViewChild('search')
+  search: ElementRef;
 
   dataUsers;
 

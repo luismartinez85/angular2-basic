@@ -1,1 +1,1 @@
-export * from './svgColor.pipe';
+export * from './search/search.pipe';

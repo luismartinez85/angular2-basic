@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild } from '@angular/core';
 import { MdDialog } from '@angular/material';
+
 import { HomeFeaturesService } from './home-features.service';
 import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.component';
 
@@ -13,7 +14,8 @@ import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.compo
 export class HomeFeaturesComponent {
 
   @Input() elements = [];
-
+  @ViewChild('search')
+  search: ElementRef;
   constructor(
     public dialog: MdDialog,
     private homeFeatureService: HomeFeaturesService

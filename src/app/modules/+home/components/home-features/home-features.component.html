@@ -1,4 +1,7 @@
-<md-card *ngFor="let element of elements">
+ <div class="box-search">
+    <md-input #search placeholder="Search"></md-input>
+ </div>
+<md-card *ngFor="let element of elements | searchPipe: search.value: 'title'">
   <h2>{{element.title}}</h2>
   <span class="feature-description">{{element.description}}</span>
   <br>
