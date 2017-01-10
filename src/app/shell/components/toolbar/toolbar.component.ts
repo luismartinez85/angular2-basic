@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ROUTES_CONSTANTS } from '../../constants/routes.constants';
+import { ROUTES_CONSTANTS } from '../../../shared/constants/routes.constants';
 /*
  * Toolbar Component
  */
