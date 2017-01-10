@@ -3,10 +3,8 @@ import { Component } from '@angular/core';
 import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
 import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
 
-import { Feature } from '../../services/features/feature';
-import { FeaturesService } from '../../services/features/features.service';
-import { Tech } from '../../services/techs/tech';
-import { TechsService } from '../../services/techs/techs.service';
+import { Feature, FeaturesService } from '../../services/features';
+import { Tech, TechsService } from '../../services/techs';
 
 @Component({
   selector: 'home-main',

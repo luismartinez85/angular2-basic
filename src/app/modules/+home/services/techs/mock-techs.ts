@@ -1,6 +1,6 @@
-import { Tech } from './tech';
+import { Tech } from './techs.interface';
 
-export let TECHS: Tech[] = [
+export let TECHS: Array<Tech> = [
   { title: 'Angular 2',
     description: 'Essential in an angular 2 starter kit...',
     image: './assets/img/techs/angular2.png',
