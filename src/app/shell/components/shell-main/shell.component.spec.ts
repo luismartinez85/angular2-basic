@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By }              from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
 import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { ToolbarComponent } from '../shared/components/toolbar/toolbar.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 // Load the implementations that should be tested
 import { ShellComponent } from './shell.component';

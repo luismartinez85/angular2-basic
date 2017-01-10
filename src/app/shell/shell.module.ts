@@ -6,9 +6,9 @@ import 'hammerjs';
 
 // Import material design module
 import { MaterialModule } from '@angular/material';
-import { ShellComponent } from './shell.component';
-import { ToolbarComponent } from '../shared/components/toolbar/toolbar.component';
-import { FooterComponent } from '../shared/components/footer/footer.component';
+import { ShellComponent } from './components/shell-main/shell.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { routes } from './shell.routes';
 
 @NgModule({
