@@ -5,7 +5,7 @@ import { Feature } from './feature';
 @Injectable()
 export class FeaturesService {
 
-  getFeatures(): Feature[] {
+  getFeatures(): Array<Feature> {
     return FEATURES;
   }
 

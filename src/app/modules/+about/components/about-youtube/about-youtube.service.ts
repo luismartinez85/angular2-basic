@@ -14,7 +14,7 @@ export class AboutYoutubeService {
     private sanitize: DomSanitizer
   ) {}
 
-  search () {
+  search() {
     // TODO: Add error handling
     return this.http.get(this.youtubeAPIURL).map(this.extractData);
   }
@@ -24,7 +24,7 @@ export class AboutYoutubeService {
     AboutYoutubeService.actualYoutubeData = item;
   }
 
-  getVideoUrl (item){
+  getVideoUrl(item){
     return this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + item.id.videoId);
   }
 

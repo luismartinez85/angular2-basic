@@ -13,6 +13,7 @@ import { AboutYoutubeComponent } from './components/about-youtube/about-youtube.
 import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
 import { SharedModule } from '../../shared/shared.module';
 
+
 @NgModule({
   declarations: [
     AboutYoutubeComponent,
