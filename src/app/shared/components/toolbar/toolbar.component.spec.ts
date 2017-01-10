@@ -14,8 +14,10 @@ describe('shared -> ToolbarComponent', () => {
   beforeEach(() => {
     // refine the test module by declaring the test component
     TestBed.configureTestingModule({
-      declarations: [ ToolbarComponent,
-                      NoContentComponent ],
+      declarations: [
+        ToolbarComponent,
+        NoContentComponent
+      ],
       imports: [
         MaterialModule.forRoot(),
         RouterTestingModule.withRoutes(ROUTES)
