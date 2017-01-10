@@ -4,7 +4,10 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
 
 import { ROUTES_CONSTANTS } from './shared/constants/routes.constants';
 
-export const ROUTES: Routes = [
+/**
+ * Main routes for root app. Here you have to define basic routes, first level of our lazy load modules.
+ */
+export const routes: Routes = [
   {
     path: '',
     canActivate: [AuthenticateGuard],

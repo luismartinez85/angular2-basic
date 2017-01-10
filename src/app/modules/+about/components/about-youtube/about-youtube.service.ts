@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Response, Http } from '@angular/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class AboutYoutubeService {
 
+  private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
+  private http: Http;
+  private sanitize: DomSanitizer;
+
   public static actualYoutubeData;
   public youtubeData;
-  private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
-
-  constructor (
-    private http: Http,
-    private sanitize: DomSanitizer
-  ) {}
 
   search() {
-    // TODO: Add error handling
-    return this.http.get(this.youtubeAPIURL).map(this.extractData);
+    return this.http.get(this.youtubeAPIURL)
+      .map(this.extractData)
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
   selectVideo(item) {

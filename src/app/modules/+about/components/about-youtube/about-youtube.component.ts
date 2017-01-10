@@ -4,6 +4,9 @@ import { MdDialog } from '@angular/material';
 import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.component';
 import { AboutYoutubeService } from './about-youtube.service';
 
+/**
+ * Youtube component
+ */
 @Component({
   selector: 'about-youtube',
   providers: [ AboutYoutubeService ],
@@ -13,18 +16,16 @@ import { AboutYoutubeService } from './about-youtube.service';
 
 export class AboutYoutubeComponent {
 
-  dataYoutube: Array<any>;
+  private aboutYoutubeService: AboutYoutubeService;
+  private dialog: MdDialog;
 
-  constructor (
-    private aboutYoutubeService: AboutYoutubeService,
-    public dialog: MdDialog) { }
+  dataYoutube: Array<any>;
 
   ngOnInit () {
 
     this.aboutYoutubeService.search().subscribe(
-      data => {
-        this.dataYoutube = data.items;
-      }
+      data => { this.dataYoutube = data.items; },
+      err => console.log(err)
     );
   }
   openVideo(item) {

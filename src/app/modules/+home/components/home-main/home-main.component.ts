@@ -19,23 +19,22 @@ import { Tech, TechsService } from '../../services/techs';
 })
 
 export class HomeMainComponent {
+
+  private featuresService: FeaturesService;
+  private techsService: TechsService;
+  private translate: MultiLanguageService;
+  private environmentConfig: EnvironmentConfigService;
+  
   /**
    * This is a doc comment for "feature".
    */
-  features: Feature[];
+  features: Array<Feature> = [];
 
   /**
    * This is a doc comment for "techs".
    */
-  techs: Tech[];
+  techs: Array<Tech> = [];
   rowHeight: string = '200px';
-
-  constructor(
-    private featuresService: FeaturesService,
-    private techsService: TechsService,
-    private translate: MultiLanguageService,
-    private environmentConfig: EnvironmentConfigService) {
-  }
 
   /**
    * Comment for method ngOnInit.
