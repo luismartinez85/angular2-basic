@@ -11,7 +11,7 @@ import { AboutMainComponent } from './components/about-main/about-main.component
 import { AboutTeamComponent } from './components/about-team/about-team.component';
 import { AboutYoutubeComponent } from './components/about-youtube/about-youtube.component';
 import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SearchPipeModule } from '../../shared';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { SharedModule } from '../../shared/shared.module';
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
     TranslateModule.forRoot(),
-    SharedModule
+    SearchPipeModule
   ],
   entryComponents : [
     AboutYoutubeModal

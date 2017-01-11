@@ -11,6 +11,12 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { routes } from './shell.routes';
 
+/**
+ * Shell Module is common known as Application shell, this module isn't a lazy load module.
+ * This module contains the main a minimum pieces of code of our application such a Toolbar,
+ * Footer, etc... This allow us to load only the main content and avoid things that we don't need
+ * at first load. 
+ */
 @NgModule({
   declarations: [
     ShellComponent,

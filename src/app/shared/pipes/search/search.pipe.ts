@@ -1,5 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * Pipe example of Angular 2 which searchs and filter arrays by a query string.
+ * You could see how it used on home features template for example.
+ */
 @Pipe({
   name: 'searchPipe',
   pure: false
