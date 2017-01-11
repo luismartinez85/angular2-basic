@@ -5,7 +5,7 @@ import { AboutTeamComponent } from '../about-team/about-team.component';
 import { AboutTeamService } from '../about-team/about-team.service';
 
 import { MaterialModule } from '@angular/material';
-import { SharedModule } from '../../../../shared/shared.module';
+import { SearchPipeModule } from '../../../../shared';
 
 import { Observable } from 'rxjs';
 
@@ -34,7 +34,7 @@ describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         MaterialModule.forRoot(),
-        SharedModule
+        SearchPipeModule
       ],
       declarations: [ AboutTeamComponent ]
     })

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MaterialModule } from '@angular/material';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ROUTES } from '../../../app.routes';
+import { routes } from '../../../app.routes';
 
 import { ToolbarComponent } from './toolbar.component';
 import { NoContentComponent } from '../../../shared/components/no-content/noContent.component';
@@ -20,7 +20,7 @@ describe('shared -> ToolbarComponent', () => {
       ],
       imports: [
         MaterialModule.forRoot(),
-        RouterTestingModule.withRoutes(ROUTES)
+        RouterTestingModule.withRoutes(routes)
       ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     });

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Tech } from '../../services/techs';
+
 /**
  * Home technologies shows a list of technologies. Receives an array of Tech.
  */
