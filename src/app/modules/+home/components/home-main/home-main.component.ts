@@ -23,6 +23,10 @@ import { Tech, TechsService } from '../../services/techs';
 
 export class HomeMainComponent {
 
+  features: Array<Feature> = [];
+  techs: Array<Tech> = [];
+  rowHeight: string = '200px';
+
   /**
    * Loads services needed by HomeMainComponent. Dependency injection.
    */
@@ -32,10 +36,6 @@ export class HomeMainComponent {
     private featuresService: FeaturesService,
     private techsService: TechsService
   ) {}
-
-  features: Array<Feature> = [];
-  techs: Array<Tech> = [];
-  rowHeight: string = '200px';
 
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
