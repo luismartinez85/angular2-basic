@@ -7,11 +7,14 @@ import { Observable } from 'rxjs/Rx';
 export class AboutYoutubeService {
 
   private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
-  private http: Http;
-  private sanitize: DomSanitizer;
 
-  public static actualYoutubeData;
-  public youtubeData;
+  static actualYoutubeData;
+  youtubeData;
+
+  constructor(
+    private http: Http,
+    private sanitize: DomSanitizer
+  ){}
 
   search() {
     return this.http.get(this.youtubeAPIURL)

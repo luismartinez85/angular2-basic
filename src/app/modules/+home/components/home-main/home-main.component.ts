@@ -9,10 +9,10 @@ import { Tech, TechsService } from '../../services/techs';
 @Component({
   selector: 'home-main',
   providers: [
-    FeaturesService,
-    TechsService,
     MultiLanguageService,
-    EnvironmentConfigService
+    EnvironmentConfigService,
+    FeaturesService,
+    TechsService
   ],
   styleUrls: [ './home-main.component.scss' ],
   templateUrl: './home-main.component.html'
@@ -20,11 +20,13 @@ import { Tech, TechsService } from '../../services/techs';
 
 export class HomeMainComponent {
 
-  private featuresService: FeaturesService;
-  private techsService: TechsService;
-  private translate: MultiLanguageService;
-  private environmentConfig: EnvironmentConfigService;
-  
+  constructor(
+    private translate: MultiLanguageService,
+    private environmentConfig: EnvironmentConfigService,
+    private featuresService: FeaturesService,
+    private techsService: TechsService
+  ) {}
+
   /**
    * This is a doc comment for "feature".
    */

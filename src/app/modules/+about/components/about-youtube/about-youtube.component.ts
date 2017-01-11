@@ -16,10 +16,12 @@ import { AboutYoutubeService } from './about-youtube.service';
 
 export class AboutYoutubeComponent {
 
-  private aboutYoutubeService: AboutYoutubeService;
-  private dialog: MdDialog;
-
   dataYoutube: Array<any>;
+
+  constructor(
+    private aboutYoutubeService: AboutYoutubeService,
+    private dialog: MdDialog
+  ){}
 
   ngOnInit () {
 
