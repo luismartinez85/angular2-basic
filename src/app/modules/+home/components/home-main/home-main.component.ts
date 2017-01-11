@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MultiLanguageService } from '../../../../shared';
-import { EnvironmentConfigService } from '../../../../shared';
+import { MultiLanguageService, EnvironmentConfigService } from '../../../../shared';
 
 import { Feature, FeaturesService } from '../../services/features';
 import { Tech, TechsService } from '../../services/techs';
