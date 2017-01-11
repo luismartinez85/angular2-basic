@@ -5,7 +5,7 @@ import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.co
 import { AboutYoutubeService } from './about-youtube.service';
 
 /**
- * Youtube component
+ * Youtube component load videos from FrontStack youtube channel
  */
 @Component({
   selector: 'about-youtube',
@@ -24,12 +24,15 @@ export class AboutYoutubeComponent {
   ){}
 
   ngOnInit () {
-
     this.aboutYoutubeService.search().subscribe(
       data => { this.dataYoutube = data.items; },
       err => console.log(err)
     );
   }
+
+  /**
+   * Open a modal dialog of material design and his content is the selected video.
+   */
   openVideo(item) {
     this.aboutYoutubeService.selectVideo(item);
 

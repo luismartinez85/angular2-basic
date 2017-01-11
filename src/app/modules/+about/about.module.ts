@@ -13,7 +13,9 @@ import { AboutYoutubeComponent } from './components/about-youtube/about-youtube.
 import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
 import { SearchPipeModule } from '../../shared';
 
-
+/**
+ * About Module is a Lazy Load module, which show team a our social networks as youtube.
+ */
 @NgModule({
   declarations: [
     AboutYoutubeComponent,
