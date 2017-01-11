@@ -10,7 +10,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-shell',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    'shell.component.scss', 
+    'shell.component.scss',
     'shell.theme.scss'
   ],
   templateUrl: 'shell.component.html',

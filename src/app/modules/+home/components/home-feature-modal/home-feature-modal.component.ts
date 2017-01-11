@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HomeFeaturesService } from '../home-features/home-features.service';
 
 /**
- * Component 
+ * Component Modal
  */
 @Component({
   selector: 'home-feature-modal',

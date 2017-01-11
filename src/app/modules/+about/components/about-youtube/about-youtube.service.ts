@@ -6,10 +6,10 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class AboutYoutubeService {
 
-  private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
-
   static actualYoutubeData;
   youtubeData;
+
+  private youtubeAPIURL = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyAXrOaIA3FiZ_Qp76WIZmU67zNV4mriEkU&channelId=UCVKdSP47XahRYJpvfA7inmg&part=snippet,id&order=date&maxResults=20';
 
   constructor(
     private http: Http,
@@ -19,7 +19,7 @@ export class AboutYoutubeService {
   search() {
     return this.http.get(this.youtubeAPIURL)
       .map(this.extractData)
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
   selectVideo(item) {

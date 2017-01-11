@@ -11,6 +11,5 @@ import { Tech } from '../../services/techs';
 
 export class HomeTechnologiesComponent {
 
-  @Input() elements:Array<Tech> = [];
-
+  @Input() elements: Array<Tech> = [];
 }
