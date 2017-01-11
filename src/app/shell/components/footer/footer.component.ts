@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
-
+/**
+ * Component footer which contains elements of our footer, a simple component.
+ * Loaded only on shell module and once.
+ */
 @Component({
   selector: 'footer',
   styleUrls: ['footer.component.scss' ],

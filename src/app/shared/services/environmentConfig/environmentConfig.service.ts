@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * Environment Service takes constants defined in /config/app.config.json and 
+ * creates a service with values and make them accesible throught a angular 2 service
+ */
 @Injectable()
 export class EnvironmentConfigService {
 

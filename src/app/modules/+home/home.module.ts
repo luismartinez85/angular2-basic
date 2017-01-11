@@ -8,7 +8,7 @@ import { HomeTechnologiesComponent } from './components/home-technologies/home-t
 import { HomeFeaturesComponent } from './components/home-features/home-features.component';
 import { HomeFeatureModal } from './components/home-feature-modal/home-feature-modal.component';
 import { HomeLogoComponent } from './components/home-logo/home-logo.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SearchPipeModule } from '../../shared';
 
 import { routes } from './home.routes';
 
@@ -28,7 +28,7 @@ import 'hammerjs';
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
     TranslateModule.forRoot(),
-    SharedModule
+    SearchPipeModule
   ],
   entryComponents : [
     HomeFeatureModal

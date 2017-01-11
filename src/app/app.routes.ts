@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
-import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.service';
-import { NoContentComponent } from './shared/components/no-content/noContent.component';
-
-import { ROUTES_CONSTANTS } from './shared/constants/routes.constants';
+import { AuthenticateGuard, NoContentComponent, ROUTES_CONSTANTS } from './shared';
 
 /**
  * Main routes for root app. Here you have to define basic routes, first level of our lazy load modules.

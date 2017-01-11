@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
+import { MultiLanguageService } from '../../../../shared';
+import { EnvironmentConfigService } from '../../../../shared';
 
 import { Feature, FeaturesService } from '../../services/features';
 import { Tech, TechsService } from '../../services/techs';
 
+/**
+ * Main component for home route. Load features and technologies used in this starter kit.
+ */
 @Component({
   selector: 'home-main',
   providers: [
@@ -20,6 +23,9 @@ import { Tech, TechsService } from '../../services/techs';
 
 export class HomeMainComponent {
 
+  /**
+   * Loads services needed by HomeMainComponent. Dependency injection.
+   */
   constructor(
     private translate: MultiLanguageService,
     private environmentConfig: EnvironmentConfigService,
@@ -27,22 +33,10 @@ export class HomeMainComponent {
     private techsService: TechsService
   ) {}
 
-  /**
-   * This is a doc comment for "feature".
-   */
   features: Array<Feature> = [];
-
-  /**
-   * This is a doc comment for "techs".
-   */
   techs: Array<Tech> = [];
   rowHeight: string = '200px';
 
-  /**
-   * Comment for method ngOnInit.
-   * @param target  Comment for parameter ´something´.
-   * @returns       Comment for return ´something´.
-   */
   ngOnInit() {
     this.features = this.featuresService.getFeatures();
     this.techs = this.techsService.getTechs();

@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
-
+import { Tech } from '../../services/techs';
+/**
+ * Home technologies shows a list of technologies. Receives an array of Tech.
+ */
 @Component({
   selector: 'home-technologies',
   templateUrl: './home-technologies.component.html',
@@ -8,7 +11,6 @@ import { Component, Input } from '@angular/core';
 
 export class HomeTechnologiesComponent {
 
-  @Input() elements = [];
-  @Input() title;
+  @Input() elements:Array<Tech> = [];
 
 }
