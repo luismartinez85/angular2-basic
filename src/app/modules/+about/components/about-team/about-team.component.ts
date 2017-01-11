@@ -10,8 +10,9 @@ import { AboutTeamService } from './about-team.service';
   styleUrls: [ './about-team.component.scss' ],
   providers: [ AboutTeamService ]
 })
+
 export class AboutTeamComponent {
-  
+
   @ViewChild('search')
   search: ElementRef;
   dataUsers;
