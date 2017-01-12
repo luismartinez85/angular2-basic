@@ -178,7 +178,7 @@ describe('Modules -> about -> about-youtube -> AboutYoutubeService', () => {
       const result = service.search();
       result.subscribe(
         res => {
-
+          console.log(res);
         },
         err => {
           expect(err).toEqual('Server error');

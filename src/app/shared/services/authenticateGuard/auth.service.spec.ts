@@ -10,7 +10,7 @@ describe('shared -> AuthenticateGuard', () => {
       ]
     });
 
-    //spyOn(AuthenticateGuard.prototype, 'canLoad').and.returnValue(true);
+    // spyOn(AuthenticateGuard.prototype, 'canLoad').and.returnValue(true);
   });
 
   it('Should be defined',
