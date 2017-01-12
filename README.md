@@ -1,10 +1,10 @@
-> ## Due to Angular2 framework instability, this starter kit is NOT recomended for production yet.
+> ## Due to Angular2 framework instability, this starter kit is NOT recommended for production yet.
 
-More details in the followin [section](#known-issues)
+More details in the following [section](#known-issues)
 
 ![](docs/angular2-basic-logo.png)
 
-# Angular2 Basic v1.0.0-beta.1 
+# Angular2 Basic v1.0.0-beta.2 
 
 > Provides fast, reliable and extensible starter for the development of Angular2 projects.
 
@@ -22,7 +22,7 @@ What you need to run this app:
 ## Installing
 * `fork` this repo
 * `clone` your fork
-* `npm install` to install all dependencies or `yarn`
+* `npm install` to install all dependencies
 * `npm run serve` to start the dev server in another tab
 
 ## Running the app
@@ -34,6 +34,42 @@ What you need to run this app:
 npm run serve
 # production
 npm run serve:pro
+
+```
+
+### test
+```bash
+# unit testing - test reports at /test-reports/html/index.html
+npm run test
+npm run test:dev
+npm run test:pro
+
+# e2e testing
+npm run e2e
+
+```
+
+### build
+```bash
+# build will be generated at /dist
+npm run build
+npm run build:dev
+npm run build:pro
+
+```
+
+### docs
+```bash
+# docs will be generated at /docs/typedoc
+npm run docs
+
+```
+
+### linting
+```bash
+# tslint
+npm run lint
+
 ```
 
 ## File Structure
@@ -98,7 +134,7 @@ angular2-webpack-starter/
 * Mobile first layout
 * Routing encapsulation by module with lazyload integrated
 * Module LazyLoad by feature and nested modules
-* Twitter and Youtube API integration
+* Youtube API integration
 
 ## Angular2 Known Issues
  

@@ -1,6 +1,6 @@
 {
   "name": "angular2-basic",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta2",
   "license": "MIT",
   "scripts": {
     "aot": "ngc -p ./tsconfig.aot.json",
