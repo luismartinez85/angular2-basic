@@ -3,6 +3,7 @@ import { BaseRequestOptions, Http, HttpModule, Response, ResponseOptions } from 
 import { MockBackend } from '@angular/http/testing';
 
 import { AboutYoutubeService } from './about-youtube.service';
+import { Observable } from 'rxjs/Rx';
 
 let videosJSONMock = {
   'items': [
@@ -166,5 +167,16 @@ describe('Modules -> about -> about-youtube -> AboutYoutubeService', () => {
     }
   ));
 
+  it('should throw error of youtube api', inject(
+    [AboutYoutubeService, MockBackend], (service, mockBackend) => {
+      let error = {'error': 'someError'};
+      mockBackend.connections.subscribe(connection => {
+        connection.mockError(new Error(JSON.stringify(error)));
+      });
+
+
+      expect(service.search).toThrow();
+    }
+  ));
 });
 
