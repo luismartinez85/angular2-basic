@@ -1,36 +1,40 @@
 import { Component } from '@angular/core';
 
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
-import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
+import { MultiLanguageService, EnvironmentConfigService } from '../../../../shared';
 
-import { Feature } from '../../services/features/feature';
-import { FeaturesService } from '../../services/features/features.service';
-import { Tech } from '../../services/techs/tech';
-import { TechsService } from '../../services/techs/techs.service';
+import { Feature, FeaturesService } from '../../services/features';
+import { Tech, TechsService } from '../../services/techs';
 
+/**
+ * Main component for home route. Load features and technologies used in this starter kit.
+ */
 @Component({
   selector: 'home-main',
   providers: [
-    FeaturesService,
-    TechsService,
     MultiLanguageService,
-    EnvironmentConfigService
+    EnvironmentConfigService,
+    FeaturesService,
+    TechsService
   ],
   styleUrls: [ './home-main.component.scss' ],
   templateUrl: './home-main.component.html'
 })
 
 export class HomeMainComponent {
-  features: Feature[];
-  techs: Tech[];
+
+  features: Array<Feature> = [];
+  techs: Array<Tech> = [];
   rowHeight: string = '200px';
 
+  /**
+   * Loads services needed by HomeMainComponent. Dependency injection.
+   */
   constructor(
-    private featuresService: FeaturesService,
-    private techsService: TechsService,
     private translate: MultiLanguageService,
-    private environmentConfig: EnvironmentConfigService) {
-  }
+    private environmentConfig: EnvironmentConfigService,
+    private featuresService: FeaturesService,
+    private techsService: TechsService
+  ) {}
 
   ngOnInit() {
     this.features = this.featuresService.getFeatures();

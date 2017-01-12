@@ -1,4 +1,4 @@
-import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -11,7 +11,11 @@ import { AboutMainComponent } from './components/about-main/about-main.component
 import { AboutTeamComponent } from './components/about-team/about-team.component';
 import { AboutYoutubeComponent } from './components/about-youtube/about-youtube.component';
 import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
+import { SearchPipeModule } from '../../shared';
 
+/**
+ * About Module is a Lazy Load module, which show team a our social networks as youtube.
+ */
 @NgModule({
   declarations: [
     AboutYoutubeComponent,
@@ -22,10 +26,10 @@ import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtub
   imports: [
     CommonModule,
     HttpModule,
-    JsonpModule,
     RouterModule.forChild(routes),
     MaterialModule.forRoot(),
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    SearchPipeModule
   ],
   entryComponents : [
     AboutYoutubeModal

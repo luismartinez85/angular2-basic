@@ -63,6 +63,7 @@ npm-debug.log
 
 # Doc #
 /docs/api
+/docs/compodoc
 
 # IDE #
 .idea/

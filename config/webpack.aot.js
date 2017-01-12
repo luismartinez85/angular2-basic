@@ -1,7 +1,3 @@
-/**
- * @author: @AngularClass
- */
-
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
@@ -54,7 +50,7 @@ module.exports = function (env) {
      */
     devtool: 'source-map',
 
-    /*
+     /*
      * The entry point for the bundle
      * Our Angular.js app
      *
@@ -68,7 +64,7 @@ module.exports = function (env) {
 
     },
 
-    /*
+     /*
      * Options affecting the resolving of modules.
      *
      * See: http://webpack.github.io/docs/configuration.html#resolve
@@ -146,9 +142,10 @@ module.exports = function (env) {
         {
           test: /\.ts$/,
           loaders: [
+            '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
             'awesome-typescript-loader',
             'angular2-template-loader',
-            'angular2-router-loader?loader=system&genDir=aot/src/app&aot=true'
+            'angular2-router-loader'
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
         },
@@ -171,12 +168,6 @@ module.exports = function (env) {
         {
           test: /\.css$/,
           loaders: ['to-string-loader', 'css-loader']
-        },
-
-        {
-          test: /\.scss$/,
-          exclude: /node_modules/,
-          loaders: ['raw-loader', 'sass-loader']
         },
 
         /* Raw loader support for *.html
@@ -215,6 +206,12 @@ module.exports = function (env) {
        * See: https://www.npmjs.com/package/webpack-md5-hash
        */
       new WebpackMd5Hash(),
+
+      new ngtools.AotPlugin({
+        tsConfigPath: './tsconfig.aot.json',
+        basePath: helpers.root('src'),
+        entryModule: helpers.root('src/app/app.module') + '#AppModule'
+      }),
 
       new AssetsPlugin({
         path: helpers.root('dist'),
@@ -433,7 +430,7 @@ module.exports = function (env) {
         options: {
 
           /**
-           * Static analysis linter for TypeSScript advanced options configuration
+           * Static analysis linter for TypeScript advanced options configuration
            * Description: An extensible linter for the TypeScript language.
            *
            * See: https://github.com/wbuchwalter/tslint-loader

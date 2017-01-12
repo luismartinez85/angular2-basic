@@ -10,7 +10,7 @@ describe('shared -> AuthenticateGuard', () => {
       ]
     });
 
-    spyOn(AuthenticateGuard.prototype, 'canLoad').and.returnValue(true);
+    // spyOn(AuthenticateGuard.prototype, 'canLoad').and.returnValue(true);
   });
 
   it('Should be defined',
@@ -25,9 +25,9 @@ describe('shared -> AuthenticateGuard', () => {
     })
   );
 
-  it('canLoad should return true',
+  it('canLoad should return promise object',
     inject([AuthenticateGuard], (authService) => {
-      expect(authService.canLoad()).toBe(true);
+      expect(typeof authService.canLoad()).toBe('object');
     })
   );
 });

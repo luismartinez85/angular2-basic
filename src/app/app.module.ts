@@ -9,7 +9,7 @@ import { TranslateModule } from 'ng2-translate';
 
 /** Platform and Environment providers/directives/pipes */
 import { ENV_PROVIDERS } from './app.environment';
-import { ROUTES } from './app.routes';
+import { routes } from './app.routes';
 import { AuthenticateGuard } from './shared/services/authenticateGuard/auth.service';
 
 /** App is our top level component */
@@ -18,7 +18,6 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
 
 /**
  * AppModule is the main entry point into Angular2's bootstraping process
- * @preferred
  */
 @NgModule({
   bootstrap: [ ShellComponent ],
@@ -30,7 +29,7 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
     HttpModule,
     MaterialModule.forRoot(),
     ShellModule,
-    RouterModule.forRoot(ROUTES, {
+    RouterModule.forRoot(routes, {
       useHash: true
       // ,preloadingStrategy: PreloadAllModules
     }),

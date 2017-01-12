@@ -5,6 +5,8 @@ import { AboutTeamComponent } from '../about-team/about-team.component';
 import { AboutTeamService } from '../about-team/about-team.service';
 
 import { MaterialModule } from '@angular/material';
+import { SearchPipeModule } from '../../../../shared';
+
 import { Observable } from 'rxjs';
 
 let component: AboutTeamComponent;
@@ -31,7 +33,8 @@ describe('Modules -> about -> about-team -> AboutTeamComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule.forRoot()
+        MaterialModule.forRoot(),
+        SearchPipeModule
       ],
       declarations: [ AboutTeamComponent ]
     })
