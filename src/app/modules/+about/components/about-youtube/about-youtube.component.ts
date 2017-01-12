@@ -26,7 +26,7 @@ export class AboutYoutubeComponent {
   ngOnInit () {
     this.aboutYoutubeService.search().subscribe(
       data => { this.dataYoutube = data.items; },
-      err => console.log(err)
+      err => console.log(err, 21)
     );
   }
 

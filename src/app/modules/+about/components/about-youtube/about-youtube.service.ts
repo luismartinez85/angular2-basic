@@ -25,7 +25,7 @@ export class AboutYoutubeService {
   search() {
     return this.http.get(this.youtubeAPIURL)
       .map(this.extractData)
-      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+      .catch((error: any) => Observable.throw('Server error'));
   }
 
   /**

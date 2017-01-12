@@ -170,12 +170,20 @@ describe('Modules -> about -> about-youtube -> AboutYoutubeService', () => {
   it('should throw error of youtube api', inject(
     [AboutYoutubeService, MockBackend], (service, mockBackend) => {
       let error = {'error': 'someError'};
+
       mockBackend.connections.subscribe(connection => {
         connection.mockError(new Error(JSON.stringify(error)));
       });
 
+      const result = service.search();
+      result.subscribe(
+        res => {
 
-      expect(service.search).toThrow();
+        },
+        err => {
+          expect(err).toEqual('Server error');
+        }
+      );
     }
   ));
 });
