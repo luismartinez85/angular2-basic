@@ -4,19 +4,24 @@ import { MaterialModule } from '@angular/material';
 
 // Load the implementations that should be tested
 import { HomeTechnologiesComponent } from './home-technologies.component';
+import { Tech } from '../../services/techs';
 
 describe('Module Home -> Component HomeTechnologies', () => {
   let component: HomeTechnologiesComponent;
   let fixture;
 
-  const elements = [
+  const elements: Array<Tech> = [
     {
       title: 'example1',
-      description: 'description example1'
+      description: 'description example1',
+      image: '',
+      icon: ''
     },
     {
       title: 'example2',
-      description: 'description example2'
+      description: 'description example2',
+      image: '',
+      icon: ''
     }
   ];
 

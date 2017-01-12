@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ROUTES_CONSTANTS } from '../../constants/routes.constants';
+import { ROUTES_CONSTANTS } from '../../../shared';
 /*
- * Toolbar Component
+ * Toolbar Component which contains routes of our application. 
  */
 @Component({
   selector: 'toolbar',
@@ -11,10 +11,10 @@ import { ROUTES_CONSTANTS } from '../../constants/routes.constants';
 
 export class ToolbarComponent {
 
-  ROUTES: any;
+  routes: any;
 
   constructor(){
-    this.ROUTES = ROUTES_CONSTANTS;
+    this.routes = ROUTES_CONSTANTS;
   }
 
 }

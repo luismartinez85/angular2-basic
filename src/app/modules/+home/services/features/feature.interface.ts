@@ -1,4 +1,4 @@
-export class Feature {
+export interface Feature {
   title: string;
   description: string;
   code: string;

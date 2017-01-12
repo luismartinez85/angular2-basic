@@ -1,5 +1,8 @@
+<div class="box-search">
+    <md-input #search placeholder="Search"></md-input>
+ </div>
 <div class="team-container">
-  <div class="team-item" *ngFor="let user of dataUsers">
+  <div class="team-item" *ngFor="let user of dataUsers | searchPipe: search.value: 'name'">
 
     <md-card>
       <div class="team-item-container">

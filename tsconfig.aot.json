@@ -3,21 +3,30 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": true,
-    "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "baseUrl": "./src",
-    "outDir": "dist-aot",
+    "allowSyntheticDefaultImports": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "noEmitHelpers": true,
+    "strictNullChecks": false,
+    "rootDir": "./src",
+    "outDir": "./dist-aot",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "hammerjs",
+      "node"
+    ],
     "typeRoots": [
       "node_modules/@types/"
     ]
   },
-  "types": [
-    "es6",
-    "node"
+  "files": [
+    "src/app/app.module.ts",
+    "src/custom-typings.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -25,16 +34,14 @@
     "docs",
     "config",
     "dist-aot",
+    "i18n",
+    "e2e",
+    "test-reports",
     "src/**/*.e2e.ts",
     "src/**/*.spec.ts"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true,
-    "forkChecker": true,
-    "useCache": true
-  },
   "angularCompilerOptions": {
     "genDir": "aot",
-    "skipMetadataEmit": true
+    "skipMetadataEmit" : true
   }
 }
