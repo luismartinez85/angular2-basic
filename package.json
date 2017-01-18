@@ -82,7 +82,7 @@
     "html-webpack-plugin": "2.26.0",
     "imports-loader": "0.7.0",
     "istanbul-instrumenter-loader": "1.2.0",
-    "jasmine-spec-reporter": "3.1.0",
+    "jasmine-spec-reporter": "3.2.0",
     "json-loader": "0.5.4",
     "karma": "1.4.0",
     "karma-chrome-launcher": "2.0.0",
@@ -102,7 +102,7 @@
     "rimraf": "~2.5.4",
     "sass-loader": "4.1.1",
     "script-ext-html-webpack-plugin": "1.4.1",
-    "source-map-loader": "0.1.5",
+    "source-map-loader": "0.1.6",
     "string-replace-loader": "1.0.5",
     "style-loader": "0.13.1",
     "to-string-loader": "1.1.5",
@@ -118,7 +118,7 @@
     "webpack-dev-middleware": "1.9.0",
     "webpack-dev-server": "2.1.0-beta.11",
     "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "2.3.1"
+    "webpack-merge": "2.4.0"
   },
   "engines": {
     "node": ">= 4.2.1",
