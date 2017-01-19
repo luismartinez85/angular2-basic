@@ -26,6 +26,9 @@
   },
   "files": [
     "src/app/app.module.ts",
+    "src/app/modules/+home/home.module.ts",
+    "src/app/modules/+about/about.module.ts",
+
     "src/custom-typings.d.ts"
   ],
   "exclude": [
