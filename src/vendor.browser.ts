@@ -6,7 +6,7 @@
 // TODO(gdi2290): switch to DLLs
 
 // Angular 2
-
+/*
 import '@angular/core';
 import '@angular/common';
 import '@angular/forms';
@@ -34,3 +34,4 @@ if ('production' === ENV) {
   // Development
 
 }
+*/
