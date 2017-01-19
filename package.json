@@ -7,7 +7,7 @@
     "build:pro": "webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run clean:aot && npm run aot && webpack --config config/webpack.aot.js --profile --bail",
     "build2:aot": "webpack --config config/webpack.aot.js --profile --bail",
-    "build": "npm run build:pro",
+    "build": "npm run clean:dist && npm run build:pro",
     "ci": "npm run lint && npm test && npm run e2e",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "pree2e": "npm run webdriver:update -- --standalone",
