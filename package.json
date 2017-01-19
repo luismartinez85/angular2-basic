@@ -71,7 +71,7 @@
     "@types/webpack": "2.1.0",
     "angular2-router-loader": "0.3.4",
     "angular2-template-loader": "0.6.0",
-    "awesome-typescript-loader": "2.2.4",
+    "awesome-typescript-loader": "~3.0.0-beta.18",
     "codelyzer": "~2.0.0-beta.4",
     "compodoc": "0.0.30",
     "copy-webpack-plugin": "4.0.1",
