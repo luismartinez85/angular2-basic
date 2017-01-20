@@ -16,14 +16,16 @@ let environment_config = appconfig.environment_constants['pro']['EnvironmentConf
  * Webpack Plugins
  */
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
-const OfflinePlugin = require('offline-plugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const OfflinePlugin = require('offline-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -109,12 +111,52 @@ module.exports = function (env) {
 
     },
 
+     module: {
+
+      rules: [
+
+        /*
+         * Extract CSS files from .src/styles directory to external CSS file
+         */
+        {
+          test: /\.css$/,
+          loader: ExtractTextPlugin.extract({
+              fallbackLoader: 'style-loader',
+              loader: 'css-loader'
+            }),
+          include: [helpers.root('src', 'styles')]
+        },
+
+        /*
+         * Extract and compile SCSS files from .src/styles directory to external CSS file
+         */
+        {
+          test: /\.scss$/,
+          loader: ExtractTextPlugin.extract({
+              fallbackLoader: 'style-loader',
+              loader: 'css-loader!sass-loader'
+            }),
+          include: [helpers.root('src', 'styles')]
+        },
+
+      ]
+
+    },
+
     /**
      * Add additional plugins to the compiler.
      *
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
+
+      /**
+       * Plugin: ExtractTextPlugin
+       * Description: Extracts imported CSS files into external stylesheet 
+       *
+       * See: https://github.com/webpack/extract-text-webpack-plugin
+       */
+      new ExtractTextPlugin('[name].[contenthash].css'),
 
       /**
        * Plugin: WebpackMd5Hash
@@ -171,15 +213,25 @@ module.exports = function (env) {
 
 
         beautify: false, //prod
-        mangle: {
-          screw_ie8: true,
-          keep_fnames: true
+        output: {
+          comments: false
         }, //prod
-        compress: {
-          warnings: false,
+        mangle: {
           screw_ie8: true
         }, //prod
-        comments: false //prod
+        compress: {
+          screw_ie8: true,
+          warnings: false,
+          conditionals: true,
+          unused: true,
+          comparisons: true,
+          sequences: true,
+          dead_code: true,
+          evaluate: true,
+          if_return: true,
+          join_vars: true,
+          negate_iife: false // we need this for lazy v8
+        }
       }),
 
       /**
@@ -192,6 +244,11 @@ module.exports = function (env) {
       new NormalModuleReplacementPlugin(
         /angular2-hmr/,
         helpers.root('config/modules/angular2-hmr-prod.js')
+      ),
+
+      new NormalModuleReplacementPlugin(
+        /zone\.js(\\|\/)dist(\\|\/)long-stack-trace-zone/,
+        helpers.root('config/empty.js')
       ),
 
       /**
@@ -222,6 +279,7 @@ module.exports = function (env) {
        * See: https://gist.github.com/sokra/27b24881210b56bbaff7
        */
       new LoaderOptionsPlugin({
+        minimize: true,
         debug: false,
         options: {
 
