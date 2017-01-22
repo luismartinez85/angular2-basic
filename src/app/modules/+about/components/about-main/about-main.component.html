@@ -3,23 +3,23 @@
     <span class="about-section-title">{{'ABOUT.TITLE' | translate}}</span>
   </div>
   <div class="about-item">
+    <div class="about-tab-header">
+      <div class="about-tab-button" (click)="tabActive.value = 'team'">
+        <span class="menu_option">Our Team</span>
+        <span class="icon"><i class="material-icons">people</i></span>
+      </div>
+      <div class="about-tab-button" (click)="tabActive.value = 'youtube'">
+        <span class="menu_option">Youtube API</span>
+        <span class="icon"><i class="material-icons">video_library</i></span>
+      </div>
+    </div>
     <div class="about-tab-content">
-      <md-tab-group>
-        <md-tab>
-          <template md-tab-label>
-            <span class="text">Our Team</span>
-            <span class="icon"><md-icon>people</md-icon></span>
-          </template>
-          <about-team></about-team>
-        </md-tab>
-        <md-tab>
-          <template md-tab-label>
-            <span class="text">Youtube API</span>
-            <span class="icon"><md-icon>video_library</md-icon></span>
-          </template>
-          <about-youtube></about-youtube>
-        </md-tab>
-      </md-tab-group>
+      <about-team 
+        *ngIf="tabActive.value === 'team'" 
+        ></about-team>
+      <about-youtube 
+        *ngIf="tabActive.value === 'youtube'" 
+        ></about-youtube>
     </div>
   </div>
 </div>

@@ -2,7 +2,6 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';
 
 import { routes } from './about.routes';
@@ -27,7 +26,6 @@ import { SearchPipeModule } from '../../shared';
     CommonModule,
     HttpModule,
     RouterModule.forChild(routes),
-    MaterialModule.forRoot(),
     TranslateModule.forRoot(),
     SearchPipeModule
   ],

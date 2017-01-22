@@ -25,6 +25,9 @@ export class HomeMainComponent {
   features: Array<Feature> = [];
   techs: Array<Tech> = [];
   rowHeight: string = '200px';
+  tabActive: Object = {
+    value: 'features'
+  }
 
   /**
    * Loads services needed by HomeMainComponent. Dependency injection.

@@ -1,27 +1,37 @@
-<md-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
+<aside #sidenav class="sidenav" [ngClass]="{'sidenav-open': sidenav.open}">
     
     <span class="sidenavHeader">
         <figure>
-            <md-icon>account_circle</md-icon>
         </figure>
         <figcaption>
             <span>Front Stack</span>
         </figcaption>
-        <md-icon>code</md-icon>
     </span>
     <div class="sidenavList">
-        <a md-button md-ripple [routerLink]="routes.HOME.path" routerLinkActive="active" (click)="sidenav.toggle();">Home </a>
-        <a md-button md-ripple [routerLink]="routes.ABOUT_US.path" routerLinkActive="active"(click)="sidenav.toggle()">About Us</a>
-        <a md-button md-ripple [routerLink]="routes.NO_CONTENT.path" routerLinkActive="active" (click)="sidenav.toggle()">No page found</a>
+        <a 
+        md-button
+        [routerLink]="routes.HOME.path" 
+        routerLinkActive="active" 
+        (click)="sidenav.open = !sidenav.open">Home </a>
+        <a 
+        md-button
+        [routerLink]="routes.ABOUT_US.path" 
+        routerLinkActive="active" 
+        (click)="sidenav.open = !sidenav.open">About Us</a>
+        <a 
+        md-button
+        [routerLink]="routes.NO_CONTENT.path" 
+        routerLinkActive="active" 
+        (click)="sidenav.open = !sidenav.open">No page found</a>
     </div>
-</md-sidenav>
+</aside>
 
 <span class="shellBackground">
-  <md-toolbar>
-    <button md-button class="app-icon-button" (click)="sidenav.toggle();">
+  <div>
+    <button md-button class="app-icon-button" (click)="sidenav.open = !sidenav.open">
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
     <span class="angular_basic_logo">Angular2 Basic</span>
     <span class="app-toolbar-filler"></span>
-  </md-toolbar> 
+  </div> 
 </span>
