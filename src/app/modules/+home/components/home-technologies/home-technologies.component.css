@@ -1,26 +1,24 @@
-home-technologies {
-  .techs-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-  }
+.techs-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
 
-  .tech-item-image {
-    flex: 0 0 1 auto auto;
-    width: 100px;
+.tech-item-image {
+  flex: 0 0 1 auto auto;
+  width: 100px;
 
-    img {
-      margin-top: 20px;
-      width: 80px;
-    }
+  img {
+    margin-top: 20px;
+    width: 80px;
   }
+}
 
-  .tech-item-text {
-    flex: 0 0 1 auto auto;
-    width: 100%;
-    padding-left: 20px;
-  }
+.tech-item-text {
+  flex: 0 0 1 auto auto;
+  width: 100%;
+  padding-left: 20px;
 }

@@ -1,4 +1,4 @@
-about-team .team-container {
+.team-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@ about-team .team-container {
   align-content: flex-start;
 }
 
-about-team .team-container .team-item {
+.team-container .team-item {
   flex: 0 0 1 auto auto;
   width: 30%;
   padding: 6px;

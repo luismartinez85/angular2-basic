@@ -111,33 +111,12 @@ module.exports = function (env) {
 
     },
 
-     module: {
-
-      rules: [
-
-        /*
-         * Extract CSS files from .src/styles directory to external CSS file
-         */
-        
-
-      ]
-
-    },
-
     /**
      * Add additional plugins to the compiler.
      *
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
-
-      /**
-       * Plugin: ExtractTextPlugin
-       * Description: Extracts imported CSS files into external stylesheet 
-       *
-       * See: https://github.com/webpack/extract-text-webpack-plugin
-       */
-     // new ExtractTextPlugin({ filename: '[name].[contenthash].css', disable: false, allChunks: true }),
 
       /**
        * Plugin: WebpackMd5Hash

@@ -1,12 +1,8 @@
-home-features {
+.feature-description {
+  display: block;
+  margin-left: 15px;
+}
 
-  .feature-description {
-    display: block;
-    margin-left: 15px;
-  }
-
-  .box-search {
-    margin-left: 20px;
-  }
-  
+.box-search {
+  margin-left: 20px;
 }
