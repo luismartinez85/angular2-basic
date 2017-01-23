@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
-import { MdDialog } from '@angular/material';
 import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.component';
 import { AboutYoutubeService } from './about-youtube.service';
 
@@ -19,8 +18,7 @@ export class AboutYoutubeComponent {
   dataYoutube: Array<any>;
 
   constructor(
-    private aboutYoutubeService: AboutYoutubeService,
-    private dialog: MdDialog
+    private aboutYoutubeService: AboutYoutubeService
   ){}
 
   ngOnInit () {
@@ -36,9 +34,9 @@ export class AboutYoutubeComponent {
   openVideo(item) {
     this.aboutYoutubeService.selectVideo(item);
 
-    return this.dialog.open(AboutYoutubeModal, {
-      disableClose: false
-    });
+    // return this.dialog.open(AboutYoutubeModal, {
+    //   disableClose: false
+    // });
   }
 }
 

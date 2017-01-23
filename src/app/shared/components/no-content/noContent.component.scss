@@ -2,10 +2,11 @@
 no-content {
   display: flex;
   color: black;
+  flex: 1;
+  padding: 8em;
+  align-items: center;
   section {
-    flex: 1;
     text-align: center;
-    padding: 1em;
     .no-content__message {
       font-size: 4em;
       margin-top: 0px;

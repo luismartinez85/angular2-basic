@@ -1,5 +1,4 @@
 import { Component, Input, ElementRef, ViewChild } from '@angular/core';
-import { MdDialog } from '@angular/material';
 
 import { HomeFeaturesService } from './home-features.service';
 import { HomeFeatureModal } from '../home-feature-modal/home-feature-modal.component';
@@ -20,9 +19,9 @@ export class HomeFeaturesComponent {
   @Input() elements: Array<Feature> = [];
   @ViewChild('search')
   search: ElementRef;
+  element: HTMLElement;
 
   constructor(
-    public dialog: MdDialog,
     private homeFeatureService: HomeFeaturesService
   ) { }
 
@@ -31,10 +30,11 @@ export class HomeFeaturesComponent {
    */
   openDialog(element) {
     this.homeFeatureService.selectData(element);
+    // var modal = document.querySelector('body').appendChild(this.element);
 
-    return this.dialog.open(HomeFeatureModal, {
-      disableClose: false
-    });
+    // return this.dialog.open(HomeFeatureModal, {
+    //   disableClose: false
+    // });
   }
 
 }

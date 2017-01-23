@@ -1,10 +1,10 @@
-<md-toolbar>
+<div>
   <span>Youtube Media</span> 
   <span class="fill-remaining-space"></span>
   <button md-icon-button md-dialog-close>
-    <md-icon>close</md-icon>
+    <i>close</i>
   </button>
-</md-toolbar>
+</div>
 <div>
   <h2>{{dialogData.snippet.title}}</h2>
   <iframe style="border: 0;" width="100%" height="450px" [src]="dialogData.id.videoId"></iframe>

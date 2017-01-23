@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MaterialModule } from '@angular/material';
 
 // Load the implementations that should be tested
 import { HomeTechnologiesComponent } from './home-technologies.component';
@@ -28,7 +27,6 @@ describe('Module Home -> Component HomeTechnologies', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule.forRoot()
       ],
       declarations: [ HomeTechnologiesComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

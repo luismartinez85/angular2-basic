@@ -12,7 +12,6 @@ import { SearchPipeModule } from '../../shared';
 
 import { routes } from './home.routes';
 
-import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 @NgModule({
@@ -26,7 +25,6 @@ import 'hammerjs';
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MaterialModule.forRoot(),
     TranslateModule.forRoot(),
     SearchPipeModule
   ],

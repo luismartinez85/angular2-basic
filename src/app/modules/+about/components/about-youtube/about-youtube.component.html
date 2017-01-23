@@ -1,5 +1,5 @@
 
-<md-card *ngFor="let item of dataYoutube let i = index">
+<div *ngFor="let item of dataYoutube let i = index">
   <div *ngIf="item.id.videoId" class="video-item">
     <span [style.background-image]="'url(' + item.snippet.thumbnails.high.url + ')'"></span>
     <div>
@@ -10,9 +10,9 @@
 
     <div class="border">
       <button color="accent" md-button (click)="openVideo(item)">
-        <md-icon>movie</md-icon>
+        movie
         Watch
       </button>
     </div>
   </div>
-</md-card>
+</div>
