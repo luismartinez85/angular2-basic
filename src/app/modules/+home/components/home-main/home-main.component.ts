@@ -25,7 +25,7 @@ export class HomeMainComponent {
   features: Array<Feature> = [];
   techs: Array<Tech> = [];
   rowHeight: string = '200px';
-  tabActive: Object = {
+  tabActive = {
     value: 'features'
   }
 

@@ -136,7 +136,7 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           use: ['to-string-loader', 'css-loader'],
-          exclude: [helpers.root('src'),helpers.root('node_modules')]
+          exclude: [helpers.root('src', 'assets')]
         },
          /*
          * to string and sass loader support for *.scss files (from Angular components)
@@ -146,7 +146,7 @@ module.exports = function (options) {
         {
           test: /\.scss$/,
           use: ['to-string-loader', 'css-loader', 'sass-loader'],
-          exclude: [helpers.root('src'),helpers.root('node_modules')]
+          exclude: [helpers.root('src', 'assets')]
         },
         /* Raw loader support for *.html
          * Returns file content as string

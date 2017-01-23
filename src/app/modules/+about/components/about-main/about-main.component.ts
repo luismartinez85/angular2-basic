@@ -13,7 +13,7 @@ import { MultiLanguageService } from '../../../../shared/services/multiLanguage/
 
 export class AboutMainComponent {
   
-  tabActive: Object = {
+  tabActive = {
     value: 'team'
   }
 
