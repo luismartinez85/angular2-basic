@@ -9,8 +9,8 @@ import { AboutYoutubeService } from './about-youtube.service';
 @Component({
   selector: 'about-youtube',
   providers: [ AboutYoutubeService ],
-  styleUrls: [ 'about-youtube.component.scss' ],
-  templateUrl: 'about-youtube.component.html'
+  styleUrls: [ './about-youtube.component.css' ],
+  templateUrl: './about-youtube.component.html'
 })
 
 export class AboutYoutubeComponent {

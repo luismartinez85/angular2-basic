@@ -16,7 +16,7 @@ import { Tech, TechsService } from '../../services/techs';
     FeaturesService,
     TechsService
   ],
-  styleUrls: [ './home-main.component.scss' ],
+  styleUrls: [ './home-main.component.css' ],
   templateUrl: './home-main.component.html'
 })
 

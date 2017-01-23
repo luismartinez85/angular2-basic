@@ -7,7 +7,7 @@ import { AboutTeamService } from './about-team.service';
 @Component({
   selector: 'about-team',
   templateUrl: './about-team.component.html',
-  styleUrls: [ './about-team.component.scss' ],
+  styleUrls: [ './about-team.component.css' ],
   providers: [ AboutTeamService ]
 })
 

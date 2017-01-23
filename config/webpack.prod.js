@@ -118,26 +118,7 @@ module.exports = function (env) {
         /*
          * Extract CSS files from .src/styles directory to external CSS file
          */
-        {
-          test: /\.css$/,
-          loader: ExtractTextPlugin.extract({
-              fallbackLoader: 'style-loader',
-              loader: 'css-loader'
-            }),
-          include: [helpers.root('src', 'assets')]
-        },
-
-        /*
-         * Extract and compile SCSS files from .src/styles directory to external CSS file
-         */
-        {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract({
-              fallbackLoader: 'style-loader',
-              loader: 'css-loader!sass-loader'
-            }),
-          include: [helpers.root('src', 'assets')]
-        },
+        
 
       ]
 
@@ -156,7 +137,7 @@ module.exports = function (env) {
        *
        * See: https://github.com/webpack/extract-text-webpack-plugin
        */
-      new ExtractTextPlugin('[name].[contenthash].css'),
+     // new ExtractTextPlugin({ filename: '[name].[contenthash].css', disable: false, allChunks: true }),
 
       /**
        * Plugin: WebpackMd5Hash

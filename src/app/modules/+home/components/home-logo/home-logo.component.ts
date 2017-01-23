@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'home-logo',
   templateUrl: './home-logo.component.html',
-  styleUrls: [ './home-logo.component.scss' ]
+  styleUrls: [ './home-logo.component.css' ]
 })
 export class HomeLogoComponent {
 }

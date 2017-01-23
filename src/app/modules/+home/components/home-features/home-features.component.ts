@@ -10,7 +10,7 @@ import { Feature } from '../../services/features';
 @Component({
   selector: 'home-features',
   templateUrl: './home-features.component.html',
-  styleUrls: [ './home-features.component.scss' ],
+  styleUrls: [ './home-features.component.css' ],
   providers: [ HomeFeaturesService ]
 })
 

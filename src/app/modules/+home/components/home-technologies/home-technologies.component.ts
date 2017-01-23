@@ -7,7 +7,7 @@ import { Tech } from '../../services/techs';
 @Component({
   selector: 'home-technologies',
   templateUrl: './home-technologies.component.html',
-  styleUrls: [ './home-technologies.component.scss' ]
+  styleUrls: [ './home-technologies.component.css' ]
 })
 
 export class HomeTechnologiesComponent {

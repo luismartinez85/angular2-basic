@@ -8,7 +8,7 @@ import { MultiLanguageService } from '../../../../shared/services/multiLanguage/
   selector: 'about-main',
   providers: [ MultiLanguageService ],
   templateUrl: './about-main.component.html',
-  styleUrls: ['./about-main.component.scss'],
+  styleUrls: ['./about-main.component.css'],
 })
 
 export class AboutMainComponent {

@@ -7,7 +7,7 @@ import { HomeFeaturesService } from '../home-features/home-features.service';
 @Component({
   selector: 'home-feature-modal',
   templateUrl: './home-feature-modal.component.html',
-  styleUrls: [ './home-feature-modal.component.scss' ]
+  styleUrls: [ './home-feature-modal.component.css' ]
 })
 
 export class HomeFeatureModal {

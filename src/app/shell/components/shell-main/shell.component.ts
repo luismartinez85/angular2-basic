@@ -9,11 +9,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-shell',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    'shell.component.scss',
-    'shell.theme.scss'
-  ],
-  templateUrl: 'shell.component.html',
+  styleUrls: ['./shell.component.css'],
+  templateUrl: './shell.component.html',
 })
 
 export class ShellComponent { }
