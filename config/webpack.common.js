@@ -36,6 +36,7 @@ const METADATA = {
  */
 module.exports = function (options) {
   isProd = options.env === 'production';
+
   return {
 
     /*
@@ -135,7 +136,7 @@ module.exports = function (options) {
         {
           test: /\.css$/,
           use: ['to-string-loader', 'css-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src')]
         },
          /*
          * to string and sass loader support for *.scss files (from Angular components)
@@ -145,7 +146,7 @@ module.exports = function (options) {
         {
           test: /\.scss$/,
           use: ['to-string-loader', 'css-loader', 'sass-loader'],
-          exclude: [helpers.root('src', 'styles')]
+          exclude: [helpers.root('src')]
         },
         /* Raw loader support for *.html
          * Returns file content as string
