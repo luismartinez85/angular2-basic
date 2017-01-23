@@ -27,6 +27,7 @@
     "rimraf": "rimraf",
     "serve:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/ --inline --hot",
     "serve:pro": "npm run build:pro && http-server dist --cors -o",
+    "serve:aot": "npm run build:aot && http-server dist --cors -o",
     "serve": "npm run serve:dev",
     "webdriver-manager": "webdriver-manager",
     "webdriver:start": "npm run webdriver-manager start",
