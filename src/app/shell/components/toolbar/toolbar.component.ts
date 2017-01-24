@@ -12,6 +12,7 @@ import { ROUTES_CONSTANTS } from '../../../shared';
 export class ToolbarComponent {
 
   routes: any;
+  clickResponsive: boolean = false;
 
   constructor(){
     this.routes = ROUTES_CONSTANTS;

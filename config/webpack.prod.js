@@ -212,28 +212,6 @@ module.exports = function (env) {
       ),
 
       /**
-       * Plugin: IgnorePlugin
-       * Description: Don’t generate modules for requests matching the provided RegExp.
-       *
-       * See: http://webpack.github.io/docs/list-of-plugins.html#ignoreplugin
-       */
-
-      // new IgnorePlugin(/angular2-hmr/),
-
-      /**
-       * Plugin: CompressionPlugin
-       * Description: Prepares compressed versions of assets to serve
-       * them with Content-Encoding
-       *
-       * See: https://github.com/webpack/compression-webpack-plugin
-       */
-      //  install compression-webpack-plugin
-      // new CompressionPlugin({
-      //   regExp: /\.css$|\.html$|\.js$|\.map$/,
-      //   threshold: 2 * 1024
-      // })
-
-      /**
        * Plugin LoaderOptionsPlugin (experimental)
        *
        * See: https://gist.github.com/sokra/27b24881210b56bbaff7
@@ -284,8 +262,6 @@ module.exports = function (env) {
        * See: https://github.com/baldore/open-browser-webpack-plugin
        */
       new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
-
-      //new OfflinePlugin()
 
     ],
 

@@ -138,16 +138,6 @@ module.exports = function (options) {
           loaders: ['to-string-loader', 'css-loader', 'postcss-loader'],
           exclude: [helpers.root('src','assets','css')]
         },
-        {
-          test: /\.scss$/,
-          loaders: ['to-string-loader', 'css-loader', 'postcss-loader', 'resolve-url-loader', 'sass-loader'],
-          exclude: [helpers.root('src','assets','css')]
-        },
-        {
-          test: /\.styl$/,
-          loaders: ['to-string-loader', 'css-loader', 'postcss-loader', 'resolve-url-loader', 'stylus-loader'],
-          exclude: [helpers.root('src','assets','css')]
-        },
         /* Raw loader support for *.html
          * Returns file content as string
          *

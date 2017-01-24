@@ -1,37 +1,9 @@
-<aside #sidenav class="sidenav" [ngClass]="{'sidenav-open': sidenav.open}">
-    
-    <span class="sidenavHeader">
-        <figure>
-        </figure>
-        <figcaption>
-            <span>Front Stack</span>
-        </figcaption>
-    </span>
-    <div class="sidenavList">
-        <a 
-        md-button
-        [routerLink]="routes.HOME.path" 
-        routerLinkActive="active" 
-        (click)="sidenav.open = !sidenav.open">Home </a>
-        <a 
-        md-button
-        [routerLink]="routes.ABOUT_US.path" 
-        routerLinkActive="active" 
-        (click)="sidenav.open = !sidenav.open">About Us</a>
-        <a 
-        md-button
-        [routerLink]="routes.NO_CONTENT.path" 
-        routerLinkActive="active" 
-        (click)="sidenav.open = !sidenav.open">No page found</a>
-    </div>
-</aside>
-
-<span class="shellBackground">
-  <div>
-    <button md-button class="app-icon-button" (click)="sidenav.open = !sidenav.open">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
-    <span class="angular_basic_logo">Angular2 Basic</span>
-    <span class="app-toolbar-filler"></span>
-  </div> 
-</span>
+<ul [ngClass]="{'responsive': clickResponsive, 'topnav': true}" id="myTopnav">
+  <li><a [routerLink]="routes.HOME.path" routerLinkActive="active">Home</a></li>
+  <li><a [routerLink]="routes.ABOUT_US.path" routerLinkActive="active">About</a></li>
+  <li><a [routerLink]="routes.NO_CONTENT.path" routerLinkActive="active">404</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" (click)="clickResponsive = !clickResponsive">&#9776;</a>
+  </li>
+</ul>
+<span class="shellBackground"></span>
