@@ -27,5 +27,4 @@ export class AboutMainComponent {
         this.team = data;
       });
   }
-  
 }
