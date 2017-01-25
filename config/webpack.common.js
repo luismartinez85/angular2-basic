@@ -105,16 +105,16 @@ module.exports = function (options) {
         {
           test: /\.ts$/,
           use: [
-            'awesome-typescript-loader?{configFileName: "tsconfig.webpack.json"}',
-            'angular2-template-loader',
             {
               loader: 'ng-router-loader',
               options: {
-                loader: 'async-system',
+                loader: 'async-import',
                 genDir: 'compiled',
                 aot: AOT
               }
-            }
+            },
+            'awesome-typescript-loader?{configFileName: "tsconfig.webpack.json"}',
+            'angular2-template-loader'
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
         },
