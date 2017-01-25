@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { TranslateService } from 'ng2-translate';
-import 'hammerjs';
 
 import { ShellComponent } from './components/shell-main/shell.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';

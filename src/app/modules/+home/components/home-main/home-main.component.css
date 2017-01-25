@@ -10,21 +10,10 @@
 
 .home-tab-content {
   margin-top: 53px;
-
-  .md-tab-label {
-    color: white;
-
-    .icon {
-      top: 7px;
-      position: relative;
-    }
-
-  }
 }
 
 .home-item {
   flex: 0 0 1 auto auto;
-  padding: 15px;
   max-width: 1000px;
   width: 100%;
 }

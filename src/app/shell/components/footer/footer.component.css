@@ -21,11 +21,11 @@
     flex: 1;
     padding: 5px;
     text-align: center;
+}
 
-    img {
-        width: 30px;
-        height: 30px;
-    }
+.social-footer-item img {
+    width: 30px;
+    height: 30px;
 }
 
 .link {
