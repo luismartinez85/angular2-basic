@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { AboutTeamService } from './about-team.service';
+import { AboutTeamService } from '../../services/about-team/about-team.service';
 
 /**
  * About Team component shows a list of team members

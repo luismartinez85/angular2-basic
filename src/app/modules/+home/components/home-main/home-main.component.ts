@@ -26,6 +26,10 @@ export class HomeMainComponent {
   techs: Array<Tech> = [];
   rowHeight: string = '200px';
   tabActive: string = 'features';
+  /*@ViewChild('search')
+  search: ElementRef;
+  element: HTMLElement;
+  */
 
   /**
    * Loads services needed by HomeMainComponent. Dependency injection.

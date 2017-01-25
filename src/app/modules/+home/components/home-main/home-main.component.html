@@ -14,6 +14,9 @@
       </div>
     </div>
     <div class="home-tab-content">
+      <div class="box-search">
+          <input #search placeholder="Search">
+      </div>
       <image-list 
         *ngIf="tabActive === 'features'" 
         [elements]="features"></image-list>

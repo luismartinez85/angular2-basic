@@ -1,35 +1,53 @@
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
-    margin-top: -203px;
-  }
+.about-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  margin-top: -250px;
+}
 
-  .about-tab-content {
-    margin-top: 74px;
+.about-section-title {
+  color: white;
+  font-size: 2em;
+  display: block;
+  margin: auto;
+  width: 131px;
+  margin-top: 85px;
+  margin-bottom: 63px;
+}
 
-    .md-tab-label {
-      color: white;
+.about-tab-header {
+  color: white;
+  display: block;
+  margin: auto;
+  padding-top: 37px;
+  padding-left: 20px;
+}
 
-      .icon {
-        top: 7px;
-        position: relative;
-      }
+.about-tab-button {
+  width: 125px;
+  float: left;
+  height: 19px;
+}
 
-    }
-  }
+.about-tab-button .icon {
+  margin-top: -3px;
+  position: absolute;
+}
 
-  .about-item {
-    flex: 0 0 1 auto auto;
-    padding: 15px;
-    max-width: 1000px;
-    width: 100%;
+.menu-option {
+  cursor: pointer;
+}
 
-    .about-section-title {
-      color: white;
-      font-size: 2em;
-    }
-  }
+.about-tab-content {
+  margin-top: 34px;
+  margin-bottom: 30px;
+}
+
+.about-item {
+  flex: 0 0 1 auto auto;
+  max-width: 1000px;
+  width: 100%;
+}
