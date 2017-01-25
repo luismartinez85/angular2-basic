@@ -7,10 +7,8 @@ import { TranslateModule } from 'ng2-translate';
 import { routes } from './about.routes';
 
 import { AboutMainComponent } from './components/about-main/about-main.component';
-import { AboutTeamComponent } from './components/about-team/about-team.component';
 import { AboutYoutubeComponent } from './components/about-youtube/about-youtube.component';
-import { AboutYoutubeModal } from './components/about-youtube-modal/about-youtube-modal.component';
-import { SearchPipeModule } from '../../shared';
+import { SearchPipeModule, ImageListModule } from '../../shared';
 
 /**
  * About Module is a Lazy Load module, which show team a our social networks as youtube.
@@ -18,19 +16,15 @@ import { SearchPipeModule } from '../../shared';
 @NgModule({
   declarations: [
     AboutYoutubeComponent,
-    AboutMainComponent,
-    AboutTeamComponent,
-    AboutYoutubeModal
+    AboutMainComponent
   ],
   imports: [
     CommonModule,
     HttpModule,
     RouterModule.forChild(routes),
     TranslateModule.forRoot(),
+    ImageListModule,
     SearchPipeModule
-  ],
-  entryComponents : [
-    AboutYoutubeModal
   ]
 })
 
