@@ -14,12 +14,12 @@
       </div>
     </div>
     <div class="home-tab-content">
-      <home-features 
+      <home-list 
         *ngIf="tabActive === 'features'" 
-        [elements]="features"></home-features>
-      <home-technologies 
+        [elements]="features"></home-list>
+      <home-list 
         *ngIf="tabActive === 'technologies'" 
-        [elements]="techs"></home-technologies>
+        [elements]="techs"></home-list>
     </div>
   </div>
 </div>

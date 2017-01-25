@@ -4,9 +4,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from 'ng2-translate';
 
 import { HomeMainComponent } from './components/home-main/home-main.component';
-import { HomeTechnologiesComponent } from './components/home-technologies/home-technologies.component';
-import { HomeFeaturesComponent } from './components/home-features/home-features.component';
-import { HomeFeatureModal } from './components/home-feature-modal/home-feature-modal.component';
+import { HomeListComponent } from './components/home-list/home-list.component';
 import { HomeLogoComponent } from './components/home-logo/home-logo.component';
 import { SearchPipeModule } from '../../shared';
 
@@ -15,9 +13,7 @@ import { routes } from './home.routes';
 @NgModule({
   declarations: [
     HomeMainComponent,
-    HomeTechnologiesComponent,
-    HomeFeaturesComponent,
-    HomeFeatureModal,
+    HomeListComponent,
     HomeLogoComponent
   ],
   imports: [
@@ -25,9 +21,6 @@ import { routes } from './home.routes';
     RouterModule.forChild(routes),
     TranslateModule.forRoot(),
     SearchPipeModule
-  ],
-  entryComponents : [
-    HomeFeatureModal
   ]
 })
 

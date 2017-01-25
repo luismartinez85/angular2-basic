@@ -1,0 +1,10 @@
+<div class="lists-container" *ngFor="let element of elements">
+  <div class="list-item-image">
+    <img *ngIf="element.image !== ''" class="list-logo" [src]="element.image" [alt]="element.title">
+    <i *ngIf="element.icon !== ''" class="material-icons">{{element.icon}}</i>
+  </div>
+  <div class="list-item-text">
+    <h2>{{element.title}}</h2>
+    <span>{{element.description}}</span>
+  </div>
+</div>

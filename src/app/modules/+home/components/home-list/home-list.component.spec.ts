@@ -2,11 +2,11 @@ import { TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 // Load the implementations that should be tested
-import { HomeTechnologiesComponent } from './home-technologies.component';
+import { HomeListComponent } from './home-list.component';
 import { Tech } from '../../services/techs';
 
-describe('Module Home -> Component HomeTechnologies', () => {
-  let component: HomeTechnologiesComponent;
+describe('Module Home -> Component HomeList', () => {
+  let component: HomeListComponent;
   let fixture;
 
   const elements: Array<Tech> = [
@@ -28,12 +28,12 @@ describe('Module Home -> Component HomeTechnologies', () => {
     TestBed.configureTestingModule({
       imports: [
       ],
-      declarations: [ HomeTechnologiesComponent ],
+      declarations: [ HomeListComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents(); // compile template and css
 
-    fixture = TestBed.createComponent(HomeTechnologiesComponent);
+    fixture = TestBed.createComponent(HomeListComponent);
     component = fixture.componentInstance;
   });
 

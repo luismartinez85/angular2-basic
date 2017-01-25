@@ -1,13 +1,15 @@
-.techs-container {
+.lists-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.tech-item-image {
+.list-item-image {
   flex: 0 0 1 auto auto;
   width: 100px;
 
@@ -15,10 +17,16 @@
     margin-top: 20px;
     width: 80px;
   }
+  i {
+    font-size: 63px;
+    margin-top: 19px;
+  }
 }
 
-.tech-item-text {
+.list-item-text {
   flex: 0 0 1 auto auto;
   width: 100%;
   padding-left: 20px;
 }
+
+
