@@ -23,11 +23,12 @@ export class AboutYoutubeComponent {
 
   ngOnInit () {
     this.aboutYoutubeService.search().subscribe(
-      data => { 
-        this.dataYoutube = data.items; 
-        for(var i = 0; i <= data.items.length; i++){
-          if(data.items[i] && data.items[i].id && data.items[i].id.videoId){
-            this.videos.push("https://www.youtube.com/embed/"+data.items[i].id.videoId);
+      data => {
+        this.dataYoutube = data.items;
+
+        for ( let i = 0; i <= data.items.length; i++){
+          if ( data.items[i] && data.items[i].id && data.items[i].id.videoId){
+            this.videos.push('https://www.youtube.com/embed/' + data.items[i].id.videoId);
           }
         }
       },
