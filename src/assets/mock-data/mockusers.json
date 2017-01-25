@@ -1,63 +1,46 @@
 [
   {
-    "name": "David Chavarri",
-    "job": "Front Architect",
+    "title": "David Chavarri",
     "image": "/assets/img/team/david-min.jpg",
-    "description": "React Ninja",
-    "github": "https://github.com/DvdChavarri"
+    "description": "React Ninja"
   },
   {
-    "name": "Arturo Zarzalejo",
-    "job": "Fantasy Architect",
+    "title": "Arturo Zarzalejo",
     "image": "/assets/img/team/arturo-min.jpg",
-    "description": "Sexy Fantasy",
-    "github": "https://github.com/Arturozh"
+    "description": "Sexy Fantasy"
   },
   {
-    "name": "José Bermudo",
-    "job": "Front Architect",
+    "title": "José Bermudo",
     "image": "/assets/img/team/josh-min.jpg",
-    "description": "Sorcerer code level 20",
-    "github": "https://github.com/josemanuelbd"
+    "description": "Sorcerer code level 20"
   },
   {
-    "name": "Jesús Cuesta",
-    "job": "Product Owner",
+    "title": "Jesús Cuesta",
     "image": "/assets/img/team/jesus-min.png",
-    "description": "Dragon killer",
-    "github": "https://github.com/jesuscuesta"
+    "description": "Dragon killer"
   },
   {
-    "name": "Máximo García",
-    "job": "Front Architect",
+    "title": "Máximo García",
     "image": "/assets/img/team/max-min.jpg",
-    "description": "Sexy Code Hunter",
-    "github": "https://github.com/maxgarsaiz"
+    "description": "Sexy Code Hunter"
   },
   {
-    "name": "Oscar Galea",
-    "job": "Front Architect",
+    "title": "Oscar Galea",
     "image": "/assets/img/team/oscar-min.png",
-    "description": "Runner code",
-    "github": "https://github.com/ogaleac"
+    "description": "Runner code"
   },
   {
-    "name": "Juan Carlos Díez",
-    "job": "Front Architect",
+    "title": "Juan Carlos Díez",
     "image": "/assets/img/team/jc-min.jpg",
-    "description": "Pixel Hunter",
-    "github": "https://github.com/jcdevelopmentspain"
+    "description": "Pixel Hunter"
   },
   {
-    "name": "Luis Martínez",
-    "job": "Front Architect",
+    "title": "Luis Martínez",
     "image": "/assets/img/team/luis-min.jpg",
-    "description": "React Ninja",
-    "github": "https://github.com/luismartinez85"
+    "description": "React Ninja"
   },
   {
-    "name": "Fran Quintero",
-    "job": "Front Architect",
+    "title": "Fran Quintero",
     "image": "/assets/img/team/fran-min.png",
     "description": "Samurai"
   }

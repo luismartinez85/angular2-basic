@@ -14,9 +14,10 @@
       </div>
     </div>
     <div class="about-tab-content">
-      <about-team 
+      <image-list 
         *ngIf="tabActive === 'team'" 
-        ></about-team>
+        [elements]="team"
+        ></image-list>
       <about-youtube 
         *ngIf="tabActive === 'youtube'" 
         ></about-youtube>
