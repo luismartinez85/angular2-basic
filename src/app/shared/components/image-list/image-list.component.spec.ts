@@ -5,11 +5,11 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ImageListComponent } from './image-list.component';
 import { Tech } from '../../services/techs';
 
-describe('Module Home -> Component ImageList', () => {
+describe('Module Shared -> Component ImageList', () => {
   let component: ImageListComponent;
   let fixture;
 
-  const elements: Array<Tech> = [
+  const elements: Array<any> = [
     {
       title: 'example1',
       description: 'description example1',
@@ -48,7 +48,7 @@ describe('Module Home -> Component ImageList', () => {
 
     let compiled = fixture.debugElement.nativeElement;
 
-    expect(compiled.querySelectorAll('.tech-item-text').length).toEqual(elements.length);
+    expect(compiled.querySelectorAll('.list-item-text').length).toEqual(elements.length);
   });
 
 });
