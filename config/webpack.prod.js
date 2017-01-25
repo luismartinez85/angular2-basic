@@ -262,7 +262,14 @@ module.exports = function (env) {
        * See: https://github.com/baldore/open-browser-webpack-plugin
        */
       new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
-
+       /**
+       * This plugin is intended to provide an offline experience for webpack projects. 
+       * It uses ServiceWorker, and AppCache as a fallback under the hood. 
+       * Simply include this plugin in your webpack.config, and the accompanying runtime in your client script, 
+       * and your project will become offline ready by caching all (or some) of the webpack output assets.
+       * https://github.com/NekR/offline-plugin
+       */
+      new OfflinePlugin()
     ],
 
     /*
