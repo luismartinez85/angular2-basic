@@ -9,7 +9,26 @@
 }
 
 .home-tab-header {
-  margin-top: 1px;
+  color: white;
+  display: block;
+  margin: auto;
+  padding-top: 37px;
+  padding-left: 20px;
+}
+
+.home-tab-button {
+  width: 125px;
+  float: left;
+  height: 19px;
+}
+
+.home-tab-button .icon {
+  margin-top: -3px;
+  position: absolute;
+}
+
+.menu-option {
+  cursor: pointer;
 }
 
 .home-tab-content {
