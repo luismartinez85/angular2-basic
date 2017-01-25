@@ -1,8 +1,11 @@
-display: flex;
-color: black;
-flex: 1;
-padding: 8em;
-align-items: center;
+:host {
+  display: flex;
+  color: black;
+  flex: 1;
+  padding: 8em;
+  align-items: center;
+}
+
 section {
   text-align: center;
   .no-content__message {

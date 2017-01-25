@@ -4,21 +4,21 @@
   </div>
   <div class="home-item">
     <div class="home-tab-header">
-      <div class="home-tab-button" (click)="tabActive.value = 'features'">
+      <div class="home-tab-button" (click)="tabActive = 'features'">
         <span class="menu_option">Features</span>
         <span class="icon"><i class="material-icons">fingerprint</i></span>
       </div>
-      <div class="home-tab-button" (click)="tabActive.value = 'technologies'">
+      <div class="home-tab-button" (click)="tabActive = 'technologies'">
         <span class="menu_option">Technologies</span>
         <span class="icon"><i class="material-icons">code</i></span>
       </div>
     </div>
     <div class="home-tab-content">
       <home-features 
-        *ngIf="tabActive.value === 'features'" 
+        *ngIf="tabActive === 'features'" 
         [elements]="features"></home-features>
       <home-technologies 
-        *ngIf="tabActive.value === 'technologies'" 
+        *ngIf="tabActive === 'technologies'" 
         [elements]="techs"></home-technologies>
     </div>
   </div>

@@ -12,8 +12,6 @@ import { SearchPipeModule } from '../../shared';
 
 import { routes } from './home.routes';
 
-import 'hammerjs';
-
 @NgModule({
   declarations: [
     HomeMainComponent,

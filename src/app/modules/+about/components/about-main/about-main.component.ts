@@ -12,10 +12,7 @@ import { MultiLanguageService } from '../../../../shared/services/multiLanguage/
 })
 
 export class AboutMainComponent {
-  
-  tabActive = {
-    value: 'team'
-  }
+  tabActive: string = 'team';
 
   constructor(private translate: MultiLanguageService){ }
 

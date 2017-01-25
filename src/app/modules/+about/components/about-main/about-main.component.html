@@ -4,21 +4,21 @@
   </div>
   <div class="about-item">
     <div class="about-tab-header">
-      <div class="about-tab-button" (click)="tabActive.value = 'team'">
+      <div class="about-tab-button" (click)="tabActive= 'team'">
         <span class="menu_option">Our Team</span>
         <span class="icon"><i class="material-icons">people</i></span>
       </div>
-      <div class="about-tab-button" (click)="tabActive.value = 'youtube'">
+      <div class="about-tab-button" (click)="tabActive = 'youtube'">
         <span class="menu_option">Youtube API</span>
         <span class="icon"><i class="material-icons">video_library</i></span>
       </div>
     </div>
     <div class="about-tab-content">
       <about-team 
-        *ngIf="tabActive.value === 'team'" 
+        *ngIf="tabActive === 'team'" 
         ></about-team>
       <about-youtube 
-        *ngIf="tabActive.value === 'youtube'" 
+        *ngIf="tabActive === 'youtube'" 
         ></about-youtube>
     </div>
   </div>
