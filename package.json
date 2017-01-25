@@ -21,7 +21,7 @@
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs/compodoc/ -s -o ",
     "typedoc": "typedoc",
     "clean:aot": "npm run rimraf -- compiled ",
-    "clean:dist": "npm run rimraf -- dist && npm run rimraf -- dist-aot",
+    "clean:dist": "npm run rimraf -- dist",
     "clean:install": "npm set progress=false && npm install",
     "clean": "npm cache clean && npm run rimraf -- node_modules doc coverage dist",
     "rimraf": "rimraf",
