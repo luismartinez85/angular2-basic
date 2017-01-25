@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
+import { MultiLanguageService } from '../../../../shared';
 import { AboutTeamService } from '../../services/about-team/about-team.service';
 
 /**

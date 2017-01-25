@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   templateUrl: './home-logo.component.html',
   styleUrls: [ './home-logo.component.css' ]
 })
-export class HomeLogoComponent {
-}
+export class HomeLogoComponent {}
