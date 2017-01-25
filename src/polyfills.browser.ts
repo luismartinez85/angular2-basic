@@ -33,7 +33,7 @@ import 'ts-helpers';
 
 if ('production' === ENV) {
   // Production
-
+  require('offline-plugin/runtime').install();
 
 } else {
   // Development
@@ -41,5 +41,6 @@ if ('production' === ENV) {
   Error.stackTraceLimit = Infinity;
 
   require('zone.js/dist/long-stack-trace-zone');
+  require('offline-plugin/runtime').install();
 
 }
