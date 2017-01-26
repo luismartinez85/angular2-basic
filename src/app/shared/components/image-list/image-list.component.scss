@@ -1,4 +1,8 @@
 .lists-container {
+
+}
+
+.list-item {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -36,11 +40,12 @@ input[type=text] {
   box-sizing: border-box;
   border: none;
   border-bottom: 2px solid red;
-  width: 150px;
+  width: 200px;
   transition: width 0.4s ease-in-out;
+  font-size: 1em;
 }
 
 input[type=text]:focus {
-    outline-width: 0;
-    width: 100%;
+  outline-width: 0;
+  width: 100%;
 }
