@@ -4,6 +4,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // Load the implementations that should be tested
 import { ImageListComponent } from './image-list.component';
 import { Tech } from '../../services/techs';
+import { SearchPipeModule } from '../../pipes/search/search.pipe.module';
 
 describe('Module Shared -> Component ImageList', () => {
   let component: ImageListComponent;
@@ -27,6 +28,7 @@ describe('Module Shared -> Component ImageList', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
+        SearchPipeModule  
       ],
       declarations: [ ImageListComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
@@ -49,6 +51,11 @@ describe('Module Shared -> Component ImageList', () => {
     let compiled = fixture.debugElement.nativeElement;
 
     expect(compiled.querySelectorAll('.list-item-text').length).toEqual(elements.length);
+  });
+
+  it('should handle search', () => {
+    component.handleChangeSearch('query');
+    expect(component.search).toEqual('query');
   });
 
 });
