@@ -109,7 +109,7 @@ module.exports = function (options) {
         {
           enforce: 'pre',
           test: /\.js$/,
-          loader: 'source-map-loader',
+          use: 'source-map-loader',
           exclude: [
             // these packages have problems with their sourcemaps
             helpers.root('node_modules/rxjs'),
@@ -124,8 +124,22 @@ module.exports = function (options) {
          */
         {
           test: /\.ts$/,
-          loaders: [
-            'awesome-typescript-loader?sourceMap=false,inlineSourceMap=true,compilerOptions{}=removeComments:false',
+          use: [
+            {
+              loader: 'awesome-typescript-loader',
+              query: {
+                // use inline sourcemaps for "karma-remap-coverage" reporter
+                sourceMap: false,
+                inlineSourceMap: true,
+                compilerOptions: {
+
+                  // Remove TypeScript helpers to be injected
+                  // below by DefinePlugin
+                  removeComments: true
+
+                }
+              },
+            },
             'angular2-template-loader'
           ],
           exclude: [/\.e2e\.ts$/]
@@ -150,7 +164,7 @@ module.exports = function (options) {
          */
         {
           test: /\.css$/,
-          loader: ['to-string-loader', 'css-loader'],
+          loader: ['to-string-loader', 'css-loader', 'postcss-loader'],
           exclude: [helpers.root('src/index.html')]
         },
         /**
@@ -252,6 +266,14 @@ module.exports = function (options) {
       }),
 
     ],
+    /**
+     * Disable performance hints
+     *
+     * See: https://github.com/a-tarasyuk/rr-boilerplate/blob/master/webpack/dev.config.babel.js#L41
+     */
+    performance: {
+      hints: false
+    },
 
     /**
      * Include polyfills or mocks for various node stuff

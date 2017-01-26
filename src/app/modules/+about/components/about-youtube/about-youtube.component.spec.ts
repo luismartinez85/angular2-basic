@@ -1,12 +1,11 @@
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutYoutubeService } from './about-youtube.service';
 import { Observable } from 'rxjs';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { MaterialModule, MdDialog } from '@angular/material';
 
 // Load the implementations that should be tested
 import { AboutYoutubeComponent } from './about-youtube.component';
+import { SafePipeModule } from '../../../../shared';
 
 let component:  AboutYoutubeComponent;
 let fixture:    ComponentFixture<AboutYoutubeComponent>;
@@ -60,9 +59,9 @@ describe('Module -> about -> about-youtube -> AboutYoutubeComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        MaterialModule.forRoot(),
         HttpModule,
         JsonpModule,
+        SafePipeModule
       ],
       declarations: [
         AboutYoutubeComponent
@@ -75,7 +74,6 @@ describe('Module -> about -> about-youtube -> AboutYoutubeComponent', () => {
     component = fixture.componentInstance;
 
     spyOn(AboutYoutubeService.prototype, 'search').and.returnValue(Observable.of(videos));
-    spyOn(MdDialog.prototype, 'open').and.returnValue(true);
 
     component.ngOnInit();
 
@@ -83,23 +81,6 @@ describe('Module -> about -> about-youtube -> AboutYoutubeComponent', () => {
 
   it('should have a defined component', () => {
     expect(component).toBeDefined();
-  });
-
-  it('should render videos', () => {
-
-    fixture.detectChanges();
-
-    let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll('.video-item').length).toEqual(videos.items.length);
-  });
-
-  it('should open dialog', () => {
-
-    let dialog = component.openVideo(videos.items[0]);
-
-    fixture.detectChanges();
-
-    expect(dialog).toEqual(true);
   });
 
 });

@@ -1,6 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-
-import { MdDialog } from '@angular/material';
+import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { AboutYoutubeModal } from '../about-youtube-modal/about-youtube-modal.component';
 import { AboutYoutubeService } from './about-youtube.service';
 
@@ -10,35 +9,31 @@ import { AboutYoutubeService } from './about-youtube.service';
 @Component({
   selector: 'about-youtube',
   providers: [ AboutYoutubeService ],
-  styleUrls: [ 'about-youtube.component.scss' ],
-  templateUrl: 'about-youtube.component.html'
+  styleUrls: [ './about-youtube.component.css' ],
+  templateUrl: './about-youtube.component.html'
 })
 
 export class AboutYoutubeComponent {
 
   dataYoutube: Array<any>;
+  videos: Array<any> = [];
 
-  constructor(
-    private aboutYoutubeService: AboutYoutubeService,
-    private dialog: MdDialog
-  ){}
+  constructor(private aboutYoutubeService: AboutYoutubeService,
+              private sanitized: DomSanitizer){}
 
   ngOnInit () {
     this.aboutYoutubeService.search().subscribe(
-      data => { this.dataYoutube = data.items; },
+      data => {
+        this.dataYoutube = data.items;
+
+        for ( let i = 0; i <= data.items.length; i++){
+          if ( data.items[i] && data.items[i].id && data.items[i].id.videoId){
+            this.videos.push('https://www.youtube.com/embed/' + data.items[i].id.videoId);
+          }
+        }
+      },
       err => console.log(err, 21)
     );
-  }
-
-  /**
-   * Open a modal dialog of material design and his content is the selected video.
-   */
-  openVideo(item) {
-    this.aboutYoutubeService.selectVideo(item);
-
-    return this.dialog.open(AboutYoutubeModal, {
-      disableClose: false
-    });
   }
 }
 

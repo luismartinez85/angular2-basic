@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
-import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';
 
 /** Platform and Environment providers/directives/pipes */
@@ -27,7 +26,6 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
   imports: [
     BrowserModule,
     HttpModule,
-    MaterialModule.forRoot(),
     ShellModule,
     RouterModule.forRoot(routes, {
       useHash: true
