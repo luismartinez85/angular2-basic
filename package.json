@@ -1,6 +1,6 @@
 {
   "name": "angular2-basic",
-  "version": "1.0.0-beta2",
+  "version": "1.0.0-rc0",
   "license": "MIT",
   "scripts": {
     "build:pro": "webpack-dashboard -- webpack --config config/webpack.prod.js  --progress --profile --bail",
@@ -16,8 +16,8 @@
     "test:pro": "karma start",
     "test:dev": "karma start --dev",
     "tslint": "tslint",
-    "docs": "npm run typedoc -- --options config/typedoc.json --exclude '**/*.spec.ts' ./src/",
-    "docs:compodoc": "npm run compodoc",
+    "docs:typedoc": "npm run typedoc -- --options config/typedoc.json --exclude '**/*.spec.ts' ./src/",
+    "docs": "npm run compodoc",
     "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs/compodoc/ -s -o ",
     "typedoc": "typedoc",
     "clean:aot": "npm run rimraf -- compiled dist ",

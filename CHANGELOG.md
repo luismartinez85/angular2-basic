@@ -1,6 +1,13 @@
 # Changelog
-
-* (12-1-2017) Angular2-Basic v1.0.0-beta2 **latest** 
+* (26-1-2017) Angular2-Basic v1.0.0-rc0 **latest** 
+    * AOT ready
+        * Save up to ~40% of app weight
+    * Updated to Webpack 2.2.0
+    * Updated to Angular 2.4.5
+    * Added compodoc for documentation
+    * Refactoring application
+    * Updated dependencies
+* (12-1-2017) Angular2-Basic v1.0.0-beta2
     * JIT (AOT under development).
      Unit Testing with Karma and Jasmine
     * End-to-End testing with Protractor.
