@@ -23,7 +23,6 @@ describe('shared -> MultiLanguageService', () => {
 
   it('Should be defined',
     inject([MultiLanguageService], (multiLanguageService) => {
-      console.log(1)
       expect(multiLanguageService).toBeDefined();
     })
 );

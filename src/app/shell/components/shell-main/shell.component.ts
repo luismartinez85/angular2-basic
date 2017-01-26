@@ -6,6 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
  * Also contains a container for our lazy load modules, which will be loaded by the router after
  * tag router-outlet.
  */
+
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html',

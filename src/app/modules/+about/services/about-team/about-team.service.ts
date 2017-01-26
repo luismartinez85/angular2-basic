@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
 /**
- * About Team Service 
+ * About Team Service
  */
 @Injectable()
 export class AboutTeamService {

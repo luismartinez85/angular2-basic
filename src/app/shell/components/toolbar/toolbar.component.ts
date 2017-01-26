@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ROUTES_CONSTANTS } from '../../../shared';
 /*
- * Toolbar Component which contains routes of our application. 
+ * Toolbar Component which contains routes of our application.
  */
 @Component({
   selector: 'toolbar',

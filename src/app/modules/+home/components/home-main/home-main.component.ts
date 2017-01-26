@@ -48,8 +48,8 @@ export class HomeMainComponent {
 
     // initialize translate service
     this.translate.initialize();
-    /* if you want change language, you need to call method of translateService 
-      example: 
+    /* if you want change language, you need to call method of translateService
+      example:
       this.translate.setLanguage('es');
     */
   }
