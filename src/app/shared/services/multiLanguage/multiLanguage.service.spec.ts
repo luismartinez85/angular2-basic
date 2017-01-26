@@ -14,14 +14,18 @@ describe('shared -> MultiLanguageService', () => {
       ]
     });
 
+  // the lang to use, if the lang isn't available, it will use the current loader to get them
+
+    spyOn(TranslateService.prototype, 'setDefaultLang').and.returnValue(true);
     spyOn(TranslateService.prototype, 'use').and.returnValue(true);
+
   });
 
   it('Should be defined',
     inject([MultiLanguageService], (multiLanguageService) => {
       expect(multiLanguageService).toBeDefined();
     })
-  );
+);
 
   it('getLanguage should return undefined',
     inject([MultiLanguageService], (multiLanguageService) => {

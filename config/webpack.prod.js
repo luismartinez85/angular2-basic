@@ -16,14 +16,16 @@ let environment_config = appconfig.environment_constants['pro']['EnvironmentConf
  * Webpack Plugins
  */
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
-const OfflinePlugin = require('offline-plugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const OfflinePlugin = require('offline-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -171,15 +173,25 @@ module.exports = function (env) {
 
 
         beautify: false, //prod
-        mangle: {
-          screw_ie8: true,
-          keep_fnames: true
+        output: {
+          comments: false
         }, //prod
-        compress: {
-          warnings: false,
+        mangle: {
           screw_ie8: true
         }, //prod
-        comments: false //prod
+        compress: {
+          screw_ie8: true,
+          warnings: false,
+          conditionals: true,
+          unused: true,
+          comparisons: true,
+          sequences: true,
+          dead_code: true,
+          evaluate: true,
+          if_return: true,
+          join_vars: true,
+          negate_iife: false // we need this for lazy v8
+        }
       }),
 
       /**
@@ -194,27 +206,10 @@ module.exports = function (env) {
         helpers.root('config/modules/angular2-hmr-prod.js')
       ),
 
-      /**
-       * Plugin: IgnorePlugin
-       * Description: Don’t generate modules for requests matching the provided RegExp.
-       *
-       * See: http://webpack.github.io/docs/list-of-plugins.html#ignoreplugin
-       */
-
-      // new IgnorePlugin(/angular2-hmr/),
-
-      /**
-       * Plugin: CompressionPlugin
-       * Description: Prepares compressed versions of assets to serve
-       * them with Content-Encoding
-       *
-       * See: https://github.com/webpack/compression-webpack-plugin
-       */
-      //  install compression-webpack-plugin
-      // new CompressionPlugin({
-      //   regExp: /\.css$|\.html$|\.js$|\.map$/,
-      //   threshold: 2 * 1024
-      // })
+      new NormalModuleReplacementPlugin(
+        /zone\.js(\\|\/)dist(\\|\/)long-stack-trace-zone/,
+        helpers.root('config/empty.js')
+      ),
 
       /**
        * Plugin LoaderOptionsPlugin (experimental)
@@ -222,6 +217,7 @@ module.exports = function (env) {
        * See: https://gist.github.com/sokra/27b24881210b56bbaff7
        */
       new LoaderOptionsPlugin({
+        minimize: true,
         debug: false,
         options: {
 
@@ -266,9 +262,14 @@ module.exports = function (env) {
        * See: https://github.com/baldore/open-browser-webpack-plugin
        */
       new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
-
-      //new OfflinePlugin()
-
+       /**
+       * This plugin is intended to provide an offline experience for webpack projects. 
+       * It uses ServiceWorker, and AppCache as a fallback under the hood. 
+       * Simply include this plugin in your webpack.config, and the accompanying runtime in your client script, 
+       * and your project will become offline ready by caching all (or some) of the webpack output assets.
+       * https://github.com/NekR/offline-plugin
+       */
+      new OfflinePlugin()
     ],
 
     /*

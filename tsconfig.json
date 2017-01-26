@@ -7,24 +7,19 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "noEmit": true,
     "noEmitHelpers": true,
     "strictNullChecks": false,
-    "baseUrl": "./src",
-    "paths": {
-      "shared/*": ["./app/shared/*"],
-      "components/*": ["./app/shared/components/*"],
-      "pipes/*": ["./app/shared/pipes/*"],
-      "services/*": ["./src/app/shared/services/*"]
-    },
     "lib": [
       "dom",
       "es6"
     ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "types": [
-      "hammerjs",
       "jasmine",
       "node",
-      "selenium-webdriver",
       "source-map",
       "uglify-js",
       "webpack"
@@ -40,5 +35,7 @@
   },
   "compileOnSave": false,
   "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+  "atom": { 
+    "rewriteTsconfig": false 
+  }
 }

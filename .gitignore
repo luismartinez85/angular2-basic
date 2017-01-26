@@ -8,6 +8,8 @@ npm-debug.*
 #aot dirs
 aot/
 dist-aot/
+compiled/
+dll/
 
 yarn.lock
 

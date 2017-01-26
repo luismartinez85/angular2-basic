@@ -16,7 +16,7 @@ import { Tech, TechsService } from '../../services/techs';
     FeaturesService,
     TechsService
   ],
-  styleUrls: [ './home-main.component.scss' ],
+  styleUrls: [ './home-main.component.css' ],
   templateUrl: './home-main.component.html'
 })
 
@@ -25,6 +25,11 @@ export class HomeMainComponent {
   features: Array<Feature> = [];
   techs: Array<Tech> = [];
   rowHeight: string = '200px';
+  tabActive: string = 'features';
+  /*@ViewChild('search')
+  search: ElementRef;
+  element: HTMLElement;
+  */
 
   /**
    * Loads services needed by HomeMainComponent. Dependency injection.
@@ -43,8 +48,8 @@ export class HomeMainComponent {
 
     // initialize translate service
     this.translate.initialize();
-    /* if you want change language, you need to call method of translateService 
-      example: 
+    /* if you want change language, you need to call method of translateService
+      example:
       this.translate.setLanguage('es');
     */
   }

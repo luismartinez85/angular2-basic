@@ -1,11 +1,11 @@
 /*
  * Angular bootstraping
  */
-import { AppModuleNgFactory } from '../aot/src/app/app.module.ngfactory';
+import { AppModuleNgFactory } from '../compiled/src/app/app.module.ngfactory';
 import { decorateModuleRef } from './app/app.environment';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { platformBrowser } from '@angular/platform-browser';
 
-platformBrowserDynamic()
+platformBrowser()
   .bootstrapModuleFactory(AppModuleNgFactory)
   .then(decorateModuleRef)
   .catch(err => console.error(err));

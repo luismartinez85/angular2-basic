@@ -3,7 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
 
 // Load the implementations that should be tested
 import { AboutMainComponent } from './about-main.component';
-import { MultiLanguageService } from '../../../../shared/services/multiLanguage/multiLanguage.service';
+import { MultiLanguageService } from '../../../../shared';
 
 import { TranslateModule } from 'ng2-translate';
 

@@ -33,7 +33,7 @@ import 'ts-helpers';
 
 if ('production' === ENV) {
   // Production
-
+  require('offline-plugin/runtime').install();
 
 } else {
   // Development

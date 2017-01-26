@@ -1,18 +1,5 @@
-
-<md-card *ngFor="let item of dataYoutube let i = index">
-  <div *ngIf="item.id.videoId" class="video-item">
-    <span [style.background-image]="'url(' + item.snippet.thumbnails.high.url + ')'"></span>
-    <div>
-      <h3>
-        {{item.snippet.title}}
-      </h3>
+<div *ngFor="let video of videos">
+    <div class="videoWrapper">
+      <iframe width="560" height="315" [src]="video | safe" frameborder="0" allowfullscreen></iframe>
     </div>
-
-    <div class="border">
-      <button color="accent" md-button (click)="openVideo(item)">
-        <md-icon>movie</md-icon>
-        Watch
-      </button>
-    </div>
-  </div>
-</md-card>
+</div>

@@ -3,23 +3,25 @@
     <home-logo></home-logo>
   </div>
   <div class="home-item">
+    <div class="home-tab-header">
+      <div class="home-tab-button" (click)="tabActive = 'features'">
+        <span class="menu-option">Features</span>
+        <span class="icon"><i class="material-icons">fingerprint</i></span>
+      </div>
+      <div class="home-tab-button" (click)="tabActive = 'technologies'">
+        <span class="menu-option">Technologies</span>
+        <span class="icon"><i class="material-icons">code</i></span>
+      </div>
+    </div>
     <div class="home-tab-content">
-      <md-tab-group>
-        <md-tab>
-          <template md-tab-label>
-            <span class="menu_option">Features</span>
-            <span class="icon"><md-icon>fingerprint</md-icon></span>
-          </template>
-          <home-features [elements]="features"></home-features>
-        </md-tab>
-        <md-tab>
-          <template md-tab-label>
-            <span class="menu_option">Technologies</span>
-            <span class="icon"><md-icon>code</md-icon></span>
-          </template>
-          <home-technologies [elements]="techs"></home-technologies>
-        </md-tab>
-      </md-tab-group>
+      <image-list 
+        *ngIf="tabActive === 'features'" 
+        [elements]="features"
+        [filterValue]="'title'"></image-list>
+      <image-list 
+        *ngIf="tabActive === 'technologies'" 
+        [elements]="techs"
+        [filterValue]="'title'"></image-list>
     </div>
   </div>
 </div>

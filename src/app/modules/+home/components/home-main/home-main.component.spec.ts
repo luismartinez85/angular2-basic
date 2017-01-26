@@ -3,7 +3,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { EnvironmentConfigService } from '../../../../shared/services/environmentConfig/environmentConfig.service';
 
-import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate';
 
 // Load the implementations that should be tested
@@ -15,8 +14,7 @@ describe('Module Home -> Component HomeMain', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot(),
-        MaterialModule.forRoot()
+        TranslateModule.forRoot()
       ],
       providers: [ EnvironmentConfigService ],
       declarations: [ HomeMainComponent ],

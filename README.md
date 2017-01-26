@@ -4,7 +4,7 @@ More details in the following [section](#known-issues)
 
 ![](docs/angular2-basic-logo.png)
 
-# Angular2 Basic v1.0.0-beta.2 
+# Angular2 Basic v1.0.0-rc0
 
 > Provides fast, reliable and extensible starter for the development of Angular2 projects.
 
@@ -120,7 +120,8 @@ angular2-webpack-starter/
 ## Features included
 
 * Build process with WebPack for development and production environment.  
-    * JIT (AOT under development).
+    * JIT
+    * AOT
 * Unit Testing with Karma and Jasmine
 * End-to-End testing with Protractor.
 * Test reporting with HTML and file versions.
@@ -137,12 +138,6 @@ angular2-webpack-starter/
 * Youtube API integration
 
 ## Angular2 Known Issues
- 
-* Aot compile limitations:
-    * Incorrect reference compilation of static source such as CSS, Images or Fonts
-    * Module Lazyload, avoidable with workaround
-
 More details in the [Angular2 issue repository](https://github.com/angular/angular/issues) 
-
 
 

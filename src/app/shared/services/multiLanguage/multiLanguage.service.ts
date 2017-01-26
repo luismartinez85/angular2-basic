@@ -46,7 +46,7 @@ export class MultiLanguageService {
 
   /**
    * Set a language passed by param
-   * @param language: string 
+   * @param language: string
    */
   setLanguage(language: string){
     if (localStorage) {

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement, CUSTOM_ELEMENTS_SCHEMA }    from '@angular/core';
-import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
@@ -20,8 +19,7 @@ describe('App Shell', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot(routes),
-        MaterialModule.forRoot()
+        RouterModule.forRoot(routes)
       ],
       declarations: [
         ShellComponent,
