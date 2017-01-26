@@ -15,7 +15,7 @@ export class ImageListComponent {
   @Input() filterValue: string = '';
 
   search: string = '';
-  
+
   handleChangeSearch(search){
     this.search = search;
   }

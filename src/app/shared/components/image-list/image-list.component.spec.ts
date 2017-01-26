@@ -28,7 +28,7 @@ describe('Module Shared -> Component ImageList', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        SearchPipeModule  
+        SearchPipeModule
       ],
       declarations: [ ImageListComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
