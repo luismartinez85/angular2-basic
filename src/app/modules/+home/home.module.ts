@@ -5,7 +5,7 @@ import { TranslateModule } from 'ng2-translate';
 
 import { HomeMainComponent } from './components/home-main/home-main.component';
 import { HomeLogoComponent } from './components/home-logo/home-logo.component';
-import { SearchPipeModule, ImageListModule } from '../../shared';
+import { ImageListModule } from '../../shared';
 
 import { routes } from './home.routes';
 
@@ -18,8 +18,7 @@ import { routes } from './home.routes';
     CommonModule,
     RouterModule.forChild(routes),
     TranslateModule.forRoot(),
-    ImageListModule,
-    SearchPipeModule
+    ImageListModule
   ]
 })
 

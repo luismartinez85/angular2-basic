@@ -12,4 +12,11 @@ import { Component, Input } from '@angular/core';
 export class ImageListComponent {
 
   @Input() elements: Array<any> = [];
+  @Input() filterValue: string = '';
+
+  search: string = '';
+  
+  handleChangeSearch(search){
+    this.search = search;
+  }
 }

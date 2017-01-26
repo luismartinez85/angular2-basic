@@ -1,4 +1,5 @@
-<div class="lists-container" *ngFor="let element of elements">
+<input type="text" #search (keyup)="handleChangeSearch(search.value)">
+<div class="lists-container" *ngFor="let element of elements | searchPipe: search.value: filterValue">
   <div class="list-item-image">
     <img *ngIf="element.image !== ''" class="list-logo" [src]="element.image" [alt]="element.title">
     <i *ngIf="element.icon !== ''" class="material-icons">{{element.icon}}</i>

@@ -17,6 +17,7 @@
       <image-list 
         *ngIf="tabActive === 'team'" 
         [elements]="team"
+        [filterValue]="'title'"
         ></image-list>
       <about-youtube 
         *ngIf="tabActive === 'youtube'" 
