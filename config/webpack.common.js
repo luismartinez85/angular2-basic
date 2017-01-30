@@ -334,13 +334,7 @@ module.exports = function (options) {
         disabled: !AOT,
         tsConfig: helpers.root('tsconfig.webpack.json'),
         resourceOverride: helpers.root('config/resource-override.js')
-      }),
-
-      /**
-       * https://github.com/FormidableLabs/webpack-dashboard
-       * A CLI dashboard for your webpack dev server
-       */
-      new DashboardPlugin()
+      })
      
 
     ],
