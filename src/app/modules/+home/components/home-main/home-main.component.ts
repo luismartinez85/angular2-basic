@@ -4,7 +4,7 @@ import { MultiLanguageService, EnvironmentConfigService } from '../../../../shar
 
 import { Feature, FeaturesService } from '../../services/features';
 import { Tech, TechsService } from '../../services/techs';
-
+import { routerTransition } from './home-main.animations';
 /**
  * Main component for home route. Load features and technologies used in this starter kit.
  */
@@ -17,6 +17,8 @@ import { Tech, TechsService } from '../../services/techs';
     TechsService
   ],
   styleUrls: [ './home-main.component.css' ],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''},
   templateUrl: './home-main.component.html'
 })
 
