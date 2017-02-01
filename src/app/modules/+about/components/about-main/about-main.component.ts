@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MultiLanguageService } from '../../../../shared';
 import { AboutTeamService } from '../../services/about-team/about-team.service';
 import { routerTransition } from './about-main.animations';
@@ -11,7 +11,8 @@ import { routerTransition } from './about-main.animations';
   templateUrl: './about-main.component.html',
   styleUrls: ['./about-main.component.css'],
   animations: [routerTransition()],
-  host: {'[@routerTransition]': ''}
+  host: {'[@routerTransition]': ''},
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 export class AboutMainComponent {

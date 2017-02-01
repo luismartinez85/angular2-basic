@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 import { MultiLanguageService, EnvironmentConfigService } from '../../../../shared';
 
@@ -19,7 +19,8 @@ import { routerTransition } from './home-main.animations';
   styleUrls: [ './home-main.component.css' ],
   animations: [routerTransition()],
   host: {'[@routerTransition]': ''},
-  templateUrl: './home-main.component.html'
+  templateUrl: './home-main.component.html',
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 export class HomeMainComponent {
