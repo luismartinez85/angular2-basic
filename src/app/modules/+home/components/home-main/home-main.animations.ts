@@ -1,4 +1,4 @@
-import {trigger, state, animate, style, transition} from '@angular/core';
+import { trigger, state, animate, style, transition } from '@angular/core';
 
 export function routerTransition() {
   return trigger('routerTransition', [
@@ -9,7 +9,7 @@ export function routerTransition() {
     ]),
     transition('* => void', [
         // when the component leaves
-        animate(500, style({opacity: 0}))
+      animate(500, style({opacity: 0}))
     ])]
   );
 }
