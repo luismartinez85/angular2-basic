@@ -164,7 +164,7 @@ module.exports = function (options) {
          */
         {
           test: /\.(jpg|png|gif)$/,
-          loader: 'file-loader?name=assets/img/[name].[ext]'
+          loader: 'file-loader?name=assets/img/[folder]/[name].[ext]'
         }
       ]
 
