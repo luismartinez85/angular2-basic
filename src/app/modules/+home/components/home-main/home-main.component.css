@@ -46,3 +46,9 @@
   max-width: 1000px;
   width: 100%;
 }
+
+@media (min-width:1000px) {
+  .home-container {
+    min-width: 1000px;
+  }
+}
