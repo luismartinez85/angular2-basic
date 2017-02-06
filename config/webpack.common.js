@@ -26,7 +26,7 @@ const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
   title: 'Angular2 Basic',
-  baseUrl: '/',
+  baseUrl: './',
   isDevServer: helpers.isWebpackDevServer()
 };
 
