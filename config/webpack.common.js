@@ -26,7 +26,7 @@ const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
   title: 'Angular2 Basic',
-  baseUrl: '/',
+  baseUrl: './',
   isDevServer: helpers.isWebpackDevServer()
 };
 
@@ -164,7 +164,7 @@ module.exports = function (options) {
          */
         {
           test: /\.(jpg|png|gif)$/,
-          loader: 'file-loader'
+          loader: 'file-loader?name=./assets/img/[folder]/[name].[ext]'
         }
       ]
 
