@@ -17,7 +17,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ngcWebpack = require('ngc-webpack');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 const OfflinePlugin = require('offline-plugin');
 
 /*
@@ -27,7 +26,7 @@ const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
   title: 'Angular2 Basic',
-  baseUrl: '/',
+  baseUrl: './',
   isDevServer: helpers.isWebpackDevServer()
 };
 
@@ -165,7 +164,7 @@ module.exports = function (options) {
          */
         {
           test: /\.(jpg|png|gif)$/,
-          loader: 'file-loader'
+          loader: 'file-loader?name=./assets/img/[folder]/[name].[ext]'
         }
       ]
 
@@ -334,13 +333,7 @@ module.exports = function (options) {
         disabled: !AOT,
         tsConfig: helpers.root('tsconfig.webpack.json'),
         resourceOverride: helpers.root('config/resource-override.js')
-      }),
-
-      /**
-       * https://github.com/FormidableLabs/webpack-dashboard
-       * A CLI dashboard for your webpack dev server
-       */
-      new DashboardPlugin()
+      })
      
 
     ],

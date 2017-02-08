@@ -27,7 +27,11 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "compiled",
+    "dll",
+    "e2e",
+    "test-reports"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,

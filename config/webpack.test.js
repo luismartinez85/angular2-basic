@@ -190,6 +190,13 @@ module.exports = function (options) {
           exclude: [helpers.root('src/index.html')]
         },
 
+        /* File loader for supporting images, for example, in CSS files.
+         */
+        {
+          test: /\.(jpg|png|gif)$/,
+          loader: 'file-loader?name=assets/img/[folder]/[name].[ext]'
+        },
+
         /**
          * Instruments JS files with Istanbul for subsequent code coverage reporting.
          * Instrument only testing sources.

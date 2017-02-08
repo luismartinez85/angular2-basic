@@ -1,3 +1,8 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -40,4 +45,10 @@
   flex: 0 0 1 auto auto;
   max-width: 1000px;
   width: 100%;
+}
+
+@media (min-width:1000px) {
+  .home-container {
+    min-width: 1000px;
+  }
 }
