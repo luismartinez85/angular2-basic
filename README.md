@@ -5,9 +5,12 @@
 
 > Provides fast, reliable and extensible starter for the development of Angular2 projects.
 
-## Demo 
 
-* Link to the application demo:  [https://serenity-frontstack.github.io/angular2-basic/](https://serenity-frontstack.github.io/angular2-basic/) 
+The objective of this Starter kit is to provide a stable development environment tackling the Angular2 framework instability to bring the project to production. More details in the [Angular2 issue](https://github.com/angular/angular/issues/) repository. Bear in mind that new issues could be found in Angular2 framework, and we will do our best to mitigate it in this starter kit.
+
+## Demo
+
+* Link to the application demo:  [https://serenity-frontstack.github.io/angular2-basic/](https://serenity-frontstack.github.io/angular2-basic/)
 
 # Getting Started
 
@@ -90,11 +93,11 @@ angular2-webpack-starter/
  |   ├──vendor.ts              * our vendor file
  │   │
  │   ├──app/                   * WebApp: folder
- │   │   ├──modules/           * Funtional Units separated in individual modules 
+ │   │   ├──modules/           * Funtional Units separated in individual modules
  │   │   ├──shared/            * our shared component, reusable in any module
- │   │   ├──shell/             * our bootstrap component, visual scaffold of our app 
+ │   │   ├──shell/             * our bootstrap component, visual scaffold of our app
  │   │   │
- │   │   ├──app.environment.ts 
+ │   │   ├──app.environment.ts
  │   │   ├──app.module.ts      
  │   │   ├──app.routes.ts      
  │   │   └──index.ts           
@@ -135,6 +138,4 @@ angular2-webpack-starter/
 * Youtube API integration
 
 ## Angular2 Known Issues
-More details in the [Angular2 issue repository](https://github.com/angular/angular/issues) 
-
-
+More details in the [Angular2 issue repository](https://github.com/angular/angular/issues)
