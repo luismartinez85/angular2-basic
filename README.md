@@ -1,10 +1,7 @@
-> ## Due to Angular2 framework instability, this starter kit is NOT recommended for production yet.
-
-More details in the following [section](#known-issues)
 
 ![](docs/angular2-basic-logo.png)
 
-# Angular2 Basic v1.0.0-rc0
+# Angular2 Basic v1.0.0-rc1
 
 > Provides fast, reliable and extensible starter for the development of Angular2 projects.
 
