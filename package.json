@@ -1,6 +1,6 @@
 {
   "name": "angular2-basic",
-  "version": "1.0.0-rc0",
+  "version": "1.0.0-rc1",
   "license": "MIT",
   "scripts": {
     "build:pro": "webpack --config config/webpack.prod.js  --progress --profile --bail",
