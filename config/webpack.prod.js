@@ -269,7 +269,7 @@ module.exports = function (env) {
        * and your project will become offline ready by caching all (or some) of the webpack output assets.
        * https://github.com/NekR/offline-plugin
        */
-      new OfflinePlugin()
+        // new OfflinePlugin()
     ],
 
     /*

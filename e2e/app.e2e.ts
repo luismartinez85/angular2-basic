@@ -13,13 +13,13 @@ describe('App', () => {
   });
 
   it('should have Toolbar', () => {
-    let subject = element(by.css('md-toolbar')).isPresent();
+    let subject = element(by.css('.topnav')).isPresent();
     let result  = true;
     expect(subject).toEqual(result);
   });
 
-  it('should have a component with classname fs-custom-grid-cards', () => {
-    let subject = element(by.css('fs-custom-grid-cards')).isPresent();
+  it('should have a component with classname lists-container', () => {
+    let subject = element(by.css('.lists-container')).isPresent();
     let result  = true;
     expect(subject).toEqual(result);
   });
