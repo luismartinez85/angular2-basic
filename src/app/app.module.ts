@@ -1,6 +1,6 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
@@ -25,6 +25,7 @@ import { NoContentComponent } from './shared/components/no-content/noContent.com
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     ShellModule,
     RouterModule.forRoot(routes, {
